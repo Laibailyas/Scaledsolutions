@@ -11,13 +11,9 @@ export default function SuccessStoriesSection() {
     "icdVCDrMTg0",
     "CRt6Lo_vmHw",
     "Wwoh_C00jJs",
-    "icdVCDrMTg0",
-    "CRt6Lo_vmHw",
-    "Wwoh_C00jJs",
-    "YOQhaCIr87E",
   ];
 
-  const stories = [
+  const videoStories = [
     {
       title: "Revolutionized Tax Filing Efficiency",
       overview:
@@ -58,6 +54,50 @@ export default function SuccessStoriesSection() {
     },
   ];
 
+  // 🔹 New Image Stories Section
+  const imageStories = [
+    {
+      image: "/custom.png",
+      title: "Developed Custom CRM and Smart Solutions for Data Management",
+      overview:
+        "Tkxel developed a smart solution for a blood bank’s stock entry process by implementing Bluetooth connections for barcode scanning and creating printed manifests. The user-friendly desktop app increased efficiency and productivity, and visual reports were generated for data collection. Tkxel also developed a custom CRM for managing vendor and client data in a centralized view.",
+      quote:
+        "“Tkxel has proven beyond par that they excel not just in building and integrating with our team but building at a level that is at par with any US development team. Working with Tkxel is one of the best decisions we have made.”",
+      author: "Mary Jane Brower",
+      role: "COO, Southern Biologics",
+    },
+    {
+      image: "/nokia.png",
+      title: "Elevated Nokia’s User Experience and Reach",
+      overview:
+        "Tkxel provided Nokia with mobile app development services for their multiple platforms. Our expertise in app development allowed Nokia to enhance their user experience, expand their reach, and stay competitive in the mobile industry. Through a collaborative approach, Tkxel successfully delivered high- quality apps that aligned with Nokia’s brand and met the needs of their diverse user base.",
+      quote:
+        "“Tkxel’s team brought a depth of app development expertise that was crucial for our success. Their understanding f our brand and users helped us enhance our mobile presence significantly. The quality and innovation in their work were exactly what we needed to stay ahead in the competitive market.”",
+      author: "Emmanuel Neilz",
+      role: "CTO, Nokia",
+    },
+    {
+      image: "/honeywell.png",
+      title: "Developed Intuitive Mobile Apps for Honeywell",
+      overview:
+        "Tkxel’s expertise in app development enabled Honeywell to enhance their product offerings by creating intuitive and feature-rich mobile applications. By leveraging Tkxel’s technical proficiency and user-centric approach, Honeywell successfully improved customer experience, increased productivity, and strengthened their position in the market.",
+      quote:
+        "“I'm genuinely impressed with the expertise Tkxel brought to our video software project. Their team didn't just meet our expectations; they exceeded them, delivering a product that's not only technically advanced but also incredibly user-friendly. It's rare to find a partner who can truly translate complex needs into practical solutions like they did.”",
+      author: "Jason Urso",
+      role: "CTO, Honeywell",
+    },
+    {
+      image: "/groupon.png",
+      title: "Redesigned Groupon's Frontend to Enhanced Global User Experience",
+      overview:
+        "Tkxel’s platform development services empowered Groupon to create a robust and user-friendly digital platform. Through a collaborative approach, Tkxel successfully developed a solution that improved operational efficiency and customer experience. This partnership drove business growth and enhanced customer satisfaction for Groupon.",
+      quote:
+        "“Groupon's partnership with Tkxel has been transformative. Their expertise in digital solutions reshaped our platform, ensuring seamless global operations and significantly improving our user experience. Exceptional collaboration at every step!”",
+      author: "Umair Bashir",
+      role: "Director, Groupon",
+    },
+  ];
+
   return (
     <>
       <section className="success-stories">
@@ -65,16 +105,17 @@ export default function SuccessStoriesSection() {
           <h2 className="benefits-title">
             Success <span className="highlight">Stories</span>
           </h2>
-          <div class="gradient-line"></div>
+          <div className="gradient-line"></div>
 
           <p className="success-subtext">
             Discover how Tkxel partners with global innovators to deliver
             impactful technology solutions across diverse industries.
           </p>
 
-          {stories.map((story, index) => (
+          {/* ---------------- VIDEO STORIES ---------------- */}
+          <h3 className="story-section-title">🎬 Video Success Stories</h3>
+          {videoStories.map((story, index) => (
             <div key={index} className="story-block">
-              {/* Video */}
               <div
                 className="story-video"
                 onClick={() => setOpenVideo(videos[index])}
@@ -87,10 +128,45 @@ export default function SuccessStoriesSection() {
                 <div className="play-icon">&#9658;</div>
               </div>
 
-              {/* Title */}
               <h3 className="story-title">{story.title}</h3>
 
-              {/* Overview + Quote */}
+              <div className="story-flex">
+                <div className="story-box overview">
+                  <h4>Overview</h4>
+                  <p>{story.overview}</p>
+                </div>
+
+                <div className="story-box quote">
+                  <p className="quote-text">“{story.quote}”</p>
+                  <div className="quote-author">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+                      alt={story.author}
+                      className="author-img"
+                    />
+                    <div>
+                      <h4>{story.author}</h4>
+                      <p>{story.role}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* ---------------- IMAGE STORIES ---------------- */}
+          {imageStories.map((story, index) => (
+            <div key={index} className="story-block">
+              <div className="story-video">
+                <img
+                  src={story.image}
+                  alt={story.title}
+                  className="video-thumbnail"
+                />
+              </div>
+
+              <h3 className="story-title">{story.title}</h3>
+
               <div className="story-flex">
                 <div className="story-box overview">
                   <h4>Overview</h4>
@@ -117,7 +193,7 @@ export default function SuccessStoriesSection() {
         </div>
       </section>
 
-      {/* Video Modal */}
+      {/* ---------------- VIDEO MODAL ---------------- */}
       {openVideo && (
         <div className="video-modal" onClick={() => setOpenVideo(null)}>
           <div className="video-wrapper" onClick={(e) => e.stopPropagation()}>

@@ -28,12 +28,12 @@ function NavBar() {
   const [menuVentrilocInMenuActive, setMenuVentrilocInMenu] = useState(true);
 
   useEffect(() => {
-  if (menuHamburgerActive) {
-    document.body.style.overflow = "hidden"; // disable scroll
-  } else {
-    document.body.style.overflow = ""; // restore scroll
-  }
-}, [menuHamburgerActive]);
+    if (menuHamburgerActive) {
+      document.body.style.overflow = "hidden"; // disable scroll
+    } else {
+      document.body.style.overflow = ""; // restore scroll
+    }
+  }, [menuHamburgerActive]);
 
 
 
@@ -108,21 +108,21 @@ function NavBar() {
       resetHeightBtn_2();
     }
   }, [menuServicesInMenuActive, menuContactActive]);
- useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       if (menuServicesActive) {
         setMenuServices(false); // close dropdown when scrolling
       }
-       if (menuVentrilocActive) {
-      setMenuVentriloc(false); // close dropdown when scrolling
-    }
-    if (menuContactActive) {
-      setMenuContact(false); // close dropdown when scrolling
-      
-    }
-   
+      if (menuVentrilocActive) {
+        setMenuVentriloc(false); // close dropdown when scrolling
+      }
+      if (menuContactActive) {
+        setMenuContact(false); // close dropdown when scrolling
+
+      }
+
     };
-   
+
 
     window.addEventListener("scroll", handleScroll);
 
@@ -130,7 +130,7 @@ function NavBar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [menuServicesActive, menuVentrilocActive, menuContactActive]);
- 
+
   // ------------------- Active Menus ------------------- //
   const activateMenu = (menu) => {
     if (menu === "menuServices") {
@@ -169,97 +169,92 @@ function NavBar() {
   return (
     <>
       <nav className={styles.NavBar}>
-          <div className={styles.navContainer}>
-        <div className={styles.logo}>
-          <svg viewBox="0 0 1600 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-  <g>
-    {/* <!-- Paste your full Ventriloc <path> block here --> */}
-    <path d="M4.97098 11.7094L13.1789 35.888C13.3986 ..." fill="currentColor"></path>
-    <path d="M54.7046 27.2527H32.9942C33.2138 ..." fill="currentColor"></path>
-    {/* <!-- ... (all other path elements from your logo) ... --> */}
-    <path d="M222.006 15.7621C221.728 15.624 ..." fill="currentColor"></path>
-  </g>
+        <div className={styles.navContainer}>
+          <div className={styles.logo}>
+            <svg viewBox="0 0 1600 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <g>
+                {/* <!-- Paste your full Ventriloc <path> block here --> */}
+                <path d="M4.97098 11.7094L13.1789 35.888C13.3986 ..." fill="currentColor"></path>
+                <path d="M54.7046 27.2527H32.9942C33.2138 ..." fill="currentColor"></path>
+                {/* <!-- ... (all other path elements from your logo) ... --> */}
+                <path d="M222.006 15.7621C221.728 15.624 ..." fill="currentColor"></path>
+              </g>
 
-  {/* <!-- This text will appear to the right of your logo --> */}
-  <g>
-    <text x="180" y="150" font-family="Ivar Display" font-size="150" fill="#CBCBCB">
-      SCALED SOLUTIONS
-    </text>
-  </g>
-</svg>
-        </div>
-        <div className={styles.links}>
-          <button
-            className={`${styles.link} ${
-              menuServicesActive ? `${styles.active}` : ""
-            }`}
-            onClick={() => activateMenu("menuServices")}
-          >
-            Services
-            <svg
-              width="10"
-              height="6"
-              viewBox="0 0 10 6"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+              {/* <!-- This text will appear to the right of your logo --> */}
+              <g>
+                <text x="180" y="150" font-family="Ivar Display" font-size="150" fill="#CBCBCB">
+                  SCALED SOLUTIONS
+                </text>
+              </g>
             </svg>
-          </button>
-          <button
-            className={`${styles.link} ${
-              menuVentrilocActive ? `${styles.active}` : ""
-            }`}
-            onClick={() => activateMenu("menuVentriloc")}
-          >
-            Scaled Solutions
-            <svg
-              width="10"
-              height="6"
-              viewBox="0 0 10 6"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          </div>
+          <div className={styles.links}>
+            <button
+              className={`${styles.link} ${menuServicesActive ? `${styles.active}` : ""
+                }`}
+              onClick={() => activateMenu("menuServices")}
             >
-              <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
-            </svg>
-          </button>
-          <Link className={styles.link} href="">
-            Our Cloud Accelerator
-          </Link>
-          <Link href="/" className={styles.link} locale="fr">
-            Contact 
-          </Link>
-        </div>
-        <div className={styles.btns}>
-          <button
-            className={`${styles.contactButton} ${
-              menuContactActive ? `${styles.active}` : ""
-            }`}
-            onClick={() => activateMenu("menuContact")}
-          >
-            <span>Contact us</span>
-            <span>Close</span>
-          </button>
-          <button
-            className={`${styles.btnMenuHamburger} ${
-              menuHamburgerActive ? `${styles.active}` : ""
-            }`}
-            onClick={() => activateMenu("menuHamburger")}
-          >
-            <span></span>
-            <span></span>
-          </button>
-        </div>
+              Services
+              <svg
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+              </svg>
+            </button>
+            <button
+              className={`${styles.link} ${menuVentrilocActive ? `${styles.active}` : ""
+                }`}
+              onClick={() => activateMenu("menuVentriloc")}
+            >
+              Scaled Solutions
+              <svg
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+              </svg>
+            </button>
+            <Link className={styles.link} href="">
+              Our Cloud Accelerator
+            </Link>
+            <Link href="/" className={styles.link} locale="fr">
+              Contact
+            </Link>
+          </div>
+          <div className={styles.btns}>
+            <button
+              className={`${styles.contactButton} ${menuContactActive ? `${styles.active}` : ""
+                }`}
+              onClick={() => activateMenu("menuContact")}
+            >
+              <span>Contact us</span>
+              <span>Close</span>
+            </button>
+            <button
+              className={`${styles.btnMenuHamburger} ${menuHamburgerActive ? `${styles.active}` : ""
+                }`}
+              onClick={() => activateMenu("menuHamburger")}
+            >
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </nav>
       <menu
-        className={`${styles.menuServices} ${
-          menuServicesActive ? `${styles.active}` : ""
-        }`}
-        
-        >
+        className={`${styles.menuServices} ${menuServicesActive ? `${styles.active}` : ""
+          }`}
+
+      >
         <div className={styles.backSection}
-        onMouseLeave={() => setMenuServices(false)} // close when mouse leaves
+          onMouseLeave={() => setMenuServices(false)} // close when mouse leaves
         >
           {/* <figure className={styles.figureSvg}>
             <svg
@@ -276,12 +271,12 @@ function NavBar() {
             </svg>
           </figure> */}
           <div ></div>
-          <div style={{borderRadius:'1px white '}} className={styles.contact}>
+          <div style={{ borderRadius: '1px white ' }} className={styles.contact}>
             <h3>Let&apos;s work together</h3>
             <button>Make an appointment</button>
           </div>
         </div>
-        <div className={styles.body} style={{backgroundColor: "#0B1C23"}}>
+        <div className={styles.body} style={{ backgroundColor: "#0B1C23" }}>
           <div className={styles.card} >
             <h3 className={styles.headText} >
               <span>
@@ -289,13 +284,13 @@ function NavBar() {
               </span>
               {/* <span>Power BI Experts</span> */}
             </h3>
-          
-                <div
-      
-      // className={styles.videoDiv}
-    >
-     <div>
-  {/* <object 
+
+            <div
+
+            // className={styles.videoDiv}
+            >
+              <div>
+                {/* <object 
     type="image/svg+xml" 
     data="/videos/cloud_f_transparent_optimized.webp" 
     width={150} 
@@ -305,70 +300,70 @@ function NavBar() {
     Logo
   </object> */}
 
-    <object
-  type="image/svg+xml"
-  data="/svgs/1.svg"
-  className={styles.svgElementsp}
-  aria-label="Animated SVG"
-/>
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/1.svg"
+                  className={styles.svgElementsp}
+                  aria-label="Animated SVG"
+                />
 
 
-</div>
+              </div>
 
-    </div>
+            </div>
           </div>
           <div className={styles.card}>
             <h3 className={styles.headText}>
               <span>Integration</span> Services
             </h3>
-           
-           <div
-      className={styles.videoDiv}
-    >
-   <object
-  type="image/svg+xml"
-  data="/svgs/3.svg"
-  className={styles.svgElement}
-  aria-label="Animated SVG"
-/>
+
+            <div
+              className={styles.videoDiv}
+            >
+              <object
+                type="image/svg+xml"
+                data="/svgs/3.svg"
+                className={styles.svgElement}
+                aria-label="Animated SVG"
+              />
 
 
-    </div>
+            </div>
           </div>
           <div className={styles.card} >
             <h3 className={styles.headText}>
               <span>Security</span> services
             </h3>
-             
-             <div
-      
-     className={styles.videoDiv}
-    >
-        <object
-  type="image/svg+xml"
-  data="/svgs/2.svg"
-  className={styles.svgElement}
-  aria-label="Animated SVG"
-/>
-    </div>
-    </div>
+
+            <div
+
+              className={styles.videoDiv}
+            >
+              <object
+                type="image/svg+xml"
+                data="/svgs/2.svg"
+                className={styles.svgElement}
+                aria-label="Animated SVG"
+              />
+            </div>
+          </div>
           <div className={styles.card}>
             <h3 className={styles.headText} >
               <span id="yesboss" >Product</span> Development
             </h3>
-       <div
-     className={styles.videoDiv}
-    >
-      
-      <object
-  type="image/svg+xml"
-  data="/svgs/4.svg"
-  className={styles.svgElement}
-  aria-label="Animated SVG"
-/>
+            <div
+              className={styles.videoDiv}
+            >
 
-    </div>
-        </div>
+              <object
+                type="image/svg+xml"
+                data="/svgs/4.svg"
+                className={styles.svgElement}
+                aria-label="Animated SVG"
+              />
+
+            </div>
+          </div>
           {/* Duplicate card 2 */}
           {/* <div className={styles.card}>
             <h3 className={styles.headText}>
@@ -379,15 +374,14 @@ function NavBar() {
         </div>
       </menu>
       <menu
-        className={`${styles.menuVentriloc} ${
-          menuVentrilocActive ? `${styles.active}` : ""
-        }`}
-        style={{border:'0px'}}
+        className={`${styles.menuVentriloc} ${menuVentrilocActive ? `${styles.active}` : ""
+          }`}
+        style={{ border: '0px' }}
 
-        // onMouseLeave={() => setMenuVentriloc(false)}
+      // onMouseLeave={() => setMenuVentriloc(false)}
       >
-        <div className={styles.body} style={{backgroundColor: "#0B1C23",border:"0px"}}
-         onMouseLeave={() => setMenuVentriloc(false)}>
+        <div className={styles.body} style={{ backgroundColor: "#0B1C23", border: "0px" }}
+          onMouseLeave={() => setMenuVentriloc(false)}>
           <div className={styles.links}>
             <Link href="" className={styles.link}>
               <span>About</span>
@@ -398,7 +392,7 @@ function NavBar() {
             <Link href="" className={styles.link}>
               <span>Testimonials</span>
             </Link>
-            
+
             <Link href="" className={styles.link}>
               <span>Blog</span>
             </Link>
@@ -406,18 +400,17 @@ function NavBar() {
         </div>
       </menu>
       <menu
-        className={`${styles.menuContact} ${
-          menuContactActive ? `${styles.active}` : ""
-        }`}
+        className={`${styles.menuContact} ${menuContactActive ? `${styles.active}` : ""
+          }`}
 
       >
         <div className={styles.body}
-        onMouseLeave={() => setMenuContact(false)}
+          onMouseLeave={() => setMenuContact(false)}
         // onMouseDown={() => setMenuContact(false)} // close when mouse leaves
         >
           <div className={styles.head}>
             <div className={styles.left}>
-              <p style={{color:"white !important"}}>Contact form</p>
+              <p style={{ color: "white !important" }}>Contact form</p>
               <p>
                 Every good partnership starts with coffee.
                 <br /> Now lets make an appointment.
@@ -457,17 +450,15 @@ function NavBar() {
         </div>
       </menu>
       <menu
-        className={`${styles.menuHamburger} ${
-          menuHamburgerActive ? `${styles.active}` : ""
-        }`}
-        style={{backgroundColor:"#0B1C23 !important"}}
+        className={`${styles.menuHamburger} ${menuHamburgerActive ? `${styles.active}` : ""
+          }`}
+        style={{ backgroundColor: "#0B1C23 !important" }}
       >
         <div className={styles.option_1} >
           <div className={styles.body}>
             <button
-              className={`${styles.btn}  ${
-                menuServicesInMenuActive ? `${styles.active}` : ""
-              }`}
+              className={`${styles.btn}  ${menuServicesInMenuActive ? `${styles.active}` : ""
+                }`}
               onClick={() => activateMenu("menuServicesInMenu")}
             >
               <div className={styles.head}>
@@ -483,18 +474,18 @@ function NavBar() {
                 </svg>
               </div>
               <menu className={styles.menuServicesInMenu}>
-               <div className={styles.card}>
+                <div className={styles.card}>
                   <span>
                     <em>Cloud </em> Services
                   </span>
-                    <object
-  type="image/svg+xml"
-  data="/svgs/1.svg"
-  className={styles.svgElementMobile}
-  aria-label="Animated SVG"
-/>
+                  <object
+                    type="image/svg+xml"
+                    data="/svgs/1.svg"
+                    className={styles.svgElementMobile}
+                    aria-label="Animated SVG"
+                  />
                 </div>
-                   <div className={styles.card}>
+                <div className={styles.card}>
                   <span>
                     <span>
                       <em>Integration</em> Services
@@ -502,45 +493,44 @@ function NavBar() {
                     {/* <span>Power BI Experts</span> */}
                   </span>
                   <object
-  type="image/svg+xml"
-  data="/svgs/3.svg"
-  className={styles.svgElementMobile}
-  aria-label="Animated SVG"
-/>
+                    type="image/svg+xml"
+                    data="/svgs/3.svg"
+                    className={styles.svgElementMobile}
+                    aria-label="Animated SVG"
+                  />
 
                 </div>
-                 <div className={styles.card}>
+                <div className={styles.card}>
                   <span>
                     <em>Security </em> Services
                   </span>
-                    <object
-  type="image/svg+xml"
-  data="/svgs/2.svg"
-  className={styles.svgElementMobile}
-  aria-label="Animated SVG"
-/>
+                  <object
+                    type="image/svg+xml"
+                    data="/svgs/2.svg"
+                    className={styles.svgElementMobile}
+                    aria-label="Animated SVG"
+                  />
                 </div>
                 <div className={styles.card}>
                   <span>
                     <em>Product </em>Development
                   </span>
-                    <object
-  type="image/svg+xml"
-  data="/svgs/4.svg"
-  className={styles.svgElementMobile}
-  aria-label="Animated SVG"
-/>
+                  <object
+                    type="image/svg+xml"
+                    data="/svgs/4.svg"
+                    className={styles.svgElementMobile}
+                    aria-label="Animated SVG"
+                  />
                 </div>
-             
-               
-               
-                
+
+
+
+
               </menu>
             </button>
             <button
-              className={`${styles.btn} ${
-                menuVentrilocInMenuActive ? `${styles.active}` : ""
-              }`}
+              className={`${styles.btn} ${menuVentrilocInMenuActive ? `${styles.active}` : ""
+                }`}
               onClick={() => activateMenu("menuVentrilocInMenu")}
             >
               <div className={styles.head}>

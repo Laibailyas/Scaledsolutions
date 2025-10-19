@@ -9,7 +9,7 @@ import ScrollingCards from './components/ScrollingCards'
 gsap.registerPlugin(ScrollTrigger);
 import { valueAtPercentage, ScrollObserver } from 'aatjs'
 const cardData = [
- 
+
   {
     title: "Card Title",
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
@@ -52,7 +52,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import CustomEase from "gsap/CustomEase";
 import Lenis from "@studio-freight/lenis";
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Footer from "./components/Footer";
 import { isMobile } from "react-device-detect";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -174,7 +174,7 @@ export default function Home() {
       }
     );
     // ----------- Section 3 Animation ----------- //
-   gsap.fromTo(
+    gsap.fromTo(
       `.${styles.section_3} .${styles.head} h2 span:nth-child(1)`,
       {
         x: "-100%",
@@ -601,7 +601,7 @@ export default function Home() {
           },
         }
       );
-      
+
     }
     // ----------- Smooth Scroll ----------- //
     if (!isMobile) {
@@ -842,52 +842,53 @@ export default function Home() {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
-// const containerRef = useRef(null);
-//   const cardRefs = useRef([]);
+  // const containerRef = useRef(null);
+  //   const cardRefs = useRef([]);
 
-//   useEffect(() => {
-//     const cardsContainer = containerRef.current;
-//     const cards = cardRefs.current;
+  //   useEffect(() => {
+  //     const cardsContainer = containerRef.current;
+  //     const cards = cardRefs.current;
 
-//     cardsContainer.style.setProperty("--cards-count", cards.length);
-//     cardsContainer.style.setProperty(
-//       "--card-height",
-//       `${cards[0].clientHeight}px`
-//     );
+  //     cardsContainer.style.setProperty("--cards-count", cards.length);
+  //     cardsContainer.style.setProperty(
+  //       "--card-height",
+  //       `${cards[0].clientHeight}px`
+  //     );
 
-//     cards.forEach((card, index) => {
-//       const offsetTop = 20 + index * 20;
-//       card.style.paddingTop = `${offsetTop}px`;
+  //     cards.forEach((card, index) => {
+  //       const offsetTop = 20 + index * 20;
+  //       card.style.paddingTop = `${offsetTop}px`;
 
-//       if (index === cards.length - 1) return;
+  //       if (index === cards.length - 1) return;
 
-//       const toScale = 1 - (cards.length - 1 - index) * 0.1;
-//       const nextCard = cards[index + 1];
-//       const cardInner = card.querySelector(".card__inner");
+  //       const toScale = 1 - (cards.length - 1 - index) * 0.1;
+  //       const nextCard = cards[index + 1];
+  //       const cardInner = card.querySelector(".card__inner");
 
-//       ScrollObserver.Element(nextCard, {
-//         offsetTop,
-//         offsetBottom: window.innerHeight - card.clientHeight,
-//       }).onScroll(({ percentageY }) => {
-//         cardInner.style.scale = valueAtPercentage({
-//           from: 1,
-//           to: toScale,
-//           percentage: percentageY,
-//         });
+  //       ScrollObserver.Element(nextCard, {
+  //         offsetTop,
+  //         offsetBottom: window.innerHeight - card.clientHeight,
+  //       }).onScroll(({ percentageY }) => {
+  //         cardInner.style.scale = valueAtPercentage({
+  //           from: 1,
+  //           to: toScale,
+  //           percentage: percentageY,
+  //         });
 
-//         cardInner.style.filter = `brightness(${valueAtPercentage({
-//           from: 1,
-//           to: 0.6,
-//           percentage: percentageY,
-//         })})`;
-//       });
-//     });
-//   }, []);
+  //         cardInner.style.filter = `brightness(${valueAtPercentage({
+  //           from: 1,
+  //           to: 0.6,
+  //           percentage: percentageY,
+  //         })})`;
+  //       });
+  //     });
+  //   }, []);
 
   return (
-    <div style={{backgroundColor:"#0B1C23",paddingTop:"20px"}}>
+    <div style={{ backgroundColor: "#0B1C23", paddingTop: "20px" }}>
       <NavBar />
       <main className={styles.page}>
+        <div className={styles.animatedGrid}></div>
         <section className={`${styles.section_1} ${styles.section}`}>
           <div className={styles.head}>
             <h1>
@@ -917,12 +918,12 @@ export default function Home() {
           </div>
           <div className={styles.scaleGif}></div>
         </section>
-                    <div className="" style={{marginTop: '20px'}}>
-  < ScrollingCards/>
-</div>
+        <div className="" style={{ marginTop: '20px' }}>
+          < ScrollingCards />
+        </div>
         {/* <section className={`${styles.section_2} ${styles.section}`}> */}
-          {/* <div className={styles.body}> */}
-            {/* <p className={styles.text} id={styles.textSection_2}>
+        {/* <div className={styles.body}> */}
+        {/* <p className={styles.text} id={styles.textSection_2}>
               Ventriloc develops innovative data
               <br />
               solutions for humans in charge of
@@ -930,9 +931,9 @@ export default function Home() {
               making informed decisions.
             </p> */}
 
-            {/* <div className={styles.video} >
+        {/* <div className={styles.video} >
              <div className={styles.vid}> */}
-  {/* <div
+        {/* <div
     className="pretty-card"
     style={{
       background: 'white',
@@ -1010,13 +1011,13 @@ export default function Home() {
       </div>
     </div>
   </div> */}
-{/* </div>
+        {/* </div>
 
             </div> */}
 
-          {/* </div> */}
-          
-           {/* <svg
+        {/* </div> */}
+
+        {/* <svg
             className={styles.svgSection2}
             width="1440"
             height="709"
@@ -1079,17 +1080,17 @@ export default function Home() {
             ></path>
           </svg> */}
         {/* </section> */}
-        
+
         <section className={`${styles.section_3} ${styles.section}`}>
-       
+
 
           <div className={styles.head}>
             <p>Services</p>
             <h2>
-              <span className={styles.span1} style={{zIndex:'50 !important' }}>We make the</span>
-              <span className={styles.span2} style={{zIndex:'50 !important' }}>complex things</span>
-              <span className={styles.span2} style={{ color: "#2996a7",paddingTop: "1.2rem",zIndex:'10 !important' }}>
-                 <span>simple</span>.
+              <span className={styles.span1} style={{ zIndex: '50 !important' }}>We make the</span>
+              <span className={styles.span2} style={{ zIndex: '50 !important' }}>complex things</span>
+              <span className={styles.span2} style={{ color: "#2996a7", paddingTop: "1.2rem", zIndex: '10 !important' }}>
+                <span>simple</span>.
               </span>
               <svg
                 class="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100"
@@ -1118,33 +1119,43 @@ export default function Home() {
               </svg>
             </h2>
           </div>
+
+          {/* ---------------------------------------------- */}
+
           <div className={styles.body}>
-            <div className={styles.card} >
-              <div   className={styles.centerDiv}> <div
-      style={{
-        width: "220px",
-        height: "200px",
-        overflow: "hidden", // keep box fixed
-      }}
-      className={styles.videoContainer}
-    >
-      <video
-        src="/j/3.mp4"
-        loop
-        autoPlay
-        muted
-        playsInline
-        style={{
-          width: "100%",         // fill container
-          height: "100%",        // fill container
-          transform: "scale(1.2)", // zoom in
-          transformOrigin: "center",
-        }}
-        
-        className="videosmargin"
-      />
-    </div>
-    </div>
+            {/* Card 1 */}
+            <div className={`${styles.card} ${styles.extraClass}`}>
+              {/* <div className={styles.centerDiv}>
+                <div
+                  style={{
+                    width: "220px",
+                    height: "200px",
+                    overflow: "hidden", // keep box fixed
+                  }}
+                  className={styles.videoContainer}
+                >
+                  <video
+                    src="/j/3.mp4"
+                    loop
+                    autoPlay
+                    muted
+                    playsInline
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      transform: "scale(1.2)",
+                      transformOrigin: "center",
+                    }}
+                    className="videosmargin"
+                  />
+                </div>
+              </div> */}
+              <object
+                type="image/svg+xml"
+                data="/svgs/1.svg"
+                className={styles.svgElementMobile}
+                aria-label="Animated SVG"
+              />
               <div className={styles.title}>
                 <h3>
                   <span>Clouds</span> Services
@@ -1152,7 +1163,7 @@ export default function Home() {
                 <p>Together, we maximize the value of your data.</p>
                 <div className={styles.hr}></div>
                 <svg
-                  class="pb-row-services__service__icon z-1000"
+                  className="pb-row-services__service__icon z-1000" // ✅ use className instead of class
                   width="12"
                   height="12"
                   viewBox="0 0 12 12"
@@ -1167,31 +1178,39 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className={styles.card}>
-     <div   className={styles.centerDiv}>         <div
-      style={{
-        width: "220px",
-        height: "200px",
-        overflow: "hidden", // keep box fixed
-      }}
-    >
-      <video
-        src="/j/1.mp4"
-        loop
-        autoPlay
-        muted
-        playsInline
-        style={{
-          width: "100%",         // fill container
-          height: "100%",        // fill container
-          transform: "scale(1.5)", // zoom in
-          transformOrigin: "center",
-          
-        }}
-        className="videosmargin"
-      />
-    </div> 
-    </div> 
+
+            {/* Card 2 */}
+            <div className={`${styles.card} ${styles.extraClass}`}>
+              {/* <div className={styles.centerDiv}>
+                <div
+                  style={{
+                    width: "220px",
+                    height: "200px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <video
+                    src="/j/1.mp4"
+                    loop
+                    autoPlay
+                    muted
+                    playsInline
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      transform: "scale(1.5)",
+                      transformOrigin: "center",
+                    }}
+                    className="videosmargin"
+                  />
+                </div>
+              </div> */}
+              <object
+                type="image/svg+xml"
+                data="/svgs/3.svg"
+                className={styles.svgElementMobile}
+                aria-label="Animated SVG"
+              />
               <div className={styles.title}>
                 <h3>
                   <span>Integration</span> Services
@@ -1199,7 +1218,7 @@ export default function Home() {
                 <p>Together, we retrieve value from your data.</p>
                 <div className={styles.hr}></div>
                 <svg
-                  class="pb-row-services__service__icon z-1000"
+                  className="pb-row-services__service__icon z-1000"
                   width="12"
                   height="12"
                   viewBox="0 0 12 12"
@@ -1214,38 +1233,47 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <div className={styles.card}>
-          <div  className={styles.centerDiv}>      <div
-      style={{
-        width: "220px",
-        height: "200px",
-        overflow: "hidden", // keep box fixed
-      }}
-    >
-      <video
-        src="/j/2.mp4"
-        loop
-        autoPlay
-        muted
-        playsInline
-        style={{
-          width: "100%",         // fill container
-          height: "100%",        // fill container
-          transform: "scale(1.4)", // zoom in
-          transformOrigin: "center",
-        }}
-        className="videosmargin"
-      />
-    </div>
-    </div>
+
+            {/* Card 3 */}
+            <div className={`${styles.card} ${styles.extraClass}`}>
+              {/* <div className={styles.centerDiv}>
+                <div
+                  style={{
+                    width: "220px",
+                    height: "200px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <video
+                    src="/j/2.mp4"
+                    loop
+                    autoPlay
+                    muted
+                    playsInline
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      transform: "scale(1.4)",
+                      transformOrigin: "center",
+                    }}
+                    className="videosmargin"
+                  />
+                </div>
+              </div> */}
+              <object
+                type="image/svg+xml"
+                data="/svgs/2.svg"
+                className={styles.svgElementMobile}
+                aria-label="Animated SVG"
+              />
               <div className={styles.title}>
                 <h3>
-                  <span>Security</span> services
+                  <span>Security</span> Services
                 </h3>
                 <p>Together, we visualize value from your data.</p>
                 <div className={styles.hr}></div>
                 <svg
-                  class="pb-row-services__service__icon z-1000"
+                  className="pb-row-services__service__icon z-1000"
                   width="12"
                   height="12"
                   viewBox="0 0 12 12"
@@ -1260,43 +1288,47 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            
-            <div className={styles.card}>
-              <div   className={styles.centerDiv}>
 
-               <div
-      style={{
-        width: "220px",
-        height: "200px",
-        overflow: "hidden", // keep box fixed
-      }}
-    >
-      <video
-        src="/j/4.mp4"
-        loop
-        autoPlay
-        muted
-        playsInline
-        style={{
-          width: "100%",         // fill container
-          height: "100%",        // fill container
-          transform: "scale(1)", // zoom in
-          transformOrigin: "center",
-        }}
-        
-        className="videosmargin"
-      />
-    </div>
-    </div>
-              
-             <div className={styles.title}>
+            {/* Card 4 */}
+            <div className={`${styles.card} ${styles.extraClass}`}>
+              {/* <div className={styles.centerDiv}>
+                <div
+                  style={{
+                    width: "220px",
+                    height: "200px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <video
+                    src="/j/4.mp4"
+                    loop
+                    autoPlay
+                    muted
+                    playsInline
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      transform: "scale(1)",
+                      transformOrigin: "center",
+                    }}
+                    className="videosmargin"
+                  />
+                </div>
+              </div> */}
+              <object
+                type="image/svg+xml"
+                data="/svgs/4.svg"
+                className={styles.svgElementMobile}
+                aria-label="Animated SVG"
+              />
+              <div className={styles.title}>
                 <h3>
                   <span>Product</span> Development
                 </h3>
                 <p>Together, we maximize the value of your data.</p>
                 <div className={styles.hr}></div>
                 <svg
-                  class="pb-row-services__service__icon z-1000"
+                  className="pb-row-services__service__icon z-1000"
                   width="12"
                   height="12"
                   viewBox="0 0 12 12"
@@ -1313,6 +1345,8 @@ export default function Home() {
             </div>
           </div>
 
+
+          {/* ---------------------------------------------- */}
 
           <div className={styles.partner}>
             <h2>Trusted partner of</h2>
@@ -1735,7 +1769,7 @@ export default function Home() {
           </div>
         </section>
         <section className={`${styles.section_5} ${styles.section}`}>
-     
+
           <div className={styles.sticky} >
             <div className={styles.cards} >
               <div className={styles.cardSticky}>
@@ -2121,14 +2155,14 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
           {/* hdhhhhhhdhd */}
-{/* here i want when i scroll to this area then scrolling should stop and that this component should 
+          {/* here i want when i scroll to this area then scrolling should stop and that this component should 
 show its logic of matrix scorlling of text */}
-{/* ...existing code... */}
+          {/* ...existing code... */}
 
-<div className="textcust-pin-area" style={{marginTop: '20px'}}>
-  <TextCust />
-</div>
-{/* ...existing code... */}
+          <div className="textcust-pin-area" style={{ marginTop: '20px' }}>
+            <TextCust />
+          </div>
+          {/* ...existing code... */}
 
           <div className={styles.faq} >
             <div className={styles.left}>
@@ -2142,9 +2176,8 @@ show its logic of matrix scorlling of text */}
               {questions.map((item, index) => (
                 <button
                   key={index}
-                  className={`${styles.question} ${
-                    activeIndex === index ? styles.active : ""
-                  }`}
+                  className={`${styles.question} ${activeIndex === index ? styles.active : ""
+                    }`}
                   onClick={() => handleQuestionClick(index)}
                 >
                   <div className={styles.head}>
@@ -2237,7 +2270,7 @@ show its logic of matrix scorlling of text */}
             </div>
           </div>
         </section>
-        <section  className={`${styles.section_7} ${styles.section}`}>
+        <section className={`${styles.section_7} ${styles.section}`}>
           <div className={styles.container}>
             <h3>
               To make <span>good</span>
