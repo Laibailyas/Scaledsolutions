@@ -113,7 +113,6 @@ export default function SuccessStoriesSection() {
           </p>
 
           {/* ---------------- VIDEO STORIES ---------------- */}
-          <h3 className="story-section-title">🎬 Video Success Stories</h3>
           {videoStories.map((story, index) => (
             <div key={index} className="story-block">
               <div
