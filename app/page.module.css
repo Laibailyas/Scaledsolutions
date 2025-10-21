@@ -1713,8 +1713,8 @@
 .animatedGrid {
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 80px 80px;
   animation: gridMove 30s linear infinite;
   z-index: 0;
@@ -1725,6 +1725,7 @@
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 80px 80px;
   }
