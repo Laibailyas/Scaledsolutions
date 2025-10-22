@@ -925,128 +925,136 @@ export default function Home() {
 
           <div className={styles.body}>
             {/* Card 1 */}
-            <div className={`${styles.card} ${styles.extraClass}`}>
-              <object
-                type="image/svg+xml"
-                data="/svgs/1.svg"
-                className={styles.svgElementMobile}
-                aria-label="Animated SVG"
-              />
-              <div className={styles.title}>
-                <h3>
-                  <span>Clouds</span> Services
-                </h3>
-                <p>Together, we maximize the value of your data.</p>
-                <div className={styles.hr}></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000" // ✅ use className instead of class
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
+            <Link href="/cloudservices">
+              <div className={`${styles.card} ${styles.extraClass}`}>
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/1.svg"
+                  className={styles.svgElementMobile}
+                  aria-label="Animated SVG"
+                />
+                <div className={styles.title}>
+                  <h3>
+                    <span>Clouds</span> Services
+                  </h3>
+                  <p>Together, we maximize the value of your data.</p>
+                  <div className={styles.hr}></div>
+                  <svg
+                    className="pb-row-services__service__icon z-1000" // ✅ use className instead of class
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 2 */}
-            <div className={`${styles.card} ${styles.extraClass}`}>
-              <object
-                type="image/svg+xml"
-                data="/svgs/3.svg"
-                className={styles.svgElementMobile}
-                aria-label="Animated SVG"
-              />
-              <div className={styles.title}>
-                <h3>
-                  <span>Integration</span> Services
-                </h3>
-                <p>Together, we retrieve value from your data.</p>
-                <div className={styles.hr}></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
+            <Link href="/integrationservices">
+              <div className={`${styles.card} ${styles.extraClass}`}>
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/3.svg"
+                  className={styles.svgElementMobile}
+                  aria-label="Animated SVG"
+                />
+                <div className={styles.title}>
+                  <h3>
+                    <span>Integration</span> Services
+                  </h3>
+                  <p>Together, we retrieve value from your data.</p>
+                  <div className={styles.hr}></div>
+                  <svg
+                    className="pb-row-services__service__icon z-1000"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 3 */}
-            <div className={`${styles.card} ${styles.extraClass}`}>
-              <object
-                type="image/svg+xml"
-                data="/svgs/2.svg"
-                className={styles.svgElementMobile}
-                aria-label="Animated SVG"
-              />
-              <div className={styles.title}>
-                <h3>
-                  <span>Security</span> Services
-                </h3>
-                <p>Together, we visualize value from your data.</p>
-                <div className={styles.hr}></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
+            <Link href="">
+              <div className={`${styles.card} ${styles.extraClass}`}>
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/2.svg"
+                  className={styles.svgElementMobile}
+                  aria-label="Animated SVG"
+                />
+                <div className={styles.title}>
+                  <h3>
+                    <span>Security</span> Services
+                  </h3>
+                  <p>Together, we visualize value from your data.</p>
+                  <div className={styles.hr}></div>
+                  <svg
+                    className="pb-row-services__service__icon z-1000"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 4 */}
-            <div className={`${styles.card} ${styles.extraClass}`}>
-              <object
-                type="image/svg+xml"
-                data="/svgs/4.svg"
-                className={styles.svgElementMobile}
-                aria-label="Animated SVG"
-              />
-              <div className={styles.title}>
-                <h3>
-                  <span>Product</span> Development
-                </h3>
-                <p>Together, we maximize the value of your data.</p>
-                <div className={styles.hr}></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
+            <Link href="/productdevelopment">
+              <div className={`${styles.card} ${styles.extraClass}`}>
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/4.svg"
+                  className={styles.svgElementMobile}
+                  aria-label="Animated SVG"
+                />
+                <div className={styles.title}>
+                  <h3>
+                    <span>Product</span> Development
+                  </h3>
+                  <p>Together, we maximize the value of your data.</p>
+                  <div className={styles.hr}></div>
+                  <svg
+                    className="pb-row-services__service__icon z-1000"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
 
