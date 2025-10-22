@@ -793,6 +793,10 @@
   transform: translateY(0);
 }
 
+.menuServices .body a object{
+  pointer-events: none;
+}
+
 .menuServices .body .card {
   display: flex;
   background-color: #061E27;

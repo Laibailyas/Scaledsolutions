@@ -2,7 +2,6 @@
 import NavBar from "../components/NavBar";
 import NewFooter from "../components/NewFooter";
 import "./services.css";
-import Link from 'next/link';
 
 export default function ServicesPage() {
   return (
@@ -303,139 +302,134 @@ export default function ServicesPage() {
         <h3>Cloud <span className="highlight">Migration</span></h3>
         <div className='card-wrapper'>
           {/* Card 1 */}
-          <Link href="/en/cloudservices">
-            <div className="card">
-              <object
-                type="image/svg+xml"
-                data="/svgs/1.svg"
-                className="svgElementMobile"
-                aria-label="Animated SVG"
-              />
-              <div className="title">
-                <h3>
-                  <span>Clouds</span> Services
-                </h3>
-                <p>Together, we maximize the value of your data.</p>
-                <div className="hr"></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000" // ✅ use className instead of class
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
+          <div className="card">
+            <img
+              src="/integration/portfolio.jpg"
+              alt="Portfolio Analysis"
+              className="strategy-image"
+            />
+            <div className="title">
+              <h3>
+                <span>Portfolio </span> 
+                Analysis
+              </h3>
+              <p>Assess which applications should
+                be rehosted, refactored, replaced,
+                or retired</p>
+              <div className="hr"></div>
+              <svg
+                className="pb-row-services__service__icon z-1000" // ✅ use className instead of class
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
             </div>
-          </Link>
+          </div>
 
           {/* Card 2 */}
-          <Link href="/en/integrationservices">
-            <div className="card">
-              <object
-                type="image/svg+xml"
-                data="/svgs/3.svg"
-                className="svgElementMobile"
-                aria-label="Animated SVG"
-              />
-              <div className="title">
-                <h3>
-                  <span>Integration</span> Services
-                </h3>
-                <p>Together, we retrieve value from your data.</p>
-                <div className="hr"></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
+          <div className="card">
+            <img
+              src="/integration/migration.jpg"
+              alt="Migration"
+              className="strategy-image"
+            />
+            <div className="title">
+              <h3>
+                <span>Data </span>Migration
+              </h3>
+              <p>Plan and execute secure, efficient
+                data transfers to cloud
+                environments</p>
+              <div className="hr"></div>
+              <svg
+                className="pb-row-services__service__icon z-1000"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
             </div>
-          </Link>
+          </div>
 
           {/* Card 3 */}
-          <Link href="#">
-
-            <div className="card">
-              <object
-                type="image/svg+xml"
-                data="/svgs/2.svg"
-                className="svgElementMobile"
-                aria-label="Animated SVG"
-              />
-              <div className="title">
-                <h3>
-                  <span>Security</span> Services
-                </h3>
-                <p>Together, we visualize value from your data.</p>
-                <div className="hr"></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
+          <div className="card">
+            <img
+              src="/integration/minimal.jpg"
+              alt="Minimal Disruption"
+              className="strategy-image"
+            />
+            <div className="title">
+              <h3>
+                <span>Minimal </span>Disruption
+              </h3>
+              <p>Implement transitions with
+                reduced downtime and business
+                impact</p>
+              <div className="hr"></div>
+              <svg
+                className="pb-row-services__service__icon z-1000"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
             </div>
-          </Link>
+          </div>
 
           {/* Card 4 */}
-          <Link href="/en/productdevelopment">
-            <div className="card">
-              <object
-                type="image/svg+xml"
-                data="/svgs/4.svg"
-                className="svgElementMobile"
-                aria-label="Animated SVG"
-              />
-              <div className="title">
-                <h3>
-                  <span>Product</span> Development
-                </h3>
-                <p>Together, we maximize the value of your data.</p>
-                <div className="hr"></div>
-                <svg
-                  className="pb-row-services__service__icon z-1000"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
+          <div className="card">
+            <img
+              src="/integration/legacy2.jpg"
+              alt="Legacy System"
+              className="strategy-image"
+            />
+            <div className="title">
+              <h3>
+                <span>Legacy </span>System
+              </h3>
+              <p>Transform outdated systems into
+                cloud-native applications</p>
+              <div className="hr"></div>
+              <svg
+                className="pb-row-services__service__icon z-1000"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
             </div>
-          </Link>
+          </div>
         </div>
-      </section >
+      </section>
 
 
 

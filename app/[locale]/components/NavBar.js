@@ -256,20 +256,7 @@ function NavBar() {
         <div className={styles.backSection}
           onMouseLeave={() => setMenuServices(false)} // close when mouse leaves
         >
-          {/* <figure className={styles.figureSvg}>
-            <svg
-              width="243"
-              height="526"
-              viewBox="0 0 243 526"
-              fill="#0B1C23"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M86.8975 274.745C81.9629 272.26 76.1857 269.774 76.1857 262.92C76.1857 256.065 81.9629 253.58 86.8975 251.095C144.829 227.404 184.908 206.079 210.022 166.354C232.529 130.799 243 80.5315 243 0H134.679C139.614 73.5566 132.874 127.552 113.296 166.354C91.7519 209.125 54.4814 233.337 0 244.962V281.038C54.4814 292.663 91.7519 316.875 113.296 359.646C132.874 398.448 139.614 452.443 134.679 526H243C243 445.469 232.529 395.201 210.022 359.646C184.908 319.56 144.829 298.235 86.8975 274.745Z"
-                fill="#0B1C23"
-              ></path>
-            </svg>
-          </figure> */}
+
           <div ></div>
           <div style={{ borderRadius: '1px white ' }} className={styles.contact}>
             <h3>Let&apos;s work together</h3>
@@ -277,100 +264,93 @@ function NavBar() {
           </div>
         </div>
         <div className={styles.body} style={{ backgroundColor: "#0B1C23" }}>
-          <div className={styles.card} >
-            <h3 className={styles.headText} >
-              <span>
-                <span>Clouds</span> Services
-              </span>
-              {/* <span>Power BI Experts</span> */}
-            </h3>
+          <Link href="/en/cloudservices">
+            <div className={styles.card} >
+              <h3 className={styles.headText} >
+                <span>
+                  <span>Clouds</span> Services
+                </span>
+                {/* <span>Power BI Experts</span> */}
+              </h3>
 
-            <div
+              <div
 
-            // className={styles.videoDiv}
-            >
-              <div>
-                {/* <object 
-    type="image/svg+xml" 
-    data="/videos/cloud_f_transparent_optimized.webp" 
-    width={150} 
-    height={150} 
-    aria-label="Logo"
-  >
-    Logo
-  </object> */}
+              >
+                <div>
 
+
+                  <object
+                    type="image/svg+xml"
+                    data="/svgs/1.svg"
+                    className={styles.svgElementsp}
+                    aria-label="Animated SVG"
+                  />
+
+
+                </div>
+
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/en/integrationservices">
+            <div className={styles.card}>
+              <h3 className={styles.headText}>
+                <span>Integration</span> Services
+              </h3>
+
+              <div
+                className={styles.videoDiv}
+              >
                 <object
                   type="image/svg+xml"
-                  data="/svgs/1.svg"
-                  className={styles.svgElementsp}
+                  data="/svgs/3.svg"
+                  className={styles.svgElement}
                   aria-label="Animated SVG"
                 />
 
 
               </div>
-
             </div>
-          </div>
-          <div className={styles.card}>
-            <h3 className={styles.headText}>
-              <span>Integration</span> Services
-            </h3>
+          </Link>
+          <Link href="">
+            <div className={styles.card} >
+              <h3 className={styles.headText}>
+                <span>Security</span> services
+              </h3>
 
-            <div
-              className={styles.videoDiv}
-            >
-              <object
-                type="image/svg+xml"
-                data="/svgs/3.svg"
-                className={styles.svgElement}
-                aria-label="Animated SVG"
-              />
+              <div
 
-
+                className={styles.videoDiv}
+              >
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/2.svg"
+                  className={styles.svgElement}
+                  aria-label="Animated SVG"
+                />
+              </div>
             </div>
-          </div>
-          <div className={styles.card} >
-            <h3 className={styles.headText}>
-              <span>Security</span> services
-            </h3>
+          </Link>
+          <Link href="/en/productdevelopment">
+            <div className={styles.card}>
+              <h3 className={styles.headText} >
+                <span id="yesboss" >Product</span> Development
+              </h3>
+              <div
+                className={styles.videoDiv}
+              >
 
-            <div
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/4.svg"
+                  className={styles.svgElement}
+                  aria-label="Animated SVG"
+                />
 
-              className={styles.videoDiv}
-            >
-              <object
-                type="image/svg+xml"
-                data="/svgs/2.svg"
-                className={styles.svgElement}
-                aria-label="Animated SVG"
-              />
+              </div>
             </div>
-          </div>
-          <div className={styles.card}>
-            <h3 className={styles.headText} >
-              <span id="yesboss" >Product</span> Development
-            </h3>
-            <div
-              className={styles.videoDiv}
-            >
-
-              <object
-                type="image/svg+xml"
-                data="/svgs/4.svg"
-                className={styles.svgElement}
-                aria-label="Animated SVG"
-              />
-
-            </div>
-          </div>
-          {/* Duplicate card 2 */}
-          {/* <div className={styles.card}>
-            <h3 className={styles.headText}>
-              <span>Security</span> Services
-            </h3>
-            <img src={menuNavServices_Img_1} alt="Data Integration" />
-          </div> */}
+          </Link>
         </div>
       </menu>
       <menu
