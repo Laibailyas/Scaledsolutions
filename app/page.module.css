@@ -257,6 +257,14 @@
   gap: 1rem;
 }
 
+.section_3 .body>a{
+  display: flex;
+}
+
+.section_3  .body .card object{
+  pointer-events: none;
+}
+
 .section_3 .body .card {
   width: 100%;
   border: 1px solid #2996a7;
@@ -1708,6 +1716,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+
 
 /* === Elegant Animated Grid Background === */
 .animatedGrid {
