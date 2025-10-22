@@ -354,35 +354,37 @@ export default function ServicesPage() {
           </Link>
 
           {/* Card 3 */}
-          <div className="card">
-            <object
-              type="image/svg+xml"
-              data="/svgs/2.svg"
-              className="svgElementMobile"
-              aria-label="Animated SVG"
-            />
-            <div className="title">
-              <h3>
-                <span>Security</span> Services
-              </h3>
-              <p>Together, we visualize value from your data.</p>
-              <div className="hr"></div>
-              <svg
-                className="pb-row-services__service__icon z-1000"
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
+          <Link href="">
+            <div className="card">
+              <object
+                type="image/svg+xml"
+                data="/svgs/2.svg"
+                className="svgElementMobile"
+                aria-label="Animated SVG"
+              />
+              <div className="title">
+                <h3>
+                  <span>Security</span> Services
+                </h3>
+                <p>Together, we visualize value from your data.</p>
+                <div className="hr"></div>
+                <svg
+                  className="pb-row-services__service__icon z-1000"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* Card 4 */}
           <Link href="/en/productdevelopment">

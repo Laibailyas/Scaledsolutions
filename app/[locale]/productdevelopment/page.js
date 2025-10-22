@@ -55,13 +55,19 @@ export default function ServicesPage() {
 
             <div>
               <ul className="gradient-icon-list">
-                <li><a href="#sec1"><img src="/bullet-icons/api.png" alt="Cloud Strategy" />API Development</a></li>
-                <li><a href="#sec2"><img src="/bullet-icons/app.png" alt="Cloud Strategy" />Enterprise Application</a></li>
-                <li><a href="#sec3"><img src="/bullet-icons/data.png" alt="Cloud Strategy" />Data Integration</a></li>
-                <li><a href="#sec4"><img src="/bullet-icons/legacy.png" alt="Cloud Strategy" />Legacy System</a></li>
-                <li><a href="#sec5"><img src="/bullet-icons/middle.png" alt="Cloud Strategy" />Middleware Implementation</a></li>
-                <li><a href="#sec6"><img src="/bullet-icons/migration.png" alt="Cloud Strategy" />Cloud Migration</a></li>
+                <li><a href="#sec1"><img src="/bullet-icons/strategy.png" alt="Align Product Vision" />Align Product Vision</a></li>
+                <li><a href="#sec2"><img src="/bullet-icons/analysis.png" alt="Product Feasibility" />Product Feasibility Analysis</a></li>
+                <li><a href="#sec3"><img src="/bullet-icons/requirements.png" alt="Product Requirements" />Product Requirements & Metrics</a></li>
+                <li><a href="#sec4"><img src="/bullet-icons/design.png" alt="Product Design" />Product Design & Prototype</a></li>
+                <li><a href="#sec5"><img src="/bullet-icons/development.png" alt="Product Development" />Product Development</a></li>
+                <li><a href="#sec6"><img src="/bullet-icons/innovation.png" alt="Tech Innovation" />Tech Innovation & Scalability</a></li>
+                <li><a href="#sec7"><img src="/bullet-icons/testing.png" alt="Product Testing" />Product Validation & Testing</a></li>
+                <li><a href="#sec8"><img src="/bullet-icons/monitor.png" alt="Product Launch" />Product Launch & Monitoring</a></li>
+                <li><a href="#sec9"><img src="/bullet-icons/improvement.png" alt="Continuous Improvement" />Continuous Improvement & Iteration</a></li>
+                <li><a href="#sec10"><img src="/bullet-icons/innovation2.png" alt="Continuous Innovation" />Drive Continuous Innovation</a></li>
+                <li><a href="#sec11"><img src="/bullet-icons/migration.png" alt="Cloud Migration" />Cloud Migration</a></li>
               </ul>
+
             </div>
 
           </div>
@@ -221,7 +227,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec6">
         <div className="section-heading section-wrapper">
           <h2>
-            Implement <span className="highlight">Tech Innovation <br /></span>and Scalability Strategy 
+            Implement <span className="highlight">Tech Innovation <br /></span>and Scalability Strategy
           </h2>
         </div>
 
@@ -251,7 +257,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec7">
         <div className="section-heading section-wrapper">
           <h2>
-            Conduct <span className="highlight">Validation, Testing,<br /></span> and Go-to-Market Preparation 
+            Conduct <span className="highlight">Validation, Testing,<br /></span> and Go-to-Market Preparation
           </h2>
         </div>
 
@@ -309,7 +315,7 @@ export default function ServicesPage() {
         <div className="section-heading section-wrapper">
           <h2>
             Continuous <span className="highlight">Improvement <br /></span>
-          and Iteration</h2>
+            and Iteration</h2>
         </div>
 
         <div className="strategy-container section-wrapper">
@@ -433,35 +439,37 @@ export default function ServicesPage() {
           </Link>
 
           {/* Card 3 */}
-          <div className="card">
-            <object
-              type="image/svg+xml"
-              data="/svgs/2.svg"
-              className="svgElementMobile"
-              aria-label="Animated SVG"
-            />
-            <div className="title">
-              <h3>
-                <span>Security</span> Services
-              </h3>
-              <p>Together, we visualize value from your data.</p>
-              <div className="hr"></div>
-              <svg
-                className="pb-row-services__service__icon z-1000"
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
+          <Link href="">
+            <div className="card">
+              <object
+                type="image/svg+xml"
+                data="/svgs/2.svg"
+                className="svgElementMobile"
+                aria-label="Animated SVG"
+              />
+              <div className="title">
+                <h3>
+                  <span>Security</span> Services
+                </h3>
+                <p>Together, we visualize value from your data.</p>
+                <div className="hr"></div>
+                <svg
+                  className="pb-row-services__service__icon z-1000"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* Card 4 */}
           <Link href="/en/productdevelopment">

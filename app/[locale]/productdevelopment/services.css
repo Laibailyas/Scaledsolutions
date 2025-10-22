@@ -169,6 +169,10 @@
   .right-column p {
     max-width: 100%;
   }
+
+  .right-column {
+    gap: 2rem;
+  }
 }
 
 
@@ -527,34 +531,35 @@
   font-size: 1.125rem;
 }
 
-.services-container{
+.services-container {
   align-items: stretch;
 }
 
-.right-column{
+.right-column {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
 }
 
-.right-column>div:nth-child(2){
+.right-column>div:nth-child(2) {
   flex: 1;
   display: flex;
   align-items: center;
+  margin-top: 2rem;
 }
 
 
-.gradient-icon-list li a{
+.gradient-icon-list li a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.gradient-icon-list li a img{
+.gradient-icon-list li a img {
   width: 40px;
 }
 
-.card-wrapper>a{
+.card-wrapper>a {
   display: flex;
 }
 
