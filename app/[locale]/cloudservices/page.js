@@ -80,7 +80,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="strategy">
         <div className="section-heading section-wrapper">
           <h2>
-            Cloud <span className="highlight">strategy <br></br></span> &amp; advisory
+            Cloud <span className="highlight">strategy </span> &amp; advisory
           </h2>
         </div>
 
@@ -133,7 +133,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="architecture">
         <div className="section-heading section-wrapper">
           <h2>
-            Cloud <span className="highlight">Architecture &amp;<br></br></span>Implementation
+            Cloud <span className="highlight">Architecture &amp;</span>Implementation
           </h2>
         </div>
 
@@ -177,7 +177,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="optimization">
         <div className="section-heading section-wrapper">
           <h2>
-            Cloud <span className="highlight">Optimization &amp;<br></br></span>Operations
+            Cloud <span className="highlight">Optimization &amp; </span>Operations
           </h2>
         </div>
 
@@ -220,7 +220,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="devSecOps">
         <div className="section-heading section-wrapper">
           <h2>
-            Cloud <span className="highlight">Infra &amp;<br></br></span>Application <span className="highlight">DevSecOps</span>
+            Cloud <span className="highlight">Infra &amp; </span>Application <span className="highlight">DevSecOps</span>
           </h2>
         </div>
 
@@ -264,7 +264,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="security">
         <div className="section-heading section-wrapper">
           <h2>
-            Cloud <span className="highlight">Security<br></br></span>Identity  <span className="highlight">Compliance</span>
+            Cloud <span className="highlight">Security </span>Identity  <span className="highlight">Compliance</span>
           </h2>
         </div>
 

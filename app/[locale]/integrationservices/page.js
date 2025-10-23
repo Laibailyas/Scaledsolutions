@@ -86,7 +86,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec1">
         <div className="section-heading section-wrapper">
           <h2>
-            API <span className="highlight">Development <br></br></span> &amp; Management
+            API <span className="highlight">Development </span> &amp; Management
           </h2>
         </div>
 
@@ -129,7 +129,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec2">
         <div className="section-heading section-wrapper">
           <h2>
-            Enterprise <span className="highlight">Application<br></br></span>&amp; <span className="highlight">Integration</span>
+            Enterprise <span className="highlight">Application </span>&amp; <span className="highlight">Integration</span>
           </h2>
         </div>
 
@@ -175,7 +175,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec3">
         <div className="section-heading section-wrapper">
           <h2>
-            Data <span className="highlight">Integration <br></br></span>&amp; Solutions
+            Data <span className="highlight">Integration </span>&amp; Solutions
           </h2>
         </div>
 
@@ -213,7 +213,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec4">
         <div className="section-heading section-wrapper">
           <h2>
-            Legacy <span className="highlight">System <br></br></span>&amp; Modernization
+            Legacy <span className="highlight">System </span>&amp; Modernization
           </h2>
         </div>
 
@@ -254,14 +254,14 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec5">
         <div className="section-heading section-wrapper">
           <h2>
-            Middleware <span className="highlight"><br></br></span>  <span className="highlight">Implementation</span>
+            Middleware <span className="highlight"> </span>  <span className="highlight">Implementation</span>
           </h2>
         </div>
 
         <div className="strategy-container section-wrapper">
           {/* LEFT SIDE */}
           <div className="strategy-left">
-            <h6>Our team implements and configures middleware
+            <p>Our team implements and configures middleware
               platforms that act as the backbone of enterprise
               integration. From message queues and service buses
               (like Azure Service Bus, RabbitMQ) to integration
@@ -269,7 +269,7 @@ export default function ServicesPage() {
               ensure reliable communication between applications
               and services. We also optimize middleware for high
               availability, performance monitoring, and secure
-              message handling.</h6>
+              message handling.</p>
           </div>
 
           {/* RIGHT SIDE */}

@@ -225,10 +225,10 @@
 .strategy-left ul {
   list-style: disc;
   padding-left: 1.5rem;
-  padding-right: 8rem;
+  padding-right: 1.5rem;
   color: #b8c4c6;
   line-height: 1.9;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   /* slightly larger for readability */
 }
 
@@ -236,6 +236,14 @@
   list-style: none;
   /* default bullet hatado */
   padding: 0;
+}
+
+@media (max-width: 768px) {
+
+  .strategy-left p,
+  .strategy-left ul {
+    font-size: 1.125rem;
+  }
 }
 
 .strategy-left li::before {

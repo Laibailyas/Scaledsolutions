@@ -80,7 +80,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec1">
         <div className="section-heading section-wrapper">
           <h2>
-            Align <span className="highlight">Product Vision <br /></span> with Business Strategy
+            Align <span className="highlight">Product Vision</span> with Business Strategy
           </h2>
         </div>
 
@@ -110,7 +110,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec2">
         <div className="section-heading section-wrapper">
           <h2>
-            Conduct <span className="highlight">Product Feasibility <br /></span> and Profitability Analysis
+            Conduct <span className="highlight">Product Feasibility </span> and Profitability Analysis
           </h2>
         </div>
 
@@ -139,7 +139,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec3">
         <div className="section-heading section-wrapper">
           <h2>
-            Define <span className="highlight">Product Requirements <br /></span> and Success Metrics
+            Define <span className="highlight">Product Requirements </span> and Success Metrics
           </h2>
         </div>
 
@@ -168,7 +168,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec4">
         <div className="section-heading section-wrapper">
           <h2>
-            Design and <span className="highlight">Prototype <br /> </span>the Product
+            Design and <span className="highlight">Prototype </span>the Product
           </h2>
         </div>
 
@@ -197,7 +197,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec5">
         <div className="section-heading section-wrapper">
           <h2>
-            Execute <span className="highlight">Product <br /></span>Development
+            Execute <span className="highlight">Product </span>Development
           </h2>
         </div>
 
@@ -226,7 +226,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec6">
         <div className="section-heading section-wrapper">
           <h2>
-            Implement <span className="highlight">Tech Innovation <br /></span>and Scalability Strategy
+            Implement <span className="highlight">Tech Innovation </span>and Scalability Strategy
           </h2>
         </div>
 
@@ -256,7 +256,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec7">
         <div className="section-heading section-wrapper">
           <h2>
-            Conduct <span className="highlight">Validation, Testing,<br /></span> and Go-to-Market Preparation
+            Conduct <span className="highlight">Validation, Testing,</span> and Go-to-Market Preparation
           </h2>
         </div>
 
@@ -284,7 +284,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec8">
         <div className="section-heading section-wrapper">
           <h2>
-            Launch and<span className="highlight"> Monitor <br /></span>
+            Launch and<span className="highlight"> Monitor </span>
           </h2>
         </div>
 
@@ -313,7 +313,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec9">
         <div className="section-heading section-wrapper">
           <h2>
-            Continuous <span className="highlight">Improvement <br /></span>
+            Continuous <span className="highlight">Improvement </span>
             and Iteration</h2>
         </div>
 
@@ -341,7 +341,7 @@ export default function ServicesPage() {
       <section className="strategy-section" id="sec10">
         <div className="section-heading section-wrapper">
           <h2>
-            Drive <span className="highlight">Continuous  <br /></span>Innovation
+            Drive <span className="highlight">Continuous </span>Innovation
           </h2>
         </div>
 
