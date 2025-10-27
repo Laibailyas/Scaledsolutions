@@ -62,11 +62,11 @@ export default function ServicesPage() {
 
             <div>
               <ul className="gradient-icon-list">
-                <li><a href="#sec1"><img src="/bullet-icons/api.png" alt="Cloud Strategy" />Data Ingestion</a></li>
-                <li><a href="#sec2"><img src="/bullet-icons/app.png" alt="Cloud Strategy" />Business Intelligence</a></li>
-                <li><a href="#sec3"><img src="/bullet-icons/data.png" alt="Cloud Strategy" />MLOps</a></li>
-                <li><a href="#sec4"><img src="/bullet-icons/legacy.png" alt="Cloud Strategy" />Intelligent Applications</a></li>
-                <li><a href="#sec5"><img src="/bullet-icons/middle.png" alt="Cloud Strategy" />Conclusion</a></li>
+                <li><a href="#sec1"><img src="/bullet-icons/migration.png" alt="Cloud Strategy" />Data Ingestion</a></li>
+                <li><a href="#sec2"><img src="/bullet-icons/monitor.png" alt="Cloud Strategy" />Business Intelligence</a></li>
+                <li><a href="#sec3"><img src="/bullet-icons/innovation.png" alt="Cloud Strategy" />MLOps</a></li>
+                <li><a href="#sec4"><img src="/bullet-icons/innovation2.png" alt="Cloud Strategy" />Intelligent Applications</a></li>
+                <li><a href="#sec5"><img src="/bullet-icons/testing.png" alt="Cloud Strategy" />Conclusion</a></li>
               </ul>
             </div>
 
