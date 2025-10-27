@@ -293,6 +293,26 @@ function NavBar() {
             </div>
           </Link>
 
+          <Link href="/en/aidataservices">
+            <div className={styles.card} >
+              <h3 className={styles.headText}>
+                <span>Ai & Data</span> Services
+              </h3>
+
+              <div
+
+                className={styles.videoDiv}
+              >
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/2.svg"
+                  className={styles.svgElement}
+                  aria-label="Animated SVG"
+                />
+              </div>
+            </div>
+          </Link>
+
           <Link href="/en/integrationservices">
             <div className={styles.card}>
               <h3 className={styles.headText}>
@@ -313,44 +333,7 @@ function NavBar() {
               </div>
             </div>
           </Link>
-          <Link href="">
-            <div className={styles.card} >
-              <h3 className={styles.headText}>
-                <span>Security</span> services
-              </h3>
 
-              <div
-
-                className={styles.videoDiv}
-              >
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/2.svg"
-                  className={styles.svgElement}
-                  aria-label="Animated SVG"
-                />
-              </div>
-            </div>
-          </Link>
-          <Link href="/en/productdevelopment">
-            <div className={styles.card}>
-              <h3 className={styles.headText} >
-                <span id="yesboss" >Product</span> Development
-              </h3>
-              <div
-                className={styles.videoDiv}
-              >
-
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/4.svg"
-                  className={styles.svgElement}
-                  aria-label="Animated SVG"
-                />
-
-              </div>
-            </div>
-          </Link>
         </div>
       </menu>
       <menu
