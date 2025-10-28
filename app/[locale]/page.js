@@ -1790,7 +1790,7 @@ show its logic of matrix scorlling of text */}
                     Business Intelligence — Case study — Power BI — July 3, 2023
                   </p>
                   <div className={styles.img}>
-                    <img src={'/Power-BI-report.webp'} alt="PowerBIReport" />
+                    <img src={'/Power-BI-report.jpg'} alt="PowerBIReport" />
                   </div>
                   <h3 className={styles.title}>
                     A Power BI report for the Fondation du Collège de Lévis Golf
@@ -1799,7 +1799,7 @@ show its logic of matrix scorlling of text */}
                 </div>
                 <div className={styles.right}>
                   <div className={styles.img}>
-                    <img src={'/Power-BI-report.webp'} alt="PowerBIReport" />
+                    <img src={'/Power-BI-report.jpg'} alt="PowerBIReport" />
                   </div>
                 </div>
               </div>

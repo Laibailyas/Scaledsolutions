@@ -264,6 +264,8 @@
 
 .section_3  .body .card object{
   pointer-events: none;
+  width: 80%;
+  margin: auto;
 }
 
 .section_3 .body .card {
@@ -1363,6 +1365,8 @@
 @media (max-width: 1500px) {
   .section_3 .body {
     /* grid-template-columns: repeat(4, 1fr); */
+    width: 81%;
+    margin: auto;
     grid-template-columns: repeat(3, 1fr);
   }
 
