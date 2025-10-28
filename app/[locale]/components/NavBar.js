@@ -273,23 +273,20 @@ function NavBar() {
                 {/* <span>Power BI Experts</span> */}
               </h3>
 
-              <div
 
-              >
-                <div>
+              <div className={styles.videoDiv}>
 
 
-                  <object
-                    type="image/svg+xml"
-                    data="/svgs/1.svg"
-                    className={styles.svgElementsp}
-                    aria-label="Animated SVG"
-                  />
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/1.svg"
+                  className={styles.svgElement}
+                  aria-label="Animated SVG"
+                />
 
-
-                </div>
 
               </div>
+
             </div>
           </Link>
 

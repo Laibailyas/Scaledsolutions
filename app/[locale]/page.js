@@ -958,6 +958,39 @@ export default function Home() {
             </Link>
 
             {/* Card 2 */}
+            <Link href="/aidataservices">
+              <div className={`${styles.card} ${styles.extraClass}`}>
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/2.svg"
+                  className={styles.svgElementMobile}
+                  aria-label="Animated SVG"
+                />
+                <div className={styles.title}>
+                  <h3>
+                    <span>Ai & Data</span> Services
+                  </h3>
+                  <p>Together, we visualize value from your data.</p>
+                  <div className={styles.hr}></div>
+                  <svg
+                    className="pb-row-services__service__icon z-1000"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* Card 3 */}
             <Link href="/integrationservices">
               <div className={`${styles.card} ${styles.extraClass}`}>
                 <object
@@ -990,41 +1023,10 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Card 3 */}
-            <Link href="">
-              <div className={`${styles.card} ${styles.extraClass}`}>
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/2.svg"
-                  className={styles.svgElementMobile}
-                  aria-label="Animated SVG"
-                />
-                <div className={styles.title}>
-                  <h3>
-                    <span>Security</span> Services
-                  </h3>
-                  <p>Together, we visualize value from your data.</p>
-                  <div className={styles.hr}></div>
-                  <svg
-                    className="pb-row-services__service__icon z-1000"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-            </Link>
+
 
             {/* Card 4 */}
-            <Link href="/productdevelopment">
+            {/* <Link href="/productdevelopment">
               <div className={`${styles.card} ${styles.extraClass}`}>
                 <object
                   type="image/svg+xml"
@@ -1054,7 +1056,7 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-            </Link>
+            </Link> */}
           </div>
 
 
@@ -1065,236 +1067,236 @@ export default function Home() {
             <div className={styles.marquee}>
               <div className={styles.marquee__inner}>
                 <div className={styles.marquee__part}>
-                  {/* <img src={"/SOLLIO_2.svg"} alt="SOLLIO" /> */}
+                  <img src={"/logos/abb.svg"} alt="abb" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
+                  <img src={"/logos/moment.svg"} alt="moment" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  {/* <img src={"/SOLLIO_2.svg"} alt="SOLLIO" /> */}
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
                 </div>
               </div>
               <div className={styles.marquee__inner}>
                 <div className={styles.marquee__part}>
-                  <img src={"/SOLLIO_2.svg"} alt="SOLLIO" />
+                  <img src={"/logos/abb.svg"} alt="abb" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
+                  <img src={"/logos/moment.svg"} alt="moment" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
                 </div>
               </div>
               <div className={styles.marquee__inner}>
                 <div className={styles.marquee__part}>
-                  <img src={"/SOLLIO_2.svg"} alt="SOLLIO" />
+                  <img src={"/logos/abb.svg"} alt="abb" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
+                  <img src={"/logos/moment.svg"} alt="moment" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
+                </div>
+              </div>
+              <div className={styles.marquee__inner}>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/abb.svg"} alt="abb" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/moment.svg"} alt="moment" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
                 </div>
               </div>
             </div>
             <div className={styles.marquee}>
               <div className={styles.marquee__inner}>
                 <div className={styles.marquee__part}>
-                  <img src={"/SOLLIO_2.svg"} alt="SOLLIO" />
+                  <img src={"/logos/abb.svg"} alt="abb" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
+                  <img src={"/logos/moment.svg"} alt="moment" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/SOLLIO_2.svg"} alt="SOLLIO" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
                 </div>
               </div>
               <div className={styles.marquee__inner}>
                 <div className={styles.marquee__part}>
-                  <img src={"/SOLLIO_2.svg"} alt="SOLLIO" />
+                  <img src={"/logos/abb.svg"} alt="abb" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
+                  <img src={"/logos/moment.svg"} alt="moment" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
                 </div>
               </div>
               <div className={styles.marquee__inner}>
                 <div className={styles.marquee__part}>
-                  <img src={"/SOLLIO_2.svg"} alt="SOLLIO" />
+                  <img src={"/logos/abb.svg"} alt="abb" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ABB_2.svg"} alt="ABB" />
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/AUBAINERIE_2.svg"} alt="AUBAINERIE" />
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BROMONT_2.svg"} alt="BROMONT" />
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/BRP_2.svg"} alt="BRP" />
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/DOYLE_2.svg"} alt="DOYLE" />
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/ANGELCARE_2.svg"} alt="ANGELCARE" />
+                  <img src={"/logos/moment.svg"} alt="moment" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/CASCADE_2.svg"} alt="CASCADE" />
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
                 </div>
                 <div className={styles.marquee__part}>
-                  <img src={"/SONEPAR_2.svg"} alt="SONEPAR" />
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
+                </div>
+              </div>
+              <div className={styles.marquee__inner}>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/abb.svg"} alt="abb" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/barclays.svg"} alt="barclays" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/cintas.svg"} alt="cintas" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/groupon.svg"} alt="groupon" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/knowles.svg"} alt="knowles" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/moment.svg"} alt="moment" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/nbc.svg"} alt="nbc" />
+                </div>
+                <div className={styles.marquee__part}>
+                  <img src={"/logos/replenium.svg"} alt="replenium" />
                 </div>
               </div>
             </div>
