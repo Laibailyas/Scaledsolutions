@@ -253,10 +253,13 @@
 
 .section_3 .body {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+
+
+
+
 
 .section_3 .body>a{
   display: flex;
@@ -395,6 +398,15 @@
   padding: 2rem;
   background-color: #fff;
   border-radius: 18px;
+  width: 165px;
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee__part img{
+  max-width: 101px;
 }
 
 /* ------------------- Section 4 ------------------- */
@@ -1364,10 +1376,9 @@
 } */
 @media (max-width: 1500px) {
   .section_3 .body {
-    /* grid-template-columns: repeat(4, 1fr); */
-    width: 81%;
+    grid-template-columns: repeat(4, 1fr);
+    /* width: 81%; */
     margin: auto;
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .section_3 .body .card {

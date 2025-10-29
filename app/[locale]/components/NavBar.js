@@ -325,8 +325,25 @@ function NavBar() {
                   className={styles.svgElement}
                   aria-label="Animated SVG"
                 />
+              </div>
+            </div>
+          </Link>
 
+          <Link href="/en/productdevelopment">
+            <div className={styles.card}>
+              <h3 className={styles.headText}>
+                <span>Product</span> Development
+              </h3>
 
+              <div
+                className={styles.videoDiv}
+              >
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/4.svg"
+                  className={styles.svgElement}
+                  aria-label="Animated SVG"
+                />
               </div>
             </div>
           </Link>
