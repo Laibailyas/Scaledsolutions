@@ -779,8 +779,8 @@
   /* flex-wrap: wrap; */
   align-items: stretch;
   
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
   justify-content: flex-start;
   gap: 1.5rem;
   padding: 120px 5% 50px 5%;
@@ -793,7 +793,8 @@
 
 .menuServices .body a{
   display: flex;
-  width: 100%;
+  width: calc(24% - 1.5rem);
+  flex: 1 1 calc(24% - 1.5rem);
 }
 
 .menuServices.active .body {
@@ -830,6 +831,9 @@
   transition: 450ms cubic-bezier(0.215, 0.61, 0.355, 1);
   width: 100%;
 }
+
+
+
 .menuServices .body .card:nth-child(2){
   background-color: #061E27;
 }
@@ -861,7 +865,7 @@
 
 .menuServices .body .card .headText {
   width: 100%;
-  font-size: 45px;
+  font-size: 40px;
   color: rgb(237, 208, 198);
   font-family: "PolySans";
   font-weight: 300;
@@ -899,7 +903,7 @@
 
 .menuServices .body .card .headText span {
   font-family: "Ivar Display";
-  font-size: 42.56px;
+  font-size: 38.56px;
 }
 
 .menuServices .body .card:nth-child(2) .headText {
@@ -1530,4 +1534,27 @@
 /* Optional: subtle shadow on scroll (optional visual polish) */
 .NavBar.scrolled {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1380px) {
+  .menuServices .body .card{
+    padding: 24px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .menuServices .body .card{
+    padding: 20px;
+    min-width: unset;
+  }
+
+  .menuServices .body .card .headText {
+    font-size: 32px;
+  }
+
+  .menuServices .body .card .headText span{
+    font-size: 28px;
+  }
+
+
 }
