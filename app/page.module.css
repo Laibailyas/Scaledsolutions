@@ -395,8 +395,8 @@
 }
 
 .marquee .marquee__inner .marquee__part{
-  padding: 2rem;
-  background-color: #fff;
+  /* padding: 2rem; */
+  /* background-color: #fff; */
   border-radius: 18px;
   width: 165px;
   min-height: 125px;
@@ -406,7 +406,8 @@
 }
 
 .marquee__part img{
-  max-width: 101px;
+  width: 100%;
+  max-width: 140px;
 }
 
 /* ------------------- Section 4 ------------------- */
