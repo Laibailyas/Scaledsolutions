@@ -362,6 +362,16 @@ body, .footer, .footer * {
   margin: 0 auto;           /* center if you want */
 }
 
+.text-pressure-container img{
+  width: 450px;
+}
+
+@media (max-width: 1025px) {
+  .text-pressure-container img{
+  width: 300px;
+}
+}
+
 /* mobile only: screens ≤ 768px */
 @media (max-width: 768px) {
   .text-pressure-container {
@@ -373,4 +383,9 @@ body, .footer, .footer * {
   .boxicon{
     display: none;
   }
+
+  
+.text-pressure-container img{
+  width: 200px;
+}
 }

@@ -33,9 +33,10 @@ export default function ServicesPage() {
 
             <button className="cta-btn">Let's work Together</button>
 
+            
             <div className="video-box">
               <video
-                src="/product-development/hero-video.mp4"
+                src="/video.mov"
                 controls
                 muted
                 playsInline

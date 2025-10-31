@@ -33,7 +33,7 @@ export default function ServicesPage() {
 
             <div className="video-box">
               <video
-                src="/video.mov"
+                src="/cloud.mp4"
                 controls
                 muted
                 playsInline

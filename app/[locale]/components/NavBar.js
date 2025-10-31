@@ -171,22 +171,7 @@ function NavBar() {
       <nav className={styles.NavBar}>
         <div className={styles.navContainer}>
           <div className={styles.logo}>
-            <svg viewBox="0 0 1600 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-              <g>
-                {/* <!-- Paste your full Ventriloc <path> block here --> */}
-                <path d="M4.97098 11.7094L13.1789 35.888C13.3986 ..." fill="currentColor"></path>
-                <path d="M54.7046 27.2527H32.9942C33.2138 ..." fill="currentColor"></path>
-                {/* <!-- ... (all other path elements from your logo) ... --> */}
-                <path d="M222.006 15.7621C221.728 15.624 ..." fill="currentColor"></path>
-              </g>
-
-              {/* <!-- This text will appear to the right of your logo --> */}
-              <g>
-                <text x="180" y="150" font-family="Ivar Display" font-size="150" fill="#CBCBCB">
-                  SCALED SOLUTIONS
-                </text>
-              </g>
-            </svg>
+            <img src="/logo.png" alt="logo"/>
           </div>
           <div className={styles.links}>
             <button

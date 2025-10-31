@@ -220,22 +220,19 @@ export default function NewFooter() {
         </div>
 
         <div className="footer-bottom-wrap footer-animate" >
-          <div className="text-pressure-container">
-            {mounted && (
-              <TextPressure
-                text="Scaled Solutions"
-                flex
-                alpha={false}
-                stroke={false}
-                width
-                weight
-                italic
-                textColor="#ffffff"
-                strokeColor="#ff0000"
-                minFontSize={10}
-              />
-            )}
-          </div>
+            <div className="text-pressure-container">
+              {mounted && (
+                <img
+                  src="/logo.png"
+                  alt="logo"
+                  style={{
+                    height: "auto",
+                    objectFit: "contain"
+                  }}
+                />
+              )}
+            </div>
+
 
           <div className="footer-bottom-right">
             <p className="paragraph-large text-gray-2">
