@@ -6,7 +6,7 @@ import "./services.css";
 export default function ServicesPage() {
   return (
     <>
-      <NavBar />
+      <NavBar logoSrc="/logo-1.png" />
 
       <section className="services-hero">
         <div className="floating-accents">

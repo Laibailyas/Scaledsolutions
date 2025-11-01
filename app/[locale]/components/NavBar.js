@@ -12,7 +12,8 @@ import Image from "next/image";
 // const { Link, useRouter, usePathname, redirect } =
 //   createSharedPathnamesNavigation({ locales });
 
-function NavBar() {
+function NavBar({ logoSrc = "/logo.png" }) {
+
   // const t = useTranslations("NavBar");
   // ------------------- State MenuServices ------------------- //
   const [menuServicesActive, setMenuServices] = useState(false);
@@ -170,9 +171,11 @@ function NavBar() {
     <>
       <nav className={styles.NavBar}>
         <div className={styles.navContainer}>
+          <Link href={"/"}>
           <div className={styles.logo}>
-            <img src="/logo.png" alt="logo"/>
+            <img src={logoSrc} alt="logo" />
           </div>
+          </Link>
           <div className={styles.links}>
             <button
               className={`${styles.link} ${menuServicesActive ? `${styles.active}` : ""
