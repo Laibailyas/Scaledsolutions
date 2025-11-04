@@ -76,16 +76,16 @@ const ScrollingCards = () => {
         "Automate workflows for efficiency and speed.",
         "Retrieve deeper value from your data integration.",
       ],
-      video: "/integration.mov",
+      video: "/video.mov",
     },
     {
-      title: "Security Services",
+      title: "AI and Data Services",
       description: [
-        "Protect systems with advanced threat detection.",
-        "Ensure compliance with global security standards.",
-        "Visualize risks to safeguard your data.",
+        "Harness data with Azure-powered AI solutions.",
+        "Transform raw data into actionable insights.",
+        "Automate intelligence for smarter decisions.",
       ],
-      video: "/security.mov",
+      video: "/product-development/hero-video.mp4",
     },
     {
       title: "Cloud Services",
@@ -94,7 +94,7 @@ const ScrollingCards = () => {
         "Maximize uptime with reliable cloud hosting.",
         "Unlock the full value of your cloud data.",
       ],
-      video: "/video.mov",
+      video: "/cloud.mp4",
     },
     {
       title: "Product Development",
@@ -103,7 +103,7 @@ const ScrollingCards = () => {
         "Iterate quickly with agile development practices.",
         "Build the future by leveraging data-driven design.",
       ],
-      video: "/deployment.mov",
+      video: "/video.mov",
     },
   ];
 
