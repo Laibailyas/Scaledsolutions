@@ -441,11 +441,11 @@ function NavBar({ logoSrc = "/logo.png" }) {
                     <em>Cloud </em> Services
                   </span>
                   <object
-                    type="image/svg+xml"
-                    data="/svgs/1.svg"
-                    className={styles.svgElementMobile}
-                    aria-label="Animated SVG"
-                  />
+  type="image/svg+xml"
+  data="https://svgteststorageaccount.z8.web.core.windows.net/gear-01.svg"
+  className={styles.svgElementMobile}
+  aria-label="Animated SVG"
+/>
                 </div>
                 <div className={styles.card}>
                   <span>
@@ -547,4 +547,5 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
 
