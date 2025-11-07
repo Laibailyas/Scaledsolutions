@@ -22,6 +22,20 @@
   z-index: 99;
 }
 
+ .svgElementcss {
+      width: 100%;            
+      max-width: 150px;       
+      aspect-ratio: 1 / 1;    
+      background-image: url('rings.svg'); 
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      margin: auto;
+      animation: spin 5s linear infinite;
+    }
+
+
 .svgElement {
   width: 100%;
   height: 90%;
@@ -1555,6 +1569,7 @@
   .menuServices .body .card .headText span{
     font-size: 28px;
   }
+
 
 
 }
