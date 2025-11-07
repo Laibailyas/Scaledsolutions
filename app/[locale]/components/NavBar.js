@@ -264,12 +264,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </h3>
 
 
-                <div class="svgElementcss" style={{width: 100%; max-width:150px; aspect-ratio: 1/1; background-image: url('./styles/rings.svg');  background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: block;
-      margin: auto;
-      animation: spin 5s linear infinite;  }}></div>
+                <div className="svgElementcss"></div>
 
 
             </div>
@@ -543,5 +538,6 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
 
 
