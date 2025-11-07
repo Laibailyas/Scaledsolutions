@@ -262,18 +262,15 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </h3>
 
 
-              <div className={styles.videoDiv}>
+<div className={styles.videoDiv}>
+  <object
+    type="image/svg+xml"
+    data="https://svgteststorageaccount.z8.web.core.windows.net/gear-01.svg"
+    className={styles.svgElement}
+    aria-label="Animated SVG"
+  />
+</div>
 
-
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/1.svg"
-                  className={styles.svgElement}
-                  aria-label="Animated SVG"
-                />
-
-
-              </div>
 
             </div>
           </Link>
@@ -550,3 +547,4 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
