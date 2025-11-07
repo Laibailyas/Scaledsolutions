@@ -264,18 +264,8 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </h3>
 
 
-              <div className={styles.videoDiv}>
+                <div class="svgElementcss"></div>
 
-
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/1.svg"
-                  className={styles.svgElement}
-                  aria-label="Animated SVG"
-                />
-
-
-              </div>
 
             </div>
           </Link>
@@ -445,12 +435,8 @@ function NavBar({ logoSrc = "/logo.png" }) {
                   <span>
                     <em>Cloud </em> Services
                   </span>
-                  <object
-                    type="image/svg+xml"
-                    data="/svgs/1.svg"
-                    className={styles.svgElementMobile}
-                    aria-label="Animated SVG"
-                  />
+                    <div class="svgElementcss"></div>
+
                 </div>
                 <div className={styles.card}>
                   <span>
@@ -552,3 +538,4 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
