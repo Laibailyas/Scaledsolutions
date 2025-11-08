@@ -3,10 +3,12 @@
   font-family: "PolySans";
   src: url("../../../../public/fonts/PolySans.woff2");
 }
+
 @font-face {
   font-family: "Ivar Display";
   src: url("../../../../public/fonts/IvarDisplay.woff2");
 }
+
 /* ------------------- NavBar ------------------- */
 .NavBar {
   font-family: "PolySans";
@@ -35,7 +37,8 @@
   height: 100%;
   background-image: url("/gear-and-rings-01.svg");
   background-repeat: no-repeat;
-  background-size: contain; /* or 'cover' if you want it to fill */
+  background-size: contain;
+  /* or 'cover' if you want it to fill */
   background-position: center;
 }
 
@@ -54,11 +57,36 @@
   display: block;
 }
 
+.bgSvgElementMobile {
+  width: 60%;
+  height: 60%;
+  display: block;
+  background-image: url("/gear-and-rings-01.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+
+
 
 @media (max-width: 768px) {
   .svgElementMobile {
-    width: 80%;
+    width: 30vw;
+    height: 30vw;
     margin: 0 auto;
+  }
+
+  .bgSvgElementMobile {
+    width: 30vw;
+    height: 30vw;
+    margin: 0 auto;
+    display: block;
+    background-image: url("/gear-and-rings-01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 }
 
@@ -95,8 +123,8 @@
   justify-content: center;
   align-items: center;
   gap: 1ch;
-  color:  #CBCBCB;
-;
+  color: #CBCBCB;
+  ;
   font-size: 18px;
   transition: 0.5s;
   background-color: transparent;
@@ -179,7 +207,7 @@
   background-color: #0B1C23;
 }
 
-.NavBar .btns .btnMenuHamburger {
+.btnMenuHamburger {
   width: 30px;
   height: 12px;
   background-color: #0B1C23;
@@ -193,11 +221,11 @@
   transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.NavBar .btns .btnMenuHamburger.active {
+.btnMenuHamburger.active {
   gap: 0;
 }
 
-.NavBar .btns .btnMenuHamburger span {
+.btnMenuHamburger span {
   height: 1px;
   width: 100%;
   background-color: #CBCBCB;
@@ -208,20 +236,22 @@
   transition: 0.5s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.NavBar .btns .btnMenuHamburger.active span:nth-child(1) {
+.btnMenuHamburger.active span:nth-child(1) {
   transform: rotate(45deg) translateY(1px);
 }
 
-.NavBar .btns .btnMenuHamburger.active span:nth-child(2) {
+.btnMenuHamburger.active span:nth-child(2) {
   transform: rotate(-45deg) translateY(-1px);
 }
+
 /* ------------------- Menus ------------------- */
 /* ------------------- Menu Hamburger ------------------- */
 .menuHamburger {
   background-color: #0B1C23;
   backdrop-filter: blur(20px);
   height: 100%;
-  position: fixed;  /* full screen lock */
+  position: fixed;
+  /* full screen lock */
   width: 100%;
   top: 0;
   left: 0;
@@ -229,8 +259,10 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s 0.5s ease, opacity 0.5s 0.5s ease;
-  overflow-y: auto;              /* allow scrolling */
-  -webkit-overflow-scrolling: touch; /* smooth iOS */
+  overflow-y: auto;
+  /* allow scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* smooth iOS */
 }
 
 .menuHamburger.active {
@@ -239,12 +271,15 @@
   opacity: 1;
   visibility: visible;
 }
+
 .menuHamburger .option_1::-webkit-scrollbar {
   display: none;
 }
+
 .menuHamburger::-webkit-scrollbar {
   display: none;
 }
+
 /* Hide scrollbar for IE, Edge and Firefox */
 
 .menuHamburger .option_1 {
@@ -253,11 +288,13 @@
   justify-content: center;
   width: 100%;
   flex-direction: column;
-  
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
   position: relative;
-  padding-bottom: 50px; /* space for scroll */
+  padding-bottom: 50px;
+  /* space for scroll */
 }
 
 .menuHamburger .option_1 .body {
@@ -344,10 +381,12 @@
   opacity: 0;
   transition: transform 0.3s linear, opacity 250ms linear;
 }
+
 .menuHamburger.active .option_1 .body .btn {
   transform: translateY(0);
   opacity: 1;
 }
+
 /* .menuHamburger .option_1 .body .btn:nth-child(1) {
 }
 .menuHamburger .option_1 .body .btn:nth-child(2) {
@@ -356,6 +395,7 @@
   transition: transform 650ms 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 350ms 150ms linear;
 }
+
 .menuHamburger.active .option_1 .body .btn:nth-child(4) {
   transition: transform 650ms cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 350ms linear;
@@ -439,10 +479,12 @@
   transition: transform 650ms 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 350ms 0.6s linear;
 }
+
 .menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(4) {
   transition: transform 650ms 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 350ms 0.7s linear;
 }
+
 /* .menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(4) {
   border: none;
   background-color: #edd0c6;
@@ -453,15 +495,14 @@
   color: #ff682c;
   position: relative;
 } */
-.menuHamburger
-  .option_1
-.body {
+.menuHamburger .option_1 .body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
   /* ...other styles... */
 }
+
 /* Removed misplaced properties that caused syntax errors */
 .menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(4) svg {
   position: absolute;
@@ -471,6 +512,7 @@
   top: 14px;
   right: 11px;
 }
+
 .menuHamburger .option_1 .body .btn.active .menuServicesInMenu .card {
   transform: translateY(0);
   opacity: 1;
@@ -488,13 +530,7 @@
   font-style: normal;
 }
 
-.menuHamburger
-  .option_1
-  .body
-  .btn
-  .menuServicesInMenu
-  .card:nth-child(2)
-  span {
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(2) span {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -502,24 +538,11 @@
   text-wrap: nowrap;
 }
 
-.menuHamburger
-  .option_1
-  .body
-  .btn
-  .menuServicesInMenu
-  .card:nth-child(2)
-  span:nth-child(1) {
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(2) span:nth-child(1) {
   display: block;
 }
 
-.menuHamburger
-  .option_1
-  .body
-  .btn
-  .menuServicesInMenu
-  .card
-  span
-  span:nth-child(2) {
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card span span:nth-child(2) {
   color: #ff682c;
   line-height: 1;
   font-size: 12px;
@@ -542,37 +565,46 @@
     opacity 350ms 300ms linear,
     overflow 350ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+
 .menuHamburger .option_1 .body .btn.active:nth-child(2) {
   overflow: visible;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a {
   transform: translateX(-20px);
   opacity: 0;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(1) {
   transition: transform 350ms 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.2s linear;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(2) {
   transition: transform 350ms 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.3s linear;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(3) {
   transition: transform 350ms 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.4s linear;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(4) {
   transition: transform 350ms 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.5s linear;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(5) {
   transition: transform 350ms 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.6s linear;
 }
+
 .menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a {
   opacity: 1;
   transform: translateX(0);
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu {
   display: flex;
   align-items: flex-start;
@@ -581,6 +613,7 @@
   padding-top: 13px;
   width: 100%;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a {
   position: relative;
   padding: 12px 20px;
@@ -589,6 +622,7 @@
   width: 100%;
   text-align: start;
 }
+
 .menuHamburger .option_1 .body .btn .menuVentrilocInMenu a::before {
   content: "";
   position: absolute;
@@ -600,47 +634,28 @@
   transform: scale(0);
   transform-origin: left;
 }
+
 .menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a::before {
   transform: scale(1);
 }
-.menuHamburger
-  .option_1
-  .body
-  .btn.active
-  .menuVentrilocInMenu
-  a:nth-child(1):before {
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(1):before {
   transition: transform 1.05s 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.menuHamburger
-  .option_1
-  .body
-  .btn.active
-  .menuVentrilocInMenu
-  a:nth-child(2):before {
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(2):before {
   transition: transform 1.05s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.menuHamburger
-  .option_1
-  .body
-  .btn.active
-  .menuVentrilocInMenu
-  a:nth-child(3):before {
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(3):before {
   transition: transform 1.05s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.menuHamburger
-  .option_1
-  .body
-  .btn.active
-  .menuVentrilocInMenu
-  a:nth-child(4):before {
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(4):before {
   transition: transform 1.05s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.menuHamburger
-  .option_1
-  .body
-  .btn.active
-  .menuVentrilocInMenu
-  a:nth-child(5):before {
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(5):before {
   transition: transform 1.05s 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -658,6 +673,7 @@
   transform: translateY(-101%);
   transition: transform 550ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
 .menuHamburger.active .option_1 .backGround {
   transform: translateY(0);
   transition: transform 850ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -670,6 +686,7 @@
   bottom: -17.5vw;
   right: 0;
 }
+
 .menuHamburger .option_1 .backGround svg path {
   fill: white;
 }
@@ -686,11 +703,13 @@
   z-index: 51;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.5s 0.5s ease, opacity 0.5s 0.5s ease; /* تحديد مدة الانتقال 0.5 ثانية */
+  transition: visibility 0.5s 0.5s ease, opacity 0.5s 0.5s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
 }
 
 .menuServices.active {
-  transition: visibility 0.5s ease, opacity 0.5s ease; /* تحديد مدة الانتقال 0.5 ثانية */
+  transition: visibility 0.5s ease, opacity 0.5s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
   z-index: 52;
   opacity: 1;
   visibility: visible;
@@ -788,7 +807,7 @@
   display: flex;
   /* flex-wrap: wrap; */
   align-items: stretch;
-  
+
   /* display: grid;
   grid-template-columns: repeat(4, 1fr); */
   justify-content: flex-start;
@@ -801,7 +820,7 @@
   box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
 }
 
-.menuServices .body a{
+.menuServices .body a {
   display: flex;
   width: calc(24% - 1.5rem);
   flex: 1 1 calc(24% - 1.5rem);
@@ -812,7 +831,7 @@
   transform: translateY(0);
 }
 
-.menuServices .body a object{
+.menuServices .body a object {
   pointer-events: none;
 }
 
@@ -832,7 +851,7 @@
   /* max-width: calc(33% - 1.5rem); */
   min-width: 260px;
   border: 1px solid #2996a7;
-  padding: 34px; 
+  padding: 34px;
   /* padding-bottom: 440px; */
   border-radius: 12px;
   max-height: 580px;
@@ -844,14 +863,15 @@
 
 
 
-.menuServices .body .card:nth-child(2){
+.menuServices .body .card:nth-child(2) {
   background-color: #061E27;
 }
 
 .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
   transform: scale(1.9);
 }
-.menuServices .body .card:nth-child(3){
+
+.menuServices .body .card:nth-child(3) {
   background-color: #061E27;
 }
 
@@ -864,10 +884,12 @@
   /* background-color: #0B1C23; */
   transform: translateY(-20px);
 }
+
 .menuServices .body .card:nth-child(1):hover {
   /* background-color: #0D1D23; */
   transform: translateY(-20px);
 }
+
 .menuServices .body .card:nth-child(4):hover {
   /* background-color: #0D1D23; */
   transform: translateY(-20px);
@@ -880,6 +902,7 @@
   font-family: "PolySans";
   font-weight: 300;
 }
+
 .menuServices .body .card:nth-child(4) .headText {
   width: 100%;
   font-size: 39px;
@@ -887,26 +910,30 @@
   font-family: "PolySans";
   font-weight: 300;
 }
-.menuServices .body .card .videoDiv {  
+
+.menuServices .body .card .videoDiv {
   width: 230px !important;
   height: 200px;
-  overflow: hidden; 
+  overflow: hidden;
 }
+
 .menuServices .body .card .videoDiv .videoElement {
-  width: 100%;     
-  height: 100%;    
+  width: 100%;
+  height: 100%;
   transform: scale(1.7);
   transform-origin: center;
 }
+
 /* .menuServices .body .card:nth-child(1) .videoDiv .videoElement {
   transform: scale(0.9);
 } */
 
 .menuServices .body .card:nth-child(1) .videoDiv .videoElement {
   transform: scale(1.7);
-  
+
   transform-origin: center;
 }
+
 .menuServices .body .card:nth-child(4) .videoDiv .videoElement {
   transform: scale(1.4);
 }
@@ -941,6 +968,7 @@
   width: 100%;
   height: auto;
 }
+
 /* ------------------- Menu Ventriloc ------------------- */
 .menuVentriloc {
   background-color: rgba(0, 0, 0, 0.2);
@@ -953,12 +981,14 @@
   z-index: 51;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.5s 0.6s linear, opacity 0.5s 0.6s linear; /* تحديد مدة الانتقال 0.5 ثانية */
+  transition: visibility 0.5s 0.6s linear, opacity 0.5s 0.6s linear;
+  /* تحديد مدة الانتقال 0.5 ثانية */
 }
 
 .menuVentriloc.active {
   z-index: 52;
-  transition: visibility 0.5s linear, opacity 0.5s linear; /* تحديد مدة الانتقال 0.5 ثانية */
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+  /* تحديد مدة الانتقال 0.5 ثانية */
   opacity: 1;
   visibility: visible;
 }
@@ -1024,7 +1054,8 @@
   font-weight: 300;
   overflow: hidden;
   color: #edd0c6;
-  transition: color 0.3s; /* تطبيق التأثير عند hover وعند إلغاء hover */
+  transition: color 0.3s;
+  /* تطبيق التأثير عند hover وعند إلغاء hover */
 }
 
 .menuVentriloc .body .links .link:hover {
@@ -1091,6 +1122,7 @@
   transition: transform 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 /* ------------------- Menu Contact ------------------- */
 .menuContact {
   background-color: rgba(0, 0, 0, 0.2);
@@ -1103,11 +1135,13 @@
   z-index: 51;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.5s 0.6s ease, opacity 0.5s 0.6s ease; /* تحديد مدة الانتقال 0.5 ثانية */
+  transition: visibility 0.5s 0.6s ease, opacity 0.5s 0.6s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
 }
 
 .menuContact.active {
-  transition: visibility 0.5s ease, opacity 0.5s ease; /* تحديد مدة الانتقال 0.5 ثانية */
+  transition: visibility 0.5s ease, opacity 0.5s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
   z-index: 52;
   opacity: 1;
   visibility: visible;
@@ -1288,10 +1322,11 @@
   z-index: -1;
   transition: scale 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
- 
+
 .menuContact .body .form .btn:hover::before {
   scale: 1.05;
 }
+
 /* ------------------- Responsive Design ------------------- */
 /* ------------------- 1024px ------------------- */
 @media (max-width: 1024px) {
@@ -1299,217 +1334,248 @@
     padding: 0 3%;
     height: 60px;
   }
+
   .menuHamburger .option_1 .body {
     padding: 100px 3% 50px 3% !important;
   }
+
   .NavBar .logo svg {
     width: 231px;
   }
+
   .NavBar .links {
     display: none;
   }
+
   .menuContact .body .form input,
   .menuContact .body .form .top .right input,
   .menuContact .body .form .top .left input {
     font-size: 18px;
   }
+
   .menuContact .body .form .btn {
     font-size: 14px;
     bottom: 4%;
   }
-  .NavBar .btns .btnMenuHamburger {
+
+  .btnMenuHamburger {
     display: flex;
   }
+
   .menuServices,
   .menuVentriloc {
     display: none;
   }
+
   .menuContact .body {
     padding: 100px 3% 50px 3%;
   }
+
   .menuContact .body .head {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     align-items: flex-start;
   }
+
   .menuContact .body .head .form {
     margin-top: 2rem;
   }
+
   .menuContact .body .head .right .link:nth-child(1) {
     margin-bottom: 1rem;
   }
+
   .menuContact .body .head .left {
     gap: 1rem;
   }
+
   .menuContact .body .head .right .link:nth-child(2),
   .menuContact .body .head .right .link:nth-child(3) {
     font-size: 24px;
     line-height: 1;
   }
+
   .menuContact .body .head .right .link:nth-child(1),
   .menuContact .body .head .left p:nth-child(1) {
     font-size: 14px;
   }
+
   .menuContact .body .head .left p:nth-child(2) {
     font-size: 18px;
   }
 }
+
 /* ------------------- 768px ------------------- */
 @media (max-width: 768px) {
   .NavBar .logo svg {
     width: 112px !important;
     height: auto;
   }
+
   .NavBar .logo svg {
     width: 188px;
   }
+
   .NavBar .btns {
     gap: 1.25rem;
   }
+
   .NavBar .btns .contactButton {
     padding: 7px 15px;
     height: auto;
   }
+
   .NavBar .btns .contactButton span {
     font-size: 12px;
   }
+
   .menuHamburger .option_1 .body {
     height: 100%;
   }
+
   .menuHamburger .option_1 .body .btn .menuServicesInMenu {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .menuHamburger .option_1 .body .btn .menuServicesInMenu .card {
     padding: 14px 11px;
     justify-content: center;
     align-items: center;
     border-radius: 11px;
   }
+
   .menuHamburger .option_1 .body .btn .menuServicesInMenu .card span span {
     align-items: center !important;
   }
+
   .menuHamburger .option_1 .body .btn .menuServicesInMenu .card img {
     display: none;
   }
-  .menuHamburger
-    .option_1
-    .body
-    .btn
-    .menuServicesInMenu
-    .card:nth-child(2)
-    span {
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(2) span {
     text-wrap: wrap;
   }
+
   .menuHamburger .option_1 .body .contact,
   .menuHamburger .option_1 .backGround {
     display: none;
   }
-  .menuHamburger
-    .option_1
-    .body
-    .btn
-    .menuServicesInMenu
-    .card
-    span
-    span:nth-child(2) {
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card span span:nth-child(2) {
     padding-top: 0;
   }
+
   .menuContact .body .form .top {
     flex-direction: column;
   }
+
   .menuContact .body .form .top,
   .menuContact .body .form .top .right,
   .menuContact .body .form .top .left {
     gap: 0;
   }
+
   .menuContact .body .form .top .right input,
   .menuContact .body .form .top .left input {
     padding: 15px 0;
   }
+
   .menuContact .body .form .btn {
     position: relative;
     margin-top: 3rem;
     width: 100%;
   }
+
   .menuContact .body .head {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .menuContact .body .head .left p:nth-child(2) br {
     display: none;
   }
 }
+
 /* ------------------- 768px ------------------- */
 @media (min-width: 768px) {
   .NavBar .logo svg {
     width: 188px;
   }
 }
+
 @media (max-width:1300px) {
   .NavBar .links .link {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
 }
 
 
-@media (min-width:1700px){
+@media (min-width:1700px) {
   .menuServices .body .card .headText {
-  max-width: 260px;         
+    max-width: 260px;
+  }
+
+  .menuServices .body .card .videoDiv {
+    width: 230px !important;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .menuServices .body .card .videoDiv .videoElement {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.9);
+    transform-origin: center;
+  }
+
+  .menuServices .body .card:nth-child(1) .videoDiv .videoElement {
+    transform: scale(1.7);
+  }
+
+  .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
+    transform: scale(1.9);
+  }
+
+  .menuServices .body .card:nth-child(4) .videoDiv .videoElement {
+    transform: scale(1.2);
+  }
 }
 
-.menuServices .body .card .videoDiv {  
-  width: 230px !important;
-  height: 200px;
-  overflow: hidden; 
-}
-.menuServices .body .card .videoDiv .videoElement {
-  width: 100%;     
-  height: 100%;    
-  transform: scale(1.9);
-  transform-origin: center;
-}
-.menuServices .body .card:nth-child(1) .videoDiv .videoElement {
-  transform: scale(1.7);
+@media (max-width:1400px) {
+  .menuServices .body .card .videoDiv {
+    width: 230px !important;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .menuServices .body .card .videoDiv .videoElement {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .menuServices .body .card:nth-child(1) .videoDiv .videoElement {
+    transform: scale(1.7);
+  }
+
+  .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
+    transform: scale(1.9);
+  }
+
+  .menuServices .body .card:nth-child(3) .videoDiv .videoElement {
+    transform: scale(1.7);
+  }
+
+  .menuServices .body .card:nth-child(4) .videoDiv .videoElement {
+    transform: scale(1.4);
+  }
 }
 
-.menuServices .body .card:nth-child(2) .videoDiv .videoElement {
-  transform: scale(1.9);
-}
-.menuServices .body .card:nth-child(4) .videoDiv .videoElement {
-  transform: scale(1.2);
-}
-}
-@media (max-width:1400px){
-.menuServices .body .card .videoDiv {  
-  width: 230px !important;
-  height: 200px;
-  overflow: hidden; 
-}
-.menuServices .body .card .videoDiv .videoElement {
-  width: 100%;     
-  height: 100%;    
-  transform: scale(0.9);
-  transform-origin: center;
-}
-.menuServices .body .card:nth-child(1) .videoDiv .videoElement {
-  transform: scale(1.7);
-}
-
-.menuServices .body .card:nth-child(2) .videoDiv .videoElement {
-  transform: scale(1.9);
-}
-.menuServices .body .card:nth-child(3) .videoDiv .videoElement {
-  transform: scale(1.7);
-}
-.menuServices .body .card:nth-child(4) .videoDiv .videoElement {
-  transform: scale(1.4);
-}
-}
-
-@media (min-width:3000px){
- .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
-  transform: scale(1.5);
-} 
+@media (min-width:3000px) {
+  .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
+    transform: scale(1.5);
+  }
 }
 
 
@@ -1524,9 +1590,12 @@
    Boxed Layout (centered)
    ===================== */
 .navContainer {
-  max-width: 1200px; /* controls width on large screens */
-  margin: 0 auto;    /* centers it */
-  padding: 0 2rem;   /* some left/right breathing space */
+  max-width: 1200px;
+  /* controls width on large screens */
+  margin: 0 auto;
+  /* centers it */
+  padding: 0 2rem;
+  /* some left/right breathing space */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1547,13 +1616,13 @@
 }
 
 @media (max-width: 1380px) {
-  .menuServices .body .card{
+  .menuServices .body .card {
     padding: 24px;
   }
 }
 
 @media (max-width: 1300px) {
-  .menuServices .body .card{
+  .menuServices .body .card {
     padding: 20px;
     min-width: unset;
   }
@@ -1562,7 +1631,7 @@
     font-size: 32px;
   }
 
-  .menuServices .body .card .headText span{
+  .menuServices .body .card .headText span {
     font-size: 28px;
   }
 

@@ -84,30 +84,30 @@ function NavBar({ logoSrc = "/logo.png" }) {
       resetHeightBtn_1();
     }
     // // ------------------- Button 2 ------------------- //
-    const runCodeWhenBTN2Active = () => {
-      const menuVentrilocInMenuActive = document.querySelector(
-        `.${styles.menuVentrilocInMenu}`
-      );
-      const btn_2 = document.querySelector(
-        `.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`
-      );
+    // const runCodeWhenBTN2Active = () => {
+    //   const menuVentrilocInMenuActive = document.querySelector(
+    //     `.${styles.menuVentrilocInMenu}`
+    //   );
+    //   const btn_2 = document.querySelector(
+    //     `.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`
+    //   );
 
-      const heightMenuVentrilocInMenu = menuVentrilocInMenuActive.offsetHeight;
-      btn_2.style.height = 27 + heightMenuVentrilocInMenu + "px";
-    };
+    //   const heightMenuVentrilocInMenu = menuVentrilocInMenuActive.offsetHeight;
+    //   btn_2.style.height = 27 + heightMenuVentrilocInMenu + "px";
+    // };
 
-    const resetHeightBtn_2 = () => {
-      const btn_2 = document.querySelector(
-        `.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`
-      );
-      btn_2.style.height = "27px";
-    };
+    // const resetHeightBtn_2 = () => {
+    //   const btn_2 = document.querySelector(
+    //     `.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`
+    //   );
+    //   btn_2.style.height = "27px";
+    // };
 
-    if (menuVentrilocInMenuActive) {
-      runCodeWhenBTN2Active();
-    } else {
-      resetHeightBtn_2();
-    }
+    // if (menuVentrilocInMenuActive) {
+    //   runCodeWhenBTN2Active();
+    // } else {
+    //   resetHeightBtn_2();
+    // }
   }, [menuServicesInMenuActive, menuContactActive]);
   useEffect(() => {
     const handleScroll = () => {
@@ -131,6 +131,29 @@ function NavBar({ logoSrc = "/logo.png" }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [menuServicesActive, menuVentrilocActive, menuContactActive]);
+
+  useEffect(() => {
+  // Services height
+  const menuServicesInMenu = document.querySelector(`.${styles.menuServicesInMenu}`);
+  const btn_1 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(1)`);
+  if (menuServicesInMenuActive) {
+    btn_1.style.height = 27 + menuServicesInMenu.offsetHeight + "px";
+  } else {
+    btn_1.style.height = "27px";
+  }
+}, [menuServicesInMenuActive]);
+
+useEffect(() => {
+  // Ventriloc height
+  const menuVentrilocInMenu = document.querySelector(`.${styles.menuVentrilocInMenu}`);
+  const btn_2 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`);
+  if (menuVentrilocInMenuActive) {
+    btn_2.style.height = 27 + menuVentrilocInMenu.offsetHeight + "px";
+  } else {
+    btn_2.style.height = "27px";
+  }
+}, [menuVentrilocInMenuActive]);
+
 
   // ------------------- Active Menus ------------------- //
   const activateMenu = (menu) => {
@@ -166,6 +189,8 @@ function NavBar({ logoSrc = "/logo.png" }) {
       setMenuContact(false);
     }
   };
+
+  
 
   return (
     <>
@@ -209,25 +234,33 @@ function NavBar({ logoSrc = "/logo.png" }) {
                 <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
               </svg>
             </button>
-          <div className={styles.btns}>
-            <button
-              className={`${styles.contactButton} ${menuContactActive ? `${styles.active}` : ""
-                }`}
-              onClick={() => activateMenu("menuContact")}
-            >
-              <span>Contact</span>
-              <span>Close</span>
-            </button>
-            <button
+            <div className={styles.btns}>
+              <button
+                className={`${styles.contactButton} ${menuContactActive ? `${styles.active}` : ""
+                  }`}
+                onClick={() => activateMenu("menuContact")}
+              >
+                <span>Contact</span>
+                <span>Close</span>
+              </button>
+              {/* <button
               className={`${styles.btnMenuHamburger} ${menuHamburgerActive ? `${styles.active}` : ""
                 }`}
               onClick={() => activateMenu("menuHamburger")}
             >
               <span></span>
               <span></span>
-            </button>
+            </button> */}
+            </div>
           </div>
-          </div>
+          <button
+            className={`${styles.btnMenuHamburger} ${menuHamburgerActive ? `${styles.active}` : ""
+              }`}
+            onClick={() => activateMenu("menuHamburger")}
+          >
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
       <menu
@@ -283,12 +316,6 @@ function NavBar({ logoSrc = "/logo.png" }) {
 
                 className={styles.videoDiv}
               >
-                {/* <object
-                  type="image/svg+xml"
-                  data="/svgs/2.svg"
-                  className={styles.svgElement}
-                  aria-label="Animated SVG"
-                /> */}
                 <div
                   className={styles.bgSvgElement}
                   aria-label="Animated SVG"
@@ -435,54 +462,67 @@ function NavBar({ logoSrc = "/logo.png" }) {
                 </svg>
               </div>
               <menu className={styles.menuServicesInMenu}>
-                <div className={styles.card}>
-                  <span>
-                    <em>Cloud </em> Services
-                  </span>
-                  <object
-                    type="image/svg+xml"
-                    data="/svgs/1.svg"
-                    className={styles.svgElementMobile}
-                    aria-label="Animated SVG"
-                  />
-                </div>
-                <div className={styles.card}>
-                  <span>
-                    <span>
-                      <em>Integration</em> Services
-                    </span>
-                    {/* <span>Power BI Experts</span> */}
-                  </span>
-                  <object
-                    type="image/svg+xml"
-                    data="/svgs/3.svg"
-                    className={styles.svgElementMobile}
-                    aria-label="Animated SVG"
-                  />
 
-                </div>
-                <div className={styles.card}>
-                  <span>
-                    <em>Security </em> Services
-                  </span>
-                  <object
-                    type="image/svg+xml"
-                    data="/svgs/2.svg"
-                    className={styles.svgElementMobile}
-                    aria-label="Animated SVG"
-                  />
-                </div>
-                <div className={styles.card}>
-                  <span>
-                    <em>Product </em>Development
-                  </span>
-                  <object
-                    type="image/svg+xml"
-                    data="/svgs/4.svg"
-                    className={styles.svgElementMobile}
-                    aria-label="Animated SVG"
-                  />
-                </div>
+                <Link href="/en/cloudservices">
+                  <div className={styles.card}>
+                    <span>
+                      <em>Cloud </em> Services
+                    </span>
+                    <object
+                      type="image/svg+xml"
+                      data="/svgs/1.svg"
+                      className={styles.svgElementMobile}
+                      aria-label="Animated SVG"
+                    />
+                  </div>
+                </Link>
+
+                <Link href="/en/aidataservices">
+                  <div className={styles.card}>
+                    <span>
+                      <em>Ai & Data </em> Services
+                    </span>
+
+                    <div
+                      className={styles.bgSvgElementMobile}
+                      aria-label="Animated SVG"
+                    ></div>
+                  </div>
+                </Link>
+
+
+
+                <Link href="/en/integrationservices">
+                  <div className={styles.card}>
+                    <span>
+                      <span>
+                        <em>Integration</em> Services
+                      </span>
+                      {/* <span>Power BI Experts</span> */}
+                    </span>
+                    <object
+                      type="image/svg+xml"
+                      data="/svgs/3.svg"
+                      className={styles.svgElementMobile}
+                      aria-label="Animated SVG"
+                    />
+
+                  </div>
+                </Link>
+
+                <Link href="/en/productdevelopment">
+                  <div className={styles.card}>
+                    <span>
+                      <em>Product </em>Development
+                    </span>
+                    <object
+                      type="image/svg+xml"
+                      data="/svgs/4.svg"
+                      className={styles.svgElementMobile}
+                      aria-label="Animated SVG"
+                    />
+                  </div>
+                </Link>
 
 
 
@@ -508,17 +548,12 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </div>
               <menu className={styles.menuVentrilocInMenu}>
                 <Link href="">About</Link>
-                <Link href="">Clients</Link>
-                <Link href="">Team</Link>
-                <Link href="">Careers</Link>
-                <Link href="">Blog</Link>
+                <Link href="/en/teamexpansion">Team Expansion</Link>
+                <Link href="/en/deliverypartner">Delivery Partner</Link>
               </menu>
             </button>
             <Link className={styles.btn} href="">
               contact
-            </Link>
-            <Link className={styles.btn} href="">
-              fr
             </Link>
             <div className={styles.contact}>
               <h3>Let&apos;s work together</h3>
