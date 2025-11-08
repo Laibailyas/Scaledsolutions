@@ -620,14 +620,14 @@ export default function Home() {
     // // ----------- Marquee ----------- //
     gsap.to(`.${styles.marquee}:nth-child(2) .${styles.marquee__inner}`, {
       xPercent: -100,
-      duration: 10,
+      duration: 30,
       repeat: -1,
       ease: "linear",
       overwrite: "auto", // استخدام خاصية overwrite لتجنب التقطيع
     });
     gsap.to(`.${styles.marquee}:nth-child(3) .${styles.marquee__inner}`, {
       xPercent: 100,
-      duration: 10,
+      duration: 30,
       repeat: -1,
       ease: "linear",
       overwrite: "auto", // استخدام خاصية overwrite لتجنب التقطيع
@@ -844,7 +844,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#0B1C23", paddingTop: "20px" }}>
+    <div style={{ backgroundColor: "#0B1C23"}}>
       <NavBar />
       <main className={styles.page}>
         <div className={styles.animatedGrid}></div>

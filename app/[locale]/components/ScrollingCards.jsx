@@ -70,13 +70,13 @@ const ScrollingCards = () => {
 
   const cardData = [
     {
-      title: "Integration Services",
+      title: "Cloud Services",
       description: [
-        "Seamlessly connect applications across platforms.",
-        "Automate workflows for efficiency and speed.",
-        "Retrieve deeper value from your data integration.",
+        "Scale infrastructure with on-demand resources.",
+        "Maximize uptime with reliable cloud hosting.",
+        "Unlock the full value of your cloud data.",
       ],
-      video: "/video.mov",
+      video: "/cloud.mp4",
     },
     {
       title: "AI and Data Services",
@@ -88,13 +88,13 @@ const ScrollingCards = () => {
       video: "/product-development/hero-video.mp4",
     },
     {
-      title: "Cloud Services",
+      title: "Integration Services",
       description: [
-        "Scale infrastructure with on-demand resources.",
-        "Maximize uptime with reliable cloud hosting.",
-        "Unlock the full value of your cloud data.",
+        "Seamlessly connect applications across platforms.",
+        "Automate workflows for efficiency and speed.",
+        "Retrieve deeper value from your data integration.",
       ],
-      video: "/cloud.mp4",
+      video: "/video.mov",
     },
     {
       title: "Product Development",
@@ -146,6 +146,7 @@ const ScrollingCards = () => {
                     autoPlay
                     muted
                     playsInline
+                    controls
                   />
 
                 </div>

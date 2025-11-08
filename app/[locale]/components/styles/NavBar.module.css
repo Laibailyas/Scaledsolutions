@@ -22,20 +22,6 @@
   z-index: 99;
 }
 
- .svgElementcss {
-      width: 100%;            
-      max-width: 150px;       
-      aspect-ratio: 1 / 1;    
-      background-image: url('rings.svg'); 
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: block;
-      margin: auto;
-      animation: spin 5s linear infinite;
-    }
-
-
 .svgElement {
   width: 100%;
   height: 90%;
@@ -43,6 +29,16 @@
   align-items: center;
   justify-content: center;
 }
+
+.bgSvgElement {
+  width: 100%;
+  height: 100%;
+  background-image: url("/gear-and-rings-01.svg");
+  background-repeat: no-repeat;
+  background-size: contain; /* or 'cover' if you want it to fill */
+  background-position: center;
+}
+
 
 .svgElementsp {
   width: 70%;
@@ -1569,7 +1565,6 @@
   .menuServices .body .card .headText span{
     font-size: 28px;
   }
-
 
 
 }

@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./styles/NavBar.module.css";
@@ -174,9 +172,9 @@ function NavBar({ logoSrc = "/logo.png" }) {
       <nav className={styles.NavBar}>
         <div className={styles.navContainer}>
           <Link href={"/"}>
-          <div className={styles.logo}>
-            <img src={logoSrc} alt="logo" />
-          </div>
+            <div className={styles.logo}>
+              <img src={logoSrc} alt="logo" />
+            </div>
           </Link>
           <div className={styles.links}>
             <button
@@ -211,20 +209,13 @@ function NavBar({ logoSrc = "/logo.png" }) {
                 <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
               </svg>
             </button>
-            <Link className={styles.link} href="">
-              Our Cloud Accelerator
-            </Link>
-            <Link href="/" className={styles.link} locale="fr">
-              Contact
-            </Link>
-          </div>
           <div className={styles.btns}>
             <button
               className={`${styles.contactButton} ${menuContactActive ? `${styles.active}` : ""
                 }`}
               onClick={() => activateMenu("menuContact")}
             >
-              <span>Contact us</span>
+              <span>Contact</span>
               <span>Close</span>
             </button>
             <button
@@ -235,6 +226,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
               <span></span>
               <span></span>
             </button>
+          </div>
           </div>
         </div>
       </nav>
@@ -264,8 +256,19 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </h3>
 
 
-                <div className="svgElementcss"></div>
+              <div className={styles.videoDiv}>
 
+
+                <object
+                  type="image/svg+xml"
+                  data="/svgs/1.svg"
+                  className={styles.svgElement}
+                  aria-label="Animated SVG"
+                />
+
+
+
+              </div>
 
             </div>
           </Link>
@@ -280,12 +283,16 @@ function NavBar({ logoSrc = "/logo.png" }) {
 
                 className={styles.videoDiv}
               >
-                <object
+                {/* <object
                   type="image/svg+xml"
                   data="/svgs/2.svg"
                   className={styles.svgElement}
                   aria-label="Animated SVG"
-                />
+                /> */}
+                <div
+                  className={styles.bgSvgElement}
+                  aria-label="Animated SVG"
+                ></div>
               </div>
             </div>
           </Link>
@@ -343,16 +350,13 @@ function NavBar({ logoSrc = "/logo.png" }) {
             <Link href="" className={styles.link}>
               <span>About</span>
             </Link>
-            <Link href="" className={styles.link}>
-              <span>Team</span>
+            <Link href="/en/teamexpansion" className={styles.link}>
+              <span>Team Expansion</span>
             </Link>
-            <Link href="" className={styles.link}>
-              <span>Testimonials</span>
+            <Link href="/en/deliverypartner" className={styles.link}>
+              <span>Delivery Partner</span>
             </Link>
 
-            <Link href="" className={styles.link}>
-              <span>Blog</span>
-            </Link>
           </div>
         </div>
       </menu>
@@ -435,8 +439,12 @@ function NavBar({ logoSrc = "/logo.png" }) {
                   <span>
                     <em>Cloud </em> Services
                   </span>
-                    <div class="svgElementcss"></div>
-
+                  <object
+                    type="image/svg+xml"
+                    data="/svgs/1.svg"
+                    className={styles.svgElementMobile}
+                    aria-label="Animated SVG"
+                  />
                 </div>
                 <div className={styles.card}>
                   <span>
@@ -538,6 +546,3 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
-
-
-
