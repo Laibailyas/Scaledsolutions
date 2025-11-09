@@ -1131,7 +1131,7 @@
 }
 
 /* ------------------- 1024px ------------------- */
-@media (max-width: 1524px) {
+@media (max-width: 1024px) {
   .section {
     padding: 0 3%;
     width: 100%;
