@@ -16,6 +16,7 @@
   width: 100%;
   position: relative;
   box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 .menuContact .body .head {
@@ -79,7 +80,6 @@
   flex-direction: column;
   margin-top: 3rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .menuContact .body .form .top {

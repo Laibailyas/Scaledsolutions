@@ -35,7 +35,7 @@
 .bgSvgElement {
   width: 100%;
   height: 100%;
-  background-image: url("/gear-and-rings-01.svg");
+  background-image: url("/aidata.svg");
   background-repeat: no-repeat;
   background-size: contain;
   /* or 'cover' if you want it to fill */
@@ -91,7 +91,7 @@
   width: 60%;
   height: 60%;
   display: block;
-  background-image: url("/gear-and-rings-01.svg");
+  background-image: url("/aidata.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -145,7 +145,7 @@
     height: 30vw;
     margin: 0 auto;
     display: block;
-    background-image: url("/gear-and-rings-01.svg");
+  background-image: url("/aidata.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

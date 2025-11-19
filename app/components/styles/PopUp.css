@@ -2,6 +2,9 @@
 .success-stories {
   background: #0b1c23;
   color: #cbcbcb;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .success-container {
@@ -246,10 +249,12 @@
   color: #fff;
   border: none;
   border-radius: 50%;
-  font-size: 26px;
+  font-size: clamp(26px, 1.75vw, 1.75vw);
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  width: 3vw;
+  height: 3vw;
   transition: background 0.2s;
   z-index: 999;
 }

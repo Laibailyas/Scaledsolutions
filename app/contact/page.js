@@ -20,11 +20,11 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="right">
-              <Link className="link" href="https://www.linkedin.com/company/ventriloc">
-                LinkedIn
+              <Link className="link" href="mailto:contact@scaledsolutions.com.au">
+                Email
               </Link>
-              <Link className="link" href="mailto:info@ScaledSol.ca">
-                info@ScaledSol.ca
+              <Link className="link" href="mailto:contact@scaledsolutions.com.au">
+                contact@scaledsolutions.com.au
               </Link>
               <Link className="link" href="tel:18193453223">
                 819-345-3223

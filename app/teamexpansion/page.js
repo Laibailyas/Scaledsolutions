@@ -122,7 +122,7 @@ export default function TeamExpansionPage() {
         <div className="image-section">
           <h2 className="image-section-title" id="directdevelopers">Direct Developers</h2>
           <img
-            src="https://scaledsols.my.canva.site/_assets/media/fa5edcbc47a0baabf9448a29b319ac30.png"
+            src="/direct.svg"
             alt="Direct Developers"
             className="image-section-img"
           />
@@ -132,7 +132,7 @@ export default function TeamExpansionPage() {
         <div className="image-section" id="softwaredev">
           <h2 className="image-section-title">Software Development Team</h2>
           <img
-            src="https://scaledsols.my.canva.site/_assets/media/3ff24e31e7f25081a8791b6f8ef44732.png"
+            src="/development.svg"
             alt="Software Development Team"
             className="image-section-img"
           />
@@ -142,7 +142,7 @@ export default function TeamExpansionPage() {
         <div className="image-section" id="agilesquad">
           <h2 className="image-section-title">Agile Squad</h2>
           <img
-            src="https://scaledsols.my.canva.site/_assets/media/be290c6512d40e2694bfd8f35160f4b8.png"
+            src="/agile.svg"
             alt="Agile Squad"
             className="image-section-img"
           />

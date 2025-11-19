@@ -1,0 +1,40 @@
+.textAnimation h3{
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #d6f0f2;
+    margin-bottom: 1rem;
+}
+
+.textAnimation img{
+    width: 100%;
+}
+
+.offer-checklist {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.offer-checklist p {
+    font-size: 1rem;
+    color: var(--color-white);
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    text-align: left;
+}
+
+.check-icon {
+    color: #198190;
+    font-size: 1.1rem;
+    line-height: 1;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+    .textAnimation h3 {
+        font-size: 2rem;
+    }
+}

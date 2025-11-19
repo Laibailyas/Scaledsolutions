@@ -229,7 +229,7 @@ export default function NewFooter() {
             </div>
 
 
-            <div className="footer-menu-wrap footer-menu-02 footer-animate">
+            {/* <div className="footer-menu-wrap footer-menu-02 footer-animate">
               <p className="paragraph-small text-gray-2">(OFFICE)</p>
               <div className="footer-menu-link">
                 <p className="paragraph-large">
@@ -238,7 +238,7 @@ export default function NewFooter() {
                   United States
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

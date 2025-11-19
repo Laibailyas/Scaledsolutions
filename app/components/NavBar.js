@@ -394,12 +394,12 @@ useEffect(() => {
             <div className={styles.right}>
               <Link
                 className={styles.link}
-                href="https://www.linkedin.com/company/ventriloc"
+                href="mailto:contact@scaledsolutions.com.au"
               >
-                LinkedIn
+                Email
               </Link>
-              <Link className={styles.link} href="mailto:info@ScaledSol.ca">
-                info@ScaledSol.ca
+              <Link className={styles.link} href="mailto:contact@scaledsolutions.com.au">
+                contact@scaledsolutions.com.au
               </Link>
               <Link className={styles.link} href="tel:18193453223">
                 819-345-3223
