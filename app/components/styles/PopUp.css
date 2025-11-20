@@ -269,6 +269,10 @@
     height: 240px;
   }
 
+  .pop-video-modal{
+    height: 90%;
+  }
+
   .pop-video-modal iframe {
     width: 100%;
   }
