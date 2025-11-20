@@ -512,7 +512,19 @@
 }
 
 
+@media (max-width:768px) {
+  .main-offer-sec{
+    padding: 3rem 1.5rem;
+  }
 
+  .cta-btn{
+    margin-bottom: 1rem;
+  }
+
+  .the-offer-section{
+    padding: 3rem 1rem;
+  }
+}
 
 
 

@@ -525,6 +525,14 @@
   .card-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
+
+    .strategy-section, .services-hero{
+    padding-bottom: 3rem;
+  }
+
+  .services-hero{
+    padding-top: 3rem;
+  }
 }
 
 .right-column{

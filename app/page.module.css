@@ -1640,6 +1640,10 @@
     display: none;
   }
 
+  .section_4 {
+    width: 90%;
+  }
+
   .section_4 .logoImages .stripe_animations:nth-child(3),
   .section_4 .logoImages .stripe_animations:nth-child(4) {
     display: none;

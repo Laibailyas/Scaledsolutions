@@ -75,6 +75,8 @@
   transition: background 0.3s ease;
   font-size: 1rem;
   margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .cta-btn {
@@ -319,27 +321,6 @@
   color: #222;
   text-align: left;
   margin: 0;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .core-heading {
-    font-size: 2.3rem;
-  }
-
-  .core-services-container {
-    padding: 2rem 1rem;
-  }
-
-  .core-card {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .core-icon {
-    margin-bottom: 0.5rem;
-  }
 }
 
 
@@ -713,17 +694,17 @@
 }
 
 @media (max-width: 768px) {
-    .highlights-container{
-        grid-template-columns: 1fr;
-    }
+  .highlights-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* === Elegant Animated Grid Background === */
 .animated-grid {
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 80px 80px;
   animation: gridMove 30s linear infinite;
   z-index: 0;
@@ -734,6 +715,7 @@
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 80px 80px;
   }
@@ -741,12 +723,59 @@
 
 
 
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .core-heading {
+    font-size: 2.3rem;
+  }
 
+  .video-modal iframe {
+    width: 100%;
+  }
+
+  .core-services-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .core-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .core-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .core-services,
+  .delivery-hero {
+    padding: 4rem 8%;
+  }
+
+  .story-box {
+    min-width: unset;
+  }
+
+  .story-block {
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+
+  .story-flex {
+    gap: 20px;
+  }
+
+  .highlights-section{
+    padding: 3rem 1rem;
+  }
+}
 
 
 
 @media (max-width:600px) {
-  .hero-blob,.animated-circle{
+
+  .hero-blob,
+  .animated-circle {
     display: none;
   }
 }

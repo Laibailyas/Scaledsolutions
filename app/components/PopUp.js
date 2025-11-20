@@ -184,7 +184,7 @@ export default function PopUp({ videoIndexes = [], imageIndexes = [] }) {
 
             {/* Video Modal */}
             {openVideo && (
-                <div className="pop-pop-video-modal" onClick={() => setOpenVideo(null)}>
+                <div className="pop-video-modal" onClick={() => setOpenVideo(null)}>
                     <div className="pop-video-wrapper" onClick={(e) => e.stopPropagation()}>
                         <iframe
                             width="900"

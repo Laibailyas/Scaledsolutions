@@ -230,7 +230,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .video-wrapper {
@@ -269,6 +269,10 @@
     height: 240px;
   }
 
+  .pop-video-modal iframe {
+    width: 100%;
+  }
+
   .pop-story-flex {
     flex-direction: column;
   }
@@ -278,7 +282,7 @@
     min-width: unset;
   }
 
-  .pop-story-block{
+  .pop-story-block {
     padding: 20px;
   }
 
@@ -288,11 +292,11 @@
 }
 
 @media (max-width: 450px) {
-  .card__content-inner{
+  .card__content-inner {
     padding: 20px 0;
   }
 
-  .btn{
+  .btn {
     padding-left: 16px;
     padding-right: 16px;
   }
