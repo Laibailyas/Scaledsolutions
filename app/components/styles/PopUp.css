@@ -233,7 +233,7 @@
   z-index: 99999;
 }
 
-.video-wrapper {
+.pop-video-wrapper {
   position: relative;
   background: #000;
   border-radius: 15px;
@@ -271,6 +271,10 @@
 
   .pop-video-modal{
     height: 90%;
+  }
+
+  .pop-video-wrapper{
+    padding: 30px 10px;
   }
 
   .pop-video-modal iframe {
