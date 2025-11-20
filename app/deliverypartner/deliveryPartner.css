@@ -756,6 +756,14 @@
     min-width: unset;
   }
 
+  .video-modal{
+    height: 90%;
+  }
+
+  .video-wrapper{
+    padding: 30px 10px;
+  }
+
   .story-block {
     padding: 20px;
     margin-bottom: 50px;
