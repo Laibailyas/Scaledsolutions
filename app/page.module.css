@@ -607,7 +607,7 @@
 }
 
 
-.animated-circle {
+.animatedCircle {
   position: absolute;
   top: -100px;
   left: -100px;
@@ -632,7 +632,7 @@
 }
 
 /* === Floating Gradient Orbs === */
-.floating-accents {
+.floatingAccents {
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -685,8 +685,8 @@
 
 @media (max-width:600px) {
 
-  .floating-accents,
-  .animated-circle {
+  .floatingAccents,
+  .animatedCircle {
     display: none;
   }
 }

@@ -913,11 +913,11 @@ export default function Home() {
     <div style={{ backgroundColor: "#0B1C23" }}>
       <NavBar />
       <main className={styles.page}>
-        <div className="animated-circle"></div>
-        <div className="floating-accents">
-          <div className="accent accent1"></div>
-          <div className="accent accent2"></div>
-          <div className="accent accent3"></div>
+        <div className={styles.animatedCircle}></div>
+        <div className={styles.floatingAccents}>
+          <div className={`${styles.accent} ${styles.accent1}`}></div>
+          <div className={`${styles.accent} ${styles.accent2}`}></div>
+          <div className={`${styles.accent} ${styles.accent3}`}></div>
         </div>
         <div className={styles.animatedGrid}></div>
         <section className={`${styles.section_1} ${styles.section}`}>
