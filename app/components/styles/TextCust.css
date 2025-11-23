@@ -6,7 +6,7 @@
 }
 
 .textAnimation img{
-    width: 100%;
+    width: 50vw;
 }
 
 .offer-checklist {
@@ -37,4 +37,9 @@
     .textAnimation h3 {
         font-size: 2rem;
     }
+
+    .textAnimation img{
+    width: 75vw;
+}
+
 }
