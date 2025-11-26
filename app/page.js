@@ -1687,7 +1687,7 @@ export default function Home() {
             <h3>
               Empowering <span>timely,</span>
               <br />
-              smart business<span>decisions</span>
+              smart business<span> decisions</span>
             </h3>
             <h3>
               To make <span>good</span> business <br />
@@ -1703,5 +1703,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
