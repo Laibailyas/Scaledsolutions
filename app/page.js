@@ -66,7 +66,10 @@ import TextCust from "./components/TextCust";
 
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
-
+ScrollTrigger.defaults({
+  start: "top 90%",
+  end: "bottom 10%",
+});
 
 export default function Home() {
   const section3Ref = useRef(null);
@@ -78,6 +81,15 @@ export default function Home() {
   const cardRefs = useRef([]);
   const partnerRef = useRef(null);
   const marqueeRefs = useRef([]);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500); // mobile layout settle time
+
+    return () => clearTimeout(t);
+  }, []);
+
 
   useEffect(() => {
     // ----------- NavBar Animation ----------- //
@@ -1066,21 +1078,6 @@ export default function Home() {
     }
 
     // // ----- FAQ animations -----
-    // if (faqRef.current && faqLeftRef.current && faqQuestionsRef.current.length) {
-    //   // Left heading fade in
-    //   gsap.fromTo(faqLeftRef.current, { opacity: 0, y: 100 }, {
-    //     opacity: 1, y: 0, duration: 1, delay: 0.3,
-    //     scrollTrigger: { trigger: faqRef.current, start: "top 85%" }
-    //   });
-
-    //   // Questions stagger animation
-    //   faqQuestionsRef.current.forEach((el, i) => {
-    //     gsap.fromTo(el, { opacity: 0, x: 100 }, {
-    //       opacity: 1, x: 0, duration: 0.6, delay: 0.2 * (i + 1),
-    //       scrollTrigger: { trigger: faqRef.current, start: "top 85%" }
-    //     });
-    //   });
-    // }
 
     if (faqRef.current && faqLeftRef.current && faqQuestionsRef.current.length) {
       // Left heading fade in
@@ -1583,7 +1580,7 @@ export default function Home() {
 
 
           {/* TextCust Matrix Scroll */}
-          <div className="textcust-pin-area" style={{ marginTop: '20px'}}>
+          <div className="textcust-pin-area" style={{ marginTop: '20px' }}>
             <TextCust />
           </div>
 
@@ -1687,7 +1684,7 @@ export default function Home() {
             <h3>
               Empowering <span>timely,</span>
               <br />
-              smart business<span> decisions</span>
+              smart business<span>decisions</span>
             </h3>
             <h3>
               To make <span>good</span> business <br />
@@ -1703,6 +1700,5 @@ export default function Home() {
     </div>
   );
 }
-
 
 
