@@ -5,7 +5,6 @@
 
 
 .delivery-hero {
-  background-color: var(--color-background-dark);
   color: var(--color-white);
   padding: 6rem 8%;
   position: relative;
@@ -220,7 +219,6 @@
 
 /* ===== Core Services Section ===== */
 .core-services {
-  background-color: var(--color-blue);
   color: var(--color-white);
   text-align: center;
   padding: 6rem 8% 8rem;
@@ -359,7 +357,6 @@
 /* ===== Core Services Section ===== */
 
 .core-services {
-  background-color: #0b1c23;
   padding: 6rem 8%;
   color: white;
   text-align: center;
@@ -496,7 +493,6 @@
 /* ===== Company Highlights Section ===== */
 
 .highlights-section {
-  background-color: #0b1c23;
   padding: 6rem 2rem;
   color: #cbcbcb;
   display: flex;
@@ -509,7 +505,6 @@
   gap: 3rem 4rem;
   max-width: 1100px;
   width: 100%;
-  background: #0b1c23;
   border-radius: 16px;
   padding: 3rem;
 }
@@ -646,7 +641,6 @@
   gap: 30px;
   position: relative;
   z-index: 1;
-  background: #012230;
 }
 
 .highlight-column {
@@ -703,22 +697,14 @@
 .animated-grid {
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 80px 80px;
-  animation: gridMove 30s linear infinite;
-  z-index: 0;
+  z-index: -1;
+  background-image: url('/bgImage.svg');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   pointer-events: none;
-}
-
-@keyframes gridMove {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 80px 80px;
-  }
 }
 
 

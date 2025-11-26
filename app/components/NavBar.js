@@ -7,6 +7,14 @@ import Image from "next/image";
 
 function NavBar({ logoSrc = "/logo.png" }) {
 
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=1")) {
+      setSuccess(true);
+    }
+  }, []);
+
   // const t = useTranslations("NavBar");
   // ------------------- State MenuServices ------------------- //
   const [menuServicesActive, setMenuServices] = useState(false);
@@ -126,26 +134,26 @@ function NavBar({ logoSrc = "/logo.png" }) {
   }, [menuServicesActive, menuVentrilocActive, menuContactActive]);
 
   useEffect(() => {
-  // Services height
-  const menuServicesInMenu = document.querySelector(`.${styles.menuServicesInMenu}`);
-  const btn_1 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(1)`);
-  if (menuServicesInMenuActive) {
-    btn_1.style.height = 27 + menuServicesInMenu.offsetHeight + "px";
-  } else {
-    btn_1.style.height = "27px";
-  }
-}, [menuServicesInMenuActive]);
+    // Services height
+    const menuServicesInMenu = document.querySelector(`.${styles.menuServicesInMenu}`);
+    const btn_1 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(1)`);
+    if (menuServicesInMenuActive) {
+      btn_1.style.height = 27 + menuServicesInMenu.offsetHeight + "px";
+    } else {
+      btn_1.style.height = "27px";
+    }
+  }, [menuServicesInMenuActive]);
 
-useEffect(() => {
-  // Ventriloc height
-  const menuVentrilocInMenu = document.querySelector(`.${styles.menuVentrilocInMenu}`);
-  const btn_2 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`);
-  if (menuVentrilocInMenuActive) {
-    btn_2.style.height = 27 + menuVentrilocInMenu.offsetHeight + "px";
-  } else {
-    btn_2.style.height = "27px";
-  }
-}, [menuVentrilocInMenuActive]);
+  useEffect(() => {
+    // Ventriloc height
+    const menuVentrilocInMenu = document.querySelector(`.${styles.menuVentrilocInMenu}`);
+    const btn_2 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`);
+    if (menuVentrilocInMenuActive) {
+      btn_2.style.height = 27 + menuVentrilocInMenu.offsetHeight + "px";
+    } else {
+      btn_2.style.height = "27px";
+    }
+  }, [menuVentrilocInMenuActive]);
 
 
   // ------------------- Active Menus ------------------- //
@@ -183,7 +191,7 @@ useEffect(() => {
     }
   };
 
-  
+
 
   return (
     <>
@@ -406,22 +414,38 @@ useEffect(() => {
               </Link>
             </div>
           </div>
-          <form className={styles.form}>
+
+          {success && (
+            <p className={styles.success}>
+              ✅ Thank you! We received your message.
+            </p>
+          )}
+
+          <form className={styles.form}
+            method="POST"
+            action="https://formsubmit.co/Admin@scaledsolutions.com.au"
+          >
             <div className={styles.top}>
               <div className={styles.left}>
-                <input type="text" placeholder="Name*" />
-                <input type="email" placeholder="E-mail" />
-                <input type="text" placeholder="Company" />
+                <input type="text" name="name" placeholder="Name*" required autoComplete="name" />
+                <input type="email" name="email" placeholder="E-mail*" required autoComplete="email" />
+                <input type="text" name="company" placeholder="Company" autoComplete="off" />
               </div>
               <div className={styles.right}>
-                <input type="text" placeholder="First name*" />
-                <input type="tel" placeholder="Phone" aria-invalid="false" />
-                <input type="text" placeholder="I am looking for help for *" />
+                <input type="text" name="firstname" placeholder="First name*" required autoComplete="name" />
+                <input type="tel" name="phone" placeholder="Phone" autoComplete="tel" />
+                <input type="text" name="help" placeholder="I am looking for help for *" required autoComplete="off" />
               </div>
             </div>
-            <input type="text" placeholder="Message" />
+
+            <input type="text" name="message" placeholder="Message*" required autoComplete="off" />
+
+            <input type="hidden" name="_next" value="http://scaledsolutions.vercel.app/?success=1" />
+            <input type="hidden" name="_captcha" value="false" />
+
             <button className={styles.btn}>Send</button>
           </form>
+
         </div>
       </menu>
       <menu

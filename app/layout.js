@@ -8,7 +8,7 @@ export const metadata = {
   title: "Scaled Solutions - We turn data into value",
   description: "Made With Love By Scaled Solutions",
   icons: {
-    icon: "/icons/favicon.ico",
+    icon: "/icons/favicon.ICO",
   },
 };
 

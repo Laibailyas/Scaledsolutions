@@ -12,6 +12,7 @@
   margin: 0 auto;
   padding: 0 40px;
   position: relative;
+  z-index: 999;
 }
 
 .boxicon{
@@ -392,6 +393,10 @@ body, .footer, .footer * {
   }
 
   .boxicon{
+    display: none;
+  }
+
+  .space{
     display: none;
   }
 

@@ -3,13 +3,24 @@ import NavBar from "../components/NavBar";
 import NewFooter from "../components/NewFooter";
 import "./services.css";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 export default function ServicesPage() {
+
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=1")) {
+      setSuccess(true);
+    }
+  }, []);
   return (
     <>
       <NavBar />
 
       <div className="menuContact">
+        <div className="animated-grid"></div>
+        <div className="animated-circle"></div>
         <div className="body">
           <div className="head">
             <div className="left">
@@ -31,22 +42,40 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
-          <form className="form">
+
+          {success && (
+            <p className="success">
+              ✅ Thank you! We received your message.
+            </p>
+          )}
+
+          <form className="form"
+            method="POST"
+            action="https://formsubmit.co/Admin@scaledsolutions.com.au"
+          >
             <div className="top">
               <div className="left">
-                <input type="text" id="name" placeholder="Name*" />
-                <input type="email" id="email" placeholder="E-mail" />
-                <input type="text" id="company" placeholder="Company" />
+                <input type="text" id="name" name="name" placeholder="Name*" required autoComplete="name" />
+                <input type="email" id="email" name="email" placeholder="E-mail" autoComplete="email" />
+                <input type="text" id="company" name="company" placeholder="Company" autoComplete="organization" />
               </div>
+
               <div className="right">
-                <input type="text" id="first-name" placeholder="First name*" />
-                <input type="tel" id="phone" placeholder="Phone" aria-invalid="false" />
-                <input type="text" id="looking-for" placeholder="I am looking for help for *" />
+                <input type="text" id="first-name" name="firstname" placeholder="First name*" required autoComplete="given-name" />
+                <input type="tel" id="phone" name="phone" placeholder="Phone" autoComplete="tel" />
+                <input type="text" id="looking-for" name="help" placeholder="I am looking for help for *" required autoComplete="off" />
               </div>
             </div>
-            <input type="text" id="message" placeholder="Message" />
+
+            <input type="text" id="message" name="message" placeholder="Message" autoComplete="off" />
+
+            <input type="hidden" name="_next" value="http://scaledsolutions.vercel.app/contact?success=1" />
+
+            <input type="hidden" name="_captcha" value="false" />
+
             <button className="btn">Send</button>
           </form>
+
         </div>
       </div>
 

@@ -69,6 +69,16 @@ gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 
 export default function Home() {
+  const section3Ref = useRef(null);
+  const headRef = useRef(null);
+  const pRef = useRef(null);
+  const span1Ref = useRef(null);
+  const span2Ref1 = useRef(null);
+  const span2Ref2 = useRef(null);
+  const cardRefs = useRef([]);
+  const partnerRef = useRef(null);
+  const marqueeRefs = useRef([]);
+
   useEffect(() => {
     // ----------- NavBar Animation ----------- //
     gsap.fromTo(
@@ -125,408 +135,418 @@ export default function Home() {
       }
     );
     // ----------- Section 2 Animation ----------- //
-    gsap.fromTo(
-      `.${styles.section_2} .${styles.body} #${styles.textSection_2}`,
-      {
-        y: "50%",
-        opacity: 0,
-      },
-      {
-        y: "0%",
-        opacity: 1,
-        delay: 1.4,
-        duration: 0.8,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_2} .${styles.body} .${styles.video}`,
-      {
-        y: 100,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        delay: 1.6,
-        duration: 0.8,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_2} svg:nth-child(2)`,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        delay: 0,
-        duration: 0.8,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_2} svg:nth-child(3)`,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        delay: 0.2,
-        duration: 0.8,
-      }
-    );
+    // gsap.fromTo(
+    //   `.${styles.section_2} .${styles.body} #${styles.textSection_2}`,
+    //   {
+    //     y: "50%",
+    //     opacity: 0,
+    //   },
+    //   {
+    //     y: "0%",
+    //     opacity: 1,
+    //     delay: 1.4,
+    //     duration: 0.8,
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_2} .${styles.body} .${styles.video}`,
+    //   {
+    //     y: 100,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     y: 0,
+    //     opacity: 1,
+    //     delay: 1.6,
+    //     duration: 0.8,
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_2} svg:nth-child(2)`,
+    //   {
+    //     opacity: 0,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     delay: 0,
+    //     duration: 0.8,
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_2} svg:nth-child(3)`,
+    //   {
+    //     opacity: 0,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     delay: 0.2,
+    //     duration: 0.8,
+    //   }
+    // );
     // ----------- Section 3 Animation ----------- //
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.head} h2 span:nth-child(1)`,
-      {
-        x: "-100%",
-        opacity: 0,
-      },
-      {
-        x: "-40%",
-        opacity: 1,
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: `.${styles.section_3} .${styles.head}`,
-          toggleActions: "play reverse play reverse", // <--- This is key
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.head} h2 span:nth-child(1)`,
+    //   {
+    //     x: "-100%",
+    //     opacity: 0,
+    //   },
+    //   {
+    //     x: "-40%",
+    //     opacity: 1,
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     duration: 0.8,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3} .${styles.head}`,
+    //       toggleActions: "play reverse play reverse", // <--- This is key
+    //     },
+    //   }
+    // );
 
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.head} h2 span:nth-child(3)`,
-      {
-        x: "100%",
-        opacity: 0,
-      },
-      {
-        x: "40%",
-        opacity: 1,
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: `.${styles.section_3} .${styles.head}`,
-          toggleActions: "play reverse play reverse",
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.head} h2 svg`,
-      {
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.section_3} .${styles.head}`,
-        },
-        opacity: 1,
-        delay: 0.4,
-        duration: 1,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.body} .${styles.card}:nth-child(1)`,
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.section_3} .${styles.body}`,
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.body} .${styles.card}:nth-child(2)`,
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.section_3} .${styles.body}`,
-        },
-        y: 0,
-        opacity: 1,
-        delay: 0.2,
-        duration: 0.5,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.body} .${styles.card}:nth-child(3)`,
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.section_3} .${styles.body}`,
-        },
-        y: 0,
-        opacity: 1,
-        delay: 0.4,
-        duration: 0.5,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.head} p`,
-      {
-        x: 150,
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.section_3}`,
-        },
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.partner} h2`,
-      {
-        x: 150,
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.section_3} .${styles.partner}`,
-        },
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.partner} .${styles.marquee}:nth-child(2) .${styles.marquee__inner}`,
-      {
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.partner}`,
-        },
-        opacity: 1,
-        duration: 1.5,
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_3} .${styles.partner} .${styles.marquee}:nth-child(3) .${styles.marquee__inner}`,
-      {
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: `.${styles.partner}`,
-        },
-        opacity: 1,
-        duration: 1.5,
-      }
-    );
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.head} h2 span:nth-child(3)`,
+    //   {
+    //     x: "100%",
+    //     opacity: 0,
+    //   },
+    //   {
+    //     x: "40%",
+    //     opacity: 1,
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     duration: 0.8,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3} .${styles.head}`,
+    //       toggleActions: "play reverse play reverse",
+    //     },
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.head} h2 svg`,
+    //   {
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3} .${styles.head}`,
+    //     },
+    //     opacity: 1,
+    //     delay: 0.4,
+    //     duration: 1,
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.body} .${styles.card}:nth-child(1)`,
+    //   {
+    //     y: 50,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3} .${styles.body}`,
+    //     },
+    //     y: 0,
+    //     opacity: 1,
+    //     duration: 0.5,
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.body} .${styles.card}:nth-child(2)`,
+    //   {
+    //     y: 50,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3} .${styles.body}`,
+    //     },
+    //     y: 0,
+    //     opacity: 1,
+    //     delay: 0.2,
+    //     duration: 0.5,
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.body} .${styles.card}:nth-child(3)`,
+    //   {
+    //     y: 50,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3} .${styles.body}`,
+    //     },
+    //     y: 0,
+    //     opacity: 1,
+    //     delay: 0.4,
+    //     duration: 0.5,
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.head} p`,
+    //   {
+    //     x: 150,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3}`,
+    //     },
+    //     x: 0,
+    //     opacity: 1,
+    //     duration: 0.5,
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.partner} h2`,
+    //   {
+    //     x: 150,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_3} .${styles.partner}`,
+    //     },
+    //     x: 0,
+    //     opacity: 1,
+    //     duration: 0.5,
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.partner} .${styles.marquee}:nth-child(2) .${styles.marquee__inner}`,
+    //   {
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.partner}`,
+    //     },
+    //     opacity: 1,
+    //     duration: 1.5,
+    //   }
+    // );
+
+    // gsap.fromTo(
+    //   `.${styles.section_3} .${styles.partner} .${styles.marquee}:nth-child(3) .${styles.marquee__inner}`,
+    //   {
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.partner}`,
+    //     },
+    //     opacity: 1,
+    //     duration: 1.5,
+    //   }
+    // );
+
     // ----------- Section 4 Animation ----------- //
-    gsap.fromTo(
-      `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(1) svg path`,
-      {
-        y: "101%",
-      },
-      {
-        y: "0%",
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        scrollTrigger: {
-          trigger: `.${styles.section_4}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(2) svg path`,
-      {
-        y: "101%",
-      },
-      {
-        y: "0%",
-        delay: 0.1,
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        scrollTrigger: {
-          trigger: `.${styles.section_4}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(3) svg path`,
-      {
-        y: "101%",
-      },
-      {
-        y: "0%",
-        delay: 0.2,
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        scrollTrigger: {
-          trigger: `.${styles.section_4}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(4) svg path`,
-      {
-        y: "101%",
-      },
-      {
-        y: "0%",
-        delay: 0.3,
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        scrollTrigger: {
-          trigger: `.${styles.section_4}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_4} h3 .${styles.spanSection_4}:nth-child(1)`,
-      {
-        opacity: 0,
-        x: 200,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        delay: 0.3,
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        scrollTrigger: {
-          trigger: `.${styles.section_4} h3`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_4} h3 .${styles.spanSection_4}:nth-child(2)`,
-      {
-        opacity: 0,
-        x: -200,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        delay: 0.3,
-        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
-        scrollTrigger: {
-          trigger: `.${styles.section_4} h3`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_4} .${styles.hr} div`,
-      {
-        opacity: 0,
-        transform: "scale3d(0, 1, 1)",
-      },
-      {
-        transform: "scale3d(1, 1, 1)",
-        opacity: 1,
-        duration: 1,
-        delay: 0,
-        // ease: "cubic-bezier(0.645, 0.045, 0.355, 1)",
-        ease: CustomEase.create("custom", "M0,0,C0.645,0.045,0.355,1,1,1"),
-        scrollTrigger: {
-          trigger: `.${styles.section_4} .${styles.hr}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_4} .${styles.title}`,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1,
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: `.${styles.section_4} .${styles.title}`,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(1) svg path`,
+    //   {
+    //     y: "101%",
+    //   },
+    //   {
+    //     y: "0%",
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(2) svg path`,
+    //   {
+    //     y: "101%",
+    //   },
+    //   {
+    //     y: "0%",
+    //     delay: 0.1,
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(3) svg path`,
+    //   {
+    //     y: "101%",
+    //   },
+    //   {
+    //     y: "0%",
+    //     delay: 0.2,
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_4} .${styles.logoImages} .${styles.stripe_animations}:nth-child(4) svg path`,
+    //   {
+    //     y: "101%",
+    //   },
+    //   {
+    //     y: "0%",
+    //     delay: 0.3,
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_4} h3 .${styles.spanSection_4}:nth-child(1)`,
+    //   {
+    //     opacity: 0,
+    //     x: 200,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     x: 0,
+    //     delay: 0.3,
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4} h3`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_4} h3 .${styles.spanSection_4}:nth-child(2)`,
+    //   {
+    //     opacity: 0,
+    //     x: -200,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     x: 0,
+    //     delay: 0.3,
+    //     ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4} h3`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_4} .${styles.hr} div`,
+    //   {
+    //     opacity: 0,
+    //     transform: "scale3d(0, 1, 1)",
+    //   },
+    //   {
+    //     transform: "scale3d(1, 1, 1)",
+    //     opacity: 1,
+    //     duration: 1,
+    //     delay: 0,
+    //     // ease: "cubic-bezier(0.645, 0.045, 0.355, 1)",
+    //     ease: CustomEase.create("custom", "M0,0,C0.645,0.045,0.355,1,1,1"),
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4} .${styles.hr}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_4} .${styles.title}`,
+    //   {
+    //     opacity: 0,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     duration: 1,
+    //     delay: 0.3,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_4} .${styles.title}`,
+    //     },
+    //   }
+    // );
+
     // ----------- Section 5 Animation ----------- //
-    gsap.fromTo(
-      `.${styles.section_5} .${styles.faq} .${styles.left}`,
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: `.${styles.faq}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(1)`,
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.6,
-        scrollTrigger: {
-          trigger: `.${styles.faq}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(2)`,
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.7,
-        scrollTrigger: {
-          trigger: `.${styles.faq}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(3)`,
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.8,
-        scrollTrigger: {
-          trigger: `.${styles.faq}`,
-        },
-      }
-    );
-    gsap.fromTo(
-      `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(4)`,
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.9,
-        scrollTrigger: {
-          trigger: `.${styles.faq}`,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   `.${styles.section_5} .${styles.faq} .${styles.left}`,
+    //   {
+    //     opacity: 0,
+    //     y: 100,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     y: 0,
+    //     duration: 1,
+    //     delay: 0.3,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.faq}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(1)`,
+    //   {
+    //     opacity: 0,
+    //     x: 100,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     x: 0,
+    //     duration: 1,
+    //     delay: 0.6,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.faq}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(2)`,
+    //   {
+    //     opacity: 0,
+    //     x: 100,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     x: 0,
+    //     duration: 1,
+    //     delay: 0.7,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.faq}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(3)`,
+    //   {
+    //     opacity: 0,
+    //     x: 100,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     x: 0,
+    //     duration: 1,
+    //     delay: 0.8,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.faq}`,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   `.${styles.section_5} .${styles.faq} .${styles.questions} .${styles.question}:nth-child(4)`,
+    //   {
+    //     opacity: 0,
+    //     x: 100,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     x: 0,
+    //     duration: 1,
+    //     delay: 0.9,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.faq}`,
+    //     },
+    //   }
+    // );
     // // ----------- Section 6 Animation ----------- //
     // gsap.fromTo(
     //   `.${styles.section_6} #${styles.h3Section6}`,
@@ -598,37 +618,37 @@ export default function Home() {
     // });
 
     // ----------- Scale Video ----------- //
-    if (!isMobile) {
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.to(
-        `.${styles.section_2} .${styles.body} .${styles.video} .${styles.vid}`,
-        {
-          width: "1000px",
-          scrollTrigger: {
-            trigger: `.${styles.section_2}`,
-            start: "top 33%",
-            end: "bottom bottom",
-            scrub: true,
-            // markers: true,
-          },
-        }
-      );
+    // if (!isMobile) {
+    //   gsap.registerPlugin(ScrollTrigger);
+    //   gsap.to(
+    //     `.${styles.section_2} .${styles.body} .${styles.video} .${styles.vid}`,
+    //     {
+    //       width: "1000px",
+    //       scrollTrigger: {
+    //         trigger: `.${styles.section_2}`,
+    //         start: "top 33%",
+    //         end: "bottom bottom",
+    //         scrub: true,  
+    //         // markers: true,
+    //       },
+    //     }
+    //   );
 
-    }
-    // ----------- Smooth Scroll ----------- //
-    if (!isMobile) {
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.to(`.${styles.section_2} svg:nth-child(2)`, {
-        scrollTrigger: {
-          trigger: `.${styles.section_2}`,
-          start: "top 33%",
-          end: "bottom bottom",
-          scrub: true,
-          // markers: true,
-        },
-        y: "12rem",
-      });
-    }
+    // }
+    // // ----------- Smooth Scroll ----------- //
+    // if (!isMobile) {
+    //   gsap.registerPlugin(ScrollTrigger);
+    //   gsap.to(`.${styles.section_2} svg:nth-child(2)`, {
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_2}`,
+    //       start: "top 33%",
+    //       end: "bottom bottom",
+    //       scrub: true,
+    //       // markers: true,
+    //     },
+    //     y: "12rem",
+    //   });
+    // }
     // // ----------- Marquee ----------- //
     gsap.to(`.${styles.marquee}:nth-child(2) .${styles.marquee__inner}`, {
       xPercent: -100,
@@ -645,133 +665,133 @@ export default function Home() {
       overwrite: "auto", // استخدام خاصية overwrite لتجنب التقطيع
     });
     // ----------- Scale BackGround Section4 ----------- //
-    gsap.to(`.${styles.section_4} .${styles.BackGround}`, {
-      width: "100%",
-      duration: 10,
-      scrollTrigger: {
-        trigger: `.${styles.section_4}`,
-        scrub: 1,
-        start: "top 80%",
-        end: "bottom 80%",
-        // markers: true,
-      },
-    });
-    // ----------- Sticky Cards Section5 ----------- //
-    if (!isMobile) {
-      gsap.fromTo(
-        `.${styles.section_5} .${styles.sticky} .${styles.cards}`,
-        {
-          x: "100%",
-        },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: `.${styles.sticky}`,
-            scrub: 1,
-            // markers: true,
-            start: "top 80%",
-            end: "bottom 80%",
-          },
-        }
-      );
-    }
-    // ----------- Animation Card 1 Section5 ----------- //
-    if (!isMobile) {
-      gsap.fromTo(
-        `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(1)`,
-        {
-          rotate: "-13deg",
-        },
-        {
-          rotate: "-4deg",
-          scrollTrigger: {
-            trigger: `.${styles.sticky}`,
-            scrub: 1,
-            // markers: true,
-            start: "top 80%",
-            end: "bottom 80%",
-          },
-        }
-      );
-    }
-    // ----------- Animation Card 2 Section5 ----------- //
-    if (!isMobile) {
-      gsap.fromTo(
-        `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(2)`,
-        {
-          rotate: "-7deg",
-          x: "60%",
-        },
-        {
-          x: "-13%",
-          rotate: "10deg",
-          scrollTrigger: {
-            trigger: `.${styles.sticky}`,
-            scrub: 1,
-            // markers: true,
-            start: "top 80%",
-            end: "bottom 80%",
-          },
-        }
-      );
-    }
-    // ----------- Animation Card 3 Section5 ----------- //
-    if (!isMobile) {
-      gsap.fromTo(
-        `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(3)`,
-        {
-          x: "120%",
-          rotate: "-13deg",
-        },
-        {
-          x: "-20%",
-          rotate: "-4deg",
-          scrollTrigger: {
-            trigger: `.${styles.sticky}`,
-            scrub: 1,
-            // markers: true,
-            start: "top 80%",
-            end: "bottom 80%",
-          },
-        }
-      );
-    }
-    // ----------- Animation Card 4 Section5 ----------- //
-    if (!isMobile) {
-      gsap.fromTo(
-        `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(4)`,
-        {
-          rotate: "-7deg",
-          x: "180%",
-        },
-        {
-          x: "-35%",
-          rotate: "10deg",
-          scrollTrigger: {
-            trigger: `.${styles.sticky}`,
-            scrub: 1,
-            start: "top 80%",
-            end: "bottom 80%",
-            // markers: true,
-          },
-        }
-      );
-    }
+    // gsap.to(`.${styles.section_4} .${styles.BackGround}`, {
+    //   width: "100%",
+    //   duration: 10,
+    //   scrollTrigger: {
+    //     trigger: `.${styles.section_4}`,
+    //     scrub: 1,
+    //     start: "top 80%",
+    //     end: "bottom 80%",
+    //     // markers: true,
+    //   },
+    // });
+    // // ----------- Sticky Cards Section5 ----------- //
+    // if (!isMobile) {
+    //   gsap.fromTo(
+    //     `.${styles.section_5} .${styles.sticky} .${styles.cards}`,
+    //     {
+    //       x: "100%",
+    //     },
+    //     {
+    //       x: 0,
+    //       scrollTrigger: {
+    //         trigger: `.${styles.sticky}`,
+    //         scrub: 1,
+    //         // markers: true,
+    //         start: "top 80%",
+    //         end: "bottom 80%",
+    //       },
+    //     }
+    //   );
+    // }
+    // // ----------- Animation Card 1 Section5 ----------- //
+    // if (!isMobile) {
+    //   gsap.fromTo(
+    //     `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(1)`,
+    //     {
+    //       rotate: "-13deg",
+    //     },
+    //     {
+    //       rotate: "-4deg",
+    //       scrollTrigger: {
+    //         trigger: `.${styles.sticky}`,
+    //         scrub: 1,
+    //         // markers: true,
+    //         start: "top 80%",
+    //         end: "bottom 80%",
+    //       },
+    //     }
+    //   );
+    // }
+    // // ----------- Animation Card 2 Section5 ----------- //
+    // if (!isMobile) {
+    //   gsap.fromTo(
+    //     `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(2)`,
+    //     {
+    //       rotate: "-7deg",
+    //       x: "60%",
+    //     },
+    //     {
+    //       x: "-13%",
+    //       rotate: "10deg",
+    //       scrollTrigger: {
+    //         trigger: `.${styles.sticky}`,
+    //         scrub: 1,
+    //         // markers: true,
+    //         start: "top 80%",
+    //         end: "bottom 80%",
+    //       },
+    //     }
+    //   );
+    // }
+    // // ----------- Animation Card 3 Section5 ----------- //
+    // if (!isMobile) {
+    //   gsap.fromTo(
+    //     `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(3)`,
+    //     {
+    //       x: "120%",
+    //       rotate: "-13deg",
+    //     },
+    //     {
+    //       x: "-20%",
+    //       rotate: "-4deg",
+    //       scrollTrigger: {
+    //         trigger: `.${styles.sticky}`,
+    //         scrub: 1,
+    //         // markers: true,
+    //         start: "top 80%",
+    //         end: "bottom 80%",
+    //       },
+    //     }
+    //   );
+    // }
+    // // ----------- Animation Card 4 Section5 ----------- //
+    // if (!isMobile) {
+    //   gsap.fromTo(
+    //     `.${styles.section_5} .${styles.sticky} .${styles.cards} .${styles.cardSticky}:nth-child(4)`,
+    //     {
+    //       rotate: "-7deg",
+    //       x: "180%",
+    //     },
+    //     {
+    //       x: "-35%",
+    //       rotate: "10deg",
+    //       scrollTrigger: {
+    //         trigger: `.${styles.sticky}`,
+    //         scrub: 1,
+    //         start: "top 80%",
+    //         end: "bottom 80%",
+    //         // markers: true,
+    //       },
+    //     }
+    //   );
+    // }
     // ----------- Animation fanSvg Section6 ----------- //
-    if (window.innerWidth >= 1024) {
-      gsap.to(`.${styles.section_6} .${styles.fanSvg}`, {
-        rotate: 360,
-        scrollTrigger: {
-          trigger: `.${styles.section_6}`,
-          scrub: 1,
-          // markers: true,
-        },
-      });
-    } else {
-      null;
-    }
+    // if (window.innerWidth >= 1024) {
+    //   gsap.to(`.${styles.section_6} .${styles.fanSvg}`, {
+    //     rotate: 360,
+    //     scrollTrigger: {
+    //       trigger: `.${styles.section_6}`,
+    //       scrub: 1,
+    //       // markers: true,
+    //     },
+    //   });
+    // } else {
+    //   null;
+    // }
 
-        setTimeout(() => {
+    setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
     // ------------------- Height Section 8 ------------------- //
@@ -781,6 +801,336 @@ export default function Home() {
     // var heightMenuServices = menuServices.offsetHeight;
     // backSection.style.height = heightMenuServices + "px";
   }, []);
+
+  // useEffect(() => {
+
+
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: headRef.current,
+  //       start: "top 85%",
+  //       once: true,
+  //     }
+  //   });
+
+  //   // reset initial state
+  //   gsap.set(span1Ref.current, { opacity: 0, x: -80 });
+  //   gsap.set(span2Ref2.current, { opacity: 0, x: 80 });
+
+  //   tl.to(span1Ref.current, {
+  //     x: 0,
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease: "power3.out"
+  //   })
+
+  //     .to(
+  //       span2Ref2.current,
+  //       {
+  //         x: 0,
+  //         opacity: 1,
+  //         duration: 1,
+  //         ease: "power3.out"
+  //       },
+  //       "-=0.6"
+  //     );
+  // }, []);
+
+  useEffect(() => {
+    if (!span1Ref.current || !span2Ref2.current || !headRef.current) return;
+
+    const ctxSimple = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: headRef.current,
+          start: "top 85%",
+          once: true,
+        },
+      });
+
+      gsap.set(span1Ref.current, { opacity: 0, x: -80 });
+      gsap.set(span2Ref2.current, { opacity: 0, x: 80 });
+
+      tl.to(span1Ref.current, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+      }).to(
+        span2Ref2.current,
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.6"
+      );
+    });
+
+    return () => ctxSimple.revert();
+  }, []);
+
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // ---------- Cards Animation ----------
+      cardRefs.current.forEach((card, i) => {
+        gsap.fromTo(
+          card,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            delay: i * 0.2,
+            duration: 0.5,
+            scrollTrigger: { trigger: section3Ref.current.querySelector(`.${card.className.split(" ")[0]}`) },
+          }
+        );
+      });
+
+      // ---------- Partner Heading ----------
+      gsap.fromTo(
+        partnerRef.current.querySelector("h2"),
+        { x: 150, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.5,
+          scrollTrigger: { trigger: partnerRef.current },
+        }
+      );
+
+      // ---------- Marquee Animation ----------
+      marqueeRefs.current.forEach((marquee) => {
+        gsap.fromTo(
+          marquee,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 1.5,
+            scrollTrigger: { trigger: partnerRef.current },
+          }
+        );
+      });
+    }, section3Ref);
+
+    return () => ctx.revert();
+  }, []);
+
+
+
+  const sectionRef = useRef(null);
+
+
+  const spanRefs = useRef([]);
+  spanRefs.current = [];
+
+  const hrRef = useRef(null);
+  const titleRef = useRef(null);
+
+  const addSpanRef = (el) => {
+    if (el && !spanRefs.current.includes(el)) {
+      spanRefs.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+
+    // HEADING SPAN ANIMATIONS
+    gsap.fromTo(
+      spanRefs.current[0],
+      { opacity: 0, x: 200 },
+      {
+        opacity: 1,
+        x: 0,
+        delay: 0.3,
+        ease: CustomEase.create(
+          "custom",
+          "M0,0,C0.215,0.61,0.355,1,1,1"
+        ),
+        scrollTrigger: { trigger: spanRefs.current[0] },
+      }
+    );
+
+    gsap.fromTo(
+      spanRefs.current[1],
+      { opacity: 0, x: -200 },
+      {
+        opacity: 1,
+        x: 0,
+        delay: 0.3,
+        ease: CustomEase.create(
+          "custom",
+          "M0,0,C0.215,0.61,0.355,1,1,1"
+        ),
+        scrollTrigger: { trigger: spanRefs.current[1] },
+      }
+    );
+
+    // HR LINE
+    const hrInnerDiv = hrRef.current.querySelector("div");
+
+    gsap.fromTo(
+      hrInnerDiv,
+      { opacity: 0, transform: "scale3d(0,1,1)" },
+      {
+        opacity: 1,
+        transform: "scale3d(1,1,1)",
+        duration: 1,
+        ease: CustomEase.create(
+          "custom",
+          "M0,0,C0.645,0.045,0.355,1,1,1"
+        ),
+        scrollTrigger: { trigger: hrRef.current },
+      }
+    );
+
+    // TITLE TEXT
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        delay: 0.3,
+        scrollTrigger: { trigger: titleRef.current },
+      }
+    );
+  }, []);
+
+
+  const stickyRef = useRef(null);
+  const cardsRef = useRef(null);
+  const sCardRefs = useRef([]);
+  sCardRefs.current = [];
+
+  const faqRef = useRef(null);
+  const faqLeftRef = useRef(null);
+  const faqQuestionsRef = useRef([]);
+  faqQuestionsRef.current = [];
+
+  // Helper to add card/question refs
+  const addCardRef = (el) => { if (el && !sCardRefs.current.includes(el)) sCardRefs.current.push(el); };
+  const addQuestionRef = (el) => { if (el && !faqQuestionsRef.current.includes(el)) faqQuestionsRef.current.push(el); };
+
+  // ---------- GSAP Animations ----------
+  useEffect(() => {
+    // ----- Sticky cards horizontal + rotation animation -----
+    if (!isMobile && stickyRef.current && cardsRef.current) {
+      // Move entire cards wrapper horizontally
+      gsap.fromTo(cardsRef.current, { x: "100%" }, {
+        x: 0,
+        scrollTrigger: {
+          trigger: stickyRef.current,
+          scrub: 1,
+          start: "top 80%",
+          end: "bottom 80%",
+        },
+      });
+
+      // Animate individual cards rotation & x
+      const cardAnimations = [
+        { xFrom: "0%", xTo: "0%", rotateFrom: "-13deg", rotateTo: "-4deg" },
+        { xFrom: "60%", xTo: "-13%", rotateFrom: "-7deg", rotateTo: "10deg" },
+        { xFrom: "120%", xTo: "-20%", rotateFrom: "-13deg", rotateTo: "-4deg" },
+        { xFrom: "180%", xTo: "-35%", rotateFrom: "-7deg", rotateTo: "10deg" },
+      ];
+
+      // sCardRefs.current.forEach((card, i) => {
+      //   if (card) {
+      //     gsap.fromTo(card, { x: cardAnimations[i].xFrom, rotate: cardAnimations[i].rotateFrom }, {
+      //       x: cardAnimations[i].xTo,
+      //       rotate: cardAnimations[i].rotateTo,
+      //       scrollTrigger: {
+      //         trigger: stickyRef.current,
+      //         scrub: 1,
+      //         start: "top 80%",
+      //         end: "bottom 80%",
+      //       },
+      //     });
+      //   }
+      // });
+
+      if (!stickyRef.current) return;
+
+      sCardRefs.current.forEach((card, i) => {
+        if (card) {
+          gsap.fromTo(
+            card,
+            {
+              x: cardAnimations[i].xFrom,
+              rotate: cardAnimations[i].rotateFrom,
+            },
+            {
+              x: cardAnimations[i].xTo,
+              rotate: cardAnimations[i].rotateTo,
+              scrollTrigger: {
+                trigger: stickyRef.current,
+                scrub: 1,
+                start: "top 80%",
+                end: "bottom 80%",
+              },
+            }
+          );
+        }
+      });
+
+    }
+
+    // // ----- FAQ animations -----
+    // if (faqRef.current && faqLeftRef.current && faqQuestionsRef.current.length) {
+    //   // Left heading fade in
+    //   gsap.fromTo(faqLeftRef.current, { opacity: 0, y: 100 }, {
+    //     opacity: 1, y: 0, duration: 1, delay: 0.3,
+    //     scrollTrigger: { trigger: faqRef.current, start: "top 85%" }
+    //   });
+
+    //   // Questions stagger animation
+    //   faqQuestionsRef.current.forEach((el, i) => {
+    //     gsap.fromTo(el, { opacity: 0, x: 100 }, {
+    //       opacity: 1, x: 0, duration: 0.6, delay: 0.2 * (i + 1),
+    //       scrollTrigger: { trigger: faqRef.current, start: "top 85%" }
+    //     });
+    //   });
+    // }
+
+    if (faqRef.current && faqLeftRef.current && faqQuestionsRef.current.length) {
+      // Left heading fade in
+      gsap.fromTo(
+        faqLeftRef.current,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.3,
+          scrollTrigger: {
+            trigger: faqRef.current,
+            start: "top 85%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+
+      // Questions stagger animation
+      gsap.fromTo(
+        faqQuestionsRef.current,
+        { opacity: 0, x: 100 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.3,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: faqRef.current,
+            start: "top 85%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    }
+  }, [isMobile]);
+
 
   // ----------- handleQuestionClick ----------- //
   const [activeIndex, setActiveIndex] = useState(null);
@@ -943,423 +1293,119 @@ export default function Home() {
         </div>
 
 
-        <section className={`${styles.section_3} ${styles.section}`}>
-
-
-          <div className={styles.head}>
-            <p>Services</p>
+        <section ref={section3Ref} className={`${styles.section_3} ${styles.section}`}>
+          {/* Heading */}
+          <div ref={headRef} className={styles.head}>
+            <p ref={pRef}>Services</p>
             <h2>
-              <span className={styles.span1} style={{ zIndex: '50 !important' }}>We make the</span>
-              <span className={styles.span2} style={{ zIndex: '50 !important' }}>complex things</span>
-              <span className={styles.span2} style={{ color: "#2996a7", paddingTop: "1.2rem", zIndex: '10 !important' }}>
+              <span ref={span1Ref} className={styles.span1}>We make the</span>
+              <span ref={span2Ref1} className={styles.span2}>complex things</span>
+              <span ref={span2Ref2} className={styles.span2} style={{ color: "#2996a7", paddingTop: "1.2rem" }}>
                 <span>simple</span>.
               </span>
-              <svg
-                class="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100"
-                width="1328"
-                height="166"
-                viewBox="0 0 1328 166"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M715 83H42.5C20.1325 83 2 101.132 2 123.5V123.5C2 145.868 20.1325 164 42.5 164H715"
-                  stroke="#2996a7"
-                  vector-effect="non-scaling-stroke"
-                ></path>
-                <path
-                  d="M712.5 83L1285.5 83C1307.87 83 1326 64.8675 1326 42.5V42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00005L712.5 2.00005"
-                  stroke="#2996a7"
-                  vector-effect="non-scaling-stroke"
-                ></path>
-                <path
-                  d="M715 164H42.5C20.1325 164 2 145.868 2 123.5C2 101.132 20.1325 83 42.5 83H1065L1285.5 83C1307.87 83 1326 64.8675 1326 42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00004H712.5"
-                  stroke="#2996a7"
-                  stroke-width="1"
-                  vector-effect="non-scaling-stroke"
-                ></path>
+              <svg className="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100" width="1328" height="166" viewBox="0 0 1328 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M715 83H42.5C20.1325 83 2 101.132 2 123.5V123.5C2 145.868 20.1325 164 42.5 164H715" stroke="#2996a7" vectorEffect="non-scaling-stroke"></path>
+                <path d="M712.5 83L1285.5 83C1307.87 83 1326 64.8675 1326 42.5V42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00005L712.5 2.00005" stroke="#2996a7" vectorEffect="non-scaling-stroke"></path>
+                <path d="M715 164H42.5C20.1325 164 2 145.868 2 123.5C2 101.132 20.1325 83 42.5 83H1065L1285.5 83C1307.87 83 1326 64.8675 1326 42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00004H712.5" stroke="#2996a7" strokeWidth="1" vectorEffect="non-scaling-stroke"></path>
               </svg>
             </h2>
           </div>
 
-          {/* ---------------------------------------------- */}
-
+          {/* Cards */}
           <div className={styles.body}>
-            {/* Card 1 */}
             <Link href="/cloudservices">
-              <div className={`${styles.card} ${styles.extraClass}`}>
-                <div
-                  className={styles.bgSvgElementcloud}
-                  aria-label="Animated SVG"
-                ></div>
+              <div className={`${styles.card} ${styles.extraClass}`} ref={(el) => (cardRefs.current[0] = el)}>
+                <div className={styles.bgSvgElementcloud} aria-label="Animated SVG"></div>
                 <div className={styles.title}>
-                  <h3>
-                    <span>Clouds</span> Services
-                  </h3>
+                  <h3><span>Clouds</span> Services</h3>
                   <p>Together, we maximize the value of your data.</p>
                   <div className={styles.hr}></div>
-                  <svg
-                    className="pb-row-services__service__icon z-1000" // ✅ use className instead of class
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                      fill="currentColor"
-                    ></path>
+                  <svg className="pb-row-services__service__icon z-1000" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z" fill="currentColor"></path>
                   </svg>
                 </div>
               </div>
             </Link>
 
-            {/* Card 2 */}
             <Link href="/aidataservices">
-              <div className={`${styles.card} ${styles.extraClass}`}>
-                <div
-                  className={styles.bgSvgElement}
-                  aria-label="Animated SVG"
-                ></div>
+              <div className={`${styles.card} ${styles.extraClass}`} ref={(el) => (cardRefs.current[1] = el)}>
+                <div className={styles.bgSvgElement} aria-label="Animated SVG"></div>
                 <div className={styles.title}>
-                  <h3>
-                    <span>Ai & Data</span> Services
-                  </h3>
+                  <h3><span>Ai & Data</span> Services</h3>
                   <p>Together, we visualize value from your data.</p>
                   <div className={styles.hr}></div>
-                  <svg
-                    className="pb-row-services__service__icon z-1000"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                      fill="currentColor"
-                    ></path>
+                  <svg className="pb-row-services__service__icon z-1000" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z" fill="currentColor"></path>
                   </svg>
                 </div>
               </div>
             </Link>
 
-            {/* Card 3 */}
             <Link href="/integrationservices">
-              <div className={`${styles.card} ${styles.extraClass}`}>
-                <div
-                  className={styles.bgSvgElementintegration}
-                  aria-label="Animated SVG"
-                ></div>
+              <div className={`${styles.card} ${styles.extraClass}`} ref={(el) => (cardRefs.current[2] = el)}>
+                <div className={styles.bgSvgElementintegration} aria-label="Animated SVG"></div>
                 <div className={styles.title}>
-                  <h3>
-                    <span>Integration</span> Services
-                  </h3>
+                  <h3><span>Integration</span> Services</h3>
                   <p>Together, we retrieve value from your data.</p>
                   <div className={styles.hr}></div>
-                  <svg
-                    className="pb-row-services__service__icon z-1000"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                      fill="currentColor"
-                    ></path>
+                  <svg className="pb-row-services__service__icon z-1000" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z" fill="currentColor"></path>
                   </svg>
                 </div>
               </div>
             </Link>
 
-
-
-            {/* Card 4 */}
             <Link href="/productdevelopment">
-              <div className={`${styles.card} ${styles.extraClass}`}>
-                <div
-                  className={styles.bgSvgElementproduct}
-                  aria-label="Animated SVG"
-                ></div>
+              <div className={`${styles.card} ${styles.extraClass}`} ref={(el) => (cardRefs.current[3] = el)}>
+                <div className={styles.bgSvgElementproduct} aria-label="Animated SVG"></div>
                 <div className={styles.title}>
-                  <h3>
-                    <span>Product</span> Development
-                  </h3>
+                  <h3><span>Product</span> Development</h3>
                   <p>Together, we maximize the value of your data.</p>
                   <div className={styles.hr}></div>
-                  <svg
-                    className="pb-row-services__service__icon z-1000"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z"
-                      fill="currentColor"
-                    ></path>
+                  <svg className="pb-row-services__service__icon z-1000" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 6.72H6.72V12H5.28V6.72H0V5.28H5.28V0H6.72V5.28H12V6.72Z" fill="currentColor"></path>
                   </svg>
                 </div>
               </div>
             </Link>
           </div>
 
-
-          {/* ---------------------------------------------- */}
-
-          <div className={styles.partner}>
+          {/* Partner Marquee */}
+          <div ref={partnerRef} className={styles.partner}>
             <h2>Trusted partner of</h2>
             <div className={styles.marquee}>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className={styles.marquee__inner}>
+                  {["abb", "barclays", "cintas", "groupon", "knowles", "lumatax", "moment", "nbc", "replenium"].map((logo) => (
+                    <div key={logo} className={styles.marquee__part}>
+                      <img src={`/logos/${logo}.svg`} alt={logo} />
+                    </div>
+                  ))}
                 </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
+              ))}
+
+
             </div>
             <div className={styles.marquee}>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className={styles.marquee__inner}>
+                  {["abb", "barclays", "cintas", "groupon", "knowles", "lumatax", "moment", "nbc", "replenium"].map((logo) => (
+                    <div key={logo} className={styles.marquee__part}>
+                      <img src={`/logos/${logo}.svg`} alt={logo} />
+                    </div>
+                  ))}
                 </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
-              <div className={styles.marquee__inner}>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/abb.svg"} alt="abb" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/barclays.svg"} alt="barclays" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/cintas.svg"} alt="cintas" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/groupon.svg"} alt="groupon" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/knowles.svg"} alt="knowles" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/lumatax.svg"} alt="lumatax" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/moment.svg"} alt="moment" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/nbc.svg"} alt="nbc" />
-                </div>
-                <div className={styles.marquee__part}>
-                  <img src={"/logos/replenium.svg"} alt="replenium" />
-                </div>
-              </div>
+              ))}
+
             </div>
           </div>
         </section>
-        <section className={`${styles.section_4} ${styles.section}`}>
+
+        {/* <section className={`${styles.section_4} ${styles.section}`}>
           <div className={styles.BackGround}></div>
           <h3>
             <span className={styles.spanSection_4}>
-              We&apos;ll help <span>perfect</span>
+              Helping you <span>optimize</span>
             </span>
             <span className={styles.spanSection_4}>
               Your Business <span>model</span>
@@ -1370,208 +1416,207 @@ export default function Home() {
           </div>
           <div className={styles.title}>
             <div className={styles.links}>
-              <Link href="#">As a team, we push boundaries.</Link>
+              <Link href="#">As a team, we go beyond limits.</Link>
               <Link href="#">About us</Link>
             </div>
             <p className={styles.text}>
-              Our experts are above all passionate about organizational
-              efficiency powered by the valuation of data. This passion has
-              driven us to specialize in advanced methods of process automation
-              and data analytics.
+              Our experts are driven by a passion for organizational efficiency, powered by the strategic use of data. This passion has led us to specialize in advanced process automation, data analytics, cloud services, AI, system integration, and product development.
+            </p>
+          </div>
+        </section> */}
+
+        <section ref={sectionRef} className={`${styles.section_4} ${styles.section}`}>
+          <div className={styles.BackGround}></div>
+
+          <h3>
+            <span ref={addSpanRef} className={styles.spanSection_4}>
+              Helping you <span>optimize</span>
+            </span>
+            <span ref={addSpanRef} className={styles.spanSection_4}>
+              Your Business <span>model</span>
+            </span>
+          </h3>
+
+          <div ref={hrRef} className={styles.hr}>
+            <div></div>
+          </div>
+
+          <div ref={titleRef} className={styles.title}>
+            <div className={styles.links}>
+              <Link href="#">As a team, we go beyond limits.</Link>
+              <Link href="#">About us</Link>
+            </div>
+            <p className={styles.text}>
+              Our experts are driven by a passion for organizational efficiency, powered by
+              the strategic use of data. This passion has led us to specialize in advanced
+              process automation, data analytics, cloud services, AI, system integration,
+              and product development.
             </p>
           </div>
         </section>
-        <section className={`${styles.section_5} ${styles.section}`}>
 
-          <div className={styles.sticky} >
-            <div className={styles.cards} >
-              <div className={styles.cardSticky}>
+        <section className={`${styles.section_5} ${styles.section}`}>
+          {/* Sticky Cards */}
+          <div className={styles.sticky} ref={stickyRef}>
+            <div className={styles.cards} ref={cardsRef}>
+              {/* Card 1 */}
+              <div className={styles.cardSticky} ref={addCardRef}>
                 <img src={'/FitnessM8-logo.png'} alt="FitnessM8-logo" />
                 <p>
-                  The Scaled Solutions
-                  team are true
-                  specialists in AI and
-                  cloud. Their ability to
-                  transform raw data
-                  into actionable
-                  predictions for clients
-                  puts them well ahead
-                  of the curve.
+                  The Scaled Solutions team are true specialists in AI and cloud.
+                  Their ability to transform raw data into actionable predictions
+                  for clients puts them well ahead of the curve.
                 </p>
-                <div className={styles.caption}>
-                  <p>Director - Brendon</p>
-                </div>
+                <div className={styles.caption}><p>Director - Brendon</p></div>
               </div>
-              <div className={styles.cardSticky}>
+
+              {/* Card 2 */}
+              <div className={styles.cardSticky} ref={addCardRef}>
                 <img src={'/knowles-logo.png'} alt="knowles-logo" />
-                <h4>Scaled Solutions delivery
-                  partner</h4>
+                <h4>Scaled Solutions delivery partner</h4>
                 <p>
-                  “Tkxel has proven to be
-                  our single reliable software
-                  development partner,
-                  helping us scale from the
-                  ground up with exceptional
-                  quality.”
+                  “Tkxel has proven to be our single reliable software development partner,
+                  helping us scale from the ground up with exceptional quality.”
                 </p>
-                <p>Michelle Duval </p>
+                <p>Michelle Duval</p>
                 <div className={styles.caption}>
                   <p>Founder & CEO, </p>
                   <p>Fingerprint for Success</p>
                 </div>
               </div>
-              <div className={styles.cardSticky}>
+
+              {/* Card 3 */}
+              <div className={styles.cardSticky} ref={addCardRef}>
                 <img src={'/Xstream-sports.png'} alt="Xstream-sports" />
                 <p>
-                  Working with Scaled
-                  Solutions has completely
-                  transformed how we
-                  deliver live sports. They
-                  built a powerful streaming
-                  platform for Extreme
-                  Sports and integrated AI
-                  that automatically
-                  generates highlight reels in
-                  real time. The result is a
-                  smoother, smarter
-                  experience for both our
-                  team and our fans.
+                  Working with Scaled Solutions has completely transformed how we deliver live sports.
+                  They built a powerful streaming platform for Extreme Sports and integrated AI
+                  that automatically generates highlight reels in real time.
+                  The result is a smoother, smarter experience for both our team and our fans.
                 </p>
-                <div className={styles.caption}>
-                  <p>Director - Arafat</p>
-                </div>
+                <div className={styles.caption}><p>Director - Arafat</p></div>
               </div>
-              <div className={styles.cardSticky}>
-                <button className={styles.btn}>Contact us</button>
+
+              {/* Card 4 - Contact */}
+              <div className={styles.cardSticky} ref={addCardRef}>
+                <Link href="/contact">
+                  <button className={styles.btn}>Contact us</button>
+                </Link>
               </div>
             </div>
           </div>
+
+          {/* Swiper */}
+          {/* <Swiper
+            className={styles.swiper}
+            spaceBetween={20}
+            slidesPerView={3}
+            modules={[Pagination]}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              450: { slidesPerView: 1.5 },
+              600: { slidesPerView: 2 },
+              769: { slidesPerView: 3 },
+              1024: { slidesPerView: 3 },
+            }}
+            pagination={{ el: `.${styles.swiperPagination}` }}
+          >
+            <div className={styles.swiperPagination}></div>
+            {sCardRefs.current.map((card, idx) => (
+              <SwiperSlide className={styles.cardSticky} key={idx}>
+                {card?.innerHTML && <div dangerouslySetInnerHTML={{ __html: card.innerHTML }} />}
+              </SwiperSlide>
+            ))}
+          </Swiper> */}
+
           <Swiper
             className={styles.swiper}
             spaceBetween={20}
             slidesPerView={3}
             modules={[Pagination]}
             breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              450: {
-                slidesPerView: 1.5,
-              },
-              600: {
-                slidesPerView: 2,
-              },
-              769: {
-                slidesPerView: 3,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
+              0: { slidesPerView: 1 },
+              450: { slidesPerView: 1.5 },
+              600: { slidesPerView: 2 },
+              769: { slidesPerView: 3 },
+              1024: { slidesPerView: 3 },
             }}
-            pagination={{
-              el: `.${styles.swiperPagination}`,
-            }}
+            pagination={{ el: `.${styles.swiperPagination}` }}
           >
             <div className={styles.swiperPagination}></div>
-            <SwiperSlide className={styles.cardSticky}>
 
+            <SwiperSlide ref={addCardRef} className={styles.cardSticky}>
               <img src={'/FitnessM8-logo.png'} alt="FitnessM8-logo" />
               <p>
                 The Scaled Solutions
-                team are true
-                specialists in AI and
-                cloud. Their ability to
-                transform raw data
-                into actionable
-                predictions for clients
-                puts them well ahead
-                of the curve.
+                team are true specialists in AI and cloud.
+                Their ability to transform raw data into
+                actionable predictions for clients puts
+                them well ahead of the curve.
               </p>
               <div className={styles.caption}>
                 <p>Director - Brendon</p>
               </div>
             </SwiperSlide>
-            <SwiperSlide className={styles.cardSticky}>
+
+            <SwiperSlide ref={addCardRef} className={styles.cardSticky}>
               <img src={'/knowles-logo.png'} alt="knowles-logo" />
-              <h4>Scaled Solutions delivery
-                partner</h4>
+              <h4>Scaled Solutions delivery partner</h4>
               <p>
-                “Tkxel has proven to be
-                our single reliable software
-                development partner,
-                helping us scale from the
-                ground up with exceptional
+                “Tkxel has proven to be our single reliable
+                software development partner, helping us
+                scale from the ground up with exceptional
                 quality.”
               </p>
-              <p>Michelle Duval </p>
+              <p>Michelle Duval</p>
               <div className={styles.caption}>
-                <p>Founder & CEO, </p>
+                <p>Founder & CEO</p>
                 <p>Fingerprint for Success</p>
               </div>
             </SwiperSlide>
-            <SwiperSlide className={styles.cardSticky}>
+
+            <SwiperSlide ref={addCardRef} className={styles.cardSticky}>
               <img src={'/Xstream-sports.png'} alt="Xstream-sports" />
               <p>
-                Working with Scaled
-                Solutions has completely
-                transformed how we
-                deliver live sports. They
-                built a powerful streaming
-                platform for Extreme
-                Sports and integrated AI
-                that automatically
-                generates highlight reels in
-                real time. The result is a
-                smoother, smarter
-                experience for both our
-                team and our fans.
+                Working with Scaled Solutions has completely
+                transformed how we deliver live sports.
+                They built a powerful streaming platform for
+                Extreme Sports and integrated AI that
+                generates highlight reels in real time.
               </p>
               <div className={styles.caption}>
                 <p>Director - Arafat</p>
               </div>
             </SwiperSlide>
-            <SwiperSlide className={styles.cardSticky}>
+
+            <SwiperSlide ref={addCardRef} className={styles.cardSticky}>
               <button className={styles.btn}>Contact us</button>
             </SwiperSlide>
           </Swiper>
-          {/* hdhhhhhhdhd */}
-          {/* here i want when i scroll to this area then scrolling should stop and that this component should 
-show its logic of matrix scorlling of text */}
-          {/* ...existing code... */}
 
-          <div className="textcust-pin-area" style={{ marginTop: '20px' }}>
+
+          {/* TextCust Matrix Scroll */}
+          <div className="textcust-pin-area" style={{ marginTop: '20px', backgroundColor: "#0B1C23" }}>
             <TextCust />
           </div>
-          {/* ...existing code... */}
 
-          <div className={styles.faq} >
-            <div className={styles.left}>
+          {/* FAQ Section */}
+          <div className={styles.faq} ref={faqRef}>
+            <div className={styles.left} ref={faqLeftRef}>
               <h2>FAQ</h2>
-              <p>
-                Here are some of our most asked questions. If yours is not
-                there, contact us.
-              </p>
+              <p>Here are some of our most asked questions. If yours is not there, contact us.</p>
             </div>
             <div className={styles.questions}>
               {questions.map((item, index) => (
                 <button
                   key={index}
-                  className={`${styles.question} ${activeIndex === index ? styles.active : ""
-                    }`}
+                  className={`${styles.question} ${activeIndex === index ? styles.active : ""}`}
                   onClick={() => handleQuestionClick(index)}
+                  ref={addQuestionRef}
                 >
                   <div className={styles.head}>
-                    <svg
-                      width="9"
-                      height="9"
-                      viewBox="0 0 9 9"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 5.04H5.04V9H3.96V5.04H0V3.96H3.96V0H5.04V3.96H9V5.04Z"
-                        fill="currentColor"
-                      ></path>
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 5.04H5.04V9H3.96V5.04H0V3.96H3.96V0H5.04V3.96H9V5.04Z" fill="currentColor"></path>
                     </svg>
                     <p>{item.question}</p>
                   </div>
@@ -1653,17 +1698,17 @@ show its logic of matrix scorlling of text */}
         <section className={`${styles.section_7} ${styles.section}`}>
           <div className={styles.container}>
             <h3>
-              To make <span>good</span>
+              Empowering <span>timely,</span>
               <br />
-              business <button>Contact us</button> <span>decisions</span>
-              <br />
-              at the right time.
+              smart business<span>decisions</span>
             </h3>
             <h3>
               To make <span>good</span> business <br />
               <span>decisions</span> at the right time.
             </h3>
-            <button>Contact us</button>
+            <Link href="/contact">
+              <button>Contact us</button>
+            </Link>
           </div>
         </section>
       </main>

@@ -15,7 +15,7 @@ export default function TeamExpansionPage() {
       <section className="team-hero">
         <div className="animated-circle"></div>
                 <div className="animated-grid"></div>
-        <svg class="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+        <svg className="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#198190" stop-opacity="0.4" />
@@ -43,7 +43,7 @@ export default function TeamExpansionPage() {
               <button className="cta-btn">Let’s Collaborate</button>
             </Link>
 
-            <Link href="/productdevelopment">
+            <Link href="/deliverypartner#case">
               <button className="cta-btn cta-btn2">Case Studies</button>
             </Link>
           </div>
