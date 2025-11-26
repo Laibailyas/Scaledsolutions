@@ -802,74 +802,61 @@ export default function Home() {
     // backSection.style.height = heightMenuServices + "px";
   }, []);
 
-  // useEffect(() => {
-
-
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: headRef.current,
-  //       start: "top 85%",
-  //       once: true,
-  //     }
-  //   });
-
-  //   // reset initial state
-  //   gsap.set(span1Ref.current, { opacity: 0, x: -80 });
-  //   gsap.set(span2Ref2.current, { opacity: 0, x: 80 });
-
-  //   tl.to(span1Ref.current, {
-  //     x: 0,
-  //     opacity: 1,
-  //     duration: 1,
-  //     ease: "power3.out"
-  //   })
-
-  //     .to(
-  //       span2Ref2.current,
-  //       {
-  //         x: 0,
-  //         opacity: 1,
-  //         duration: 1,
-  //         ease: "power3.out"
-  //       },
-  //       "-=0.6"
-  //     );
-  // }, []);
 
   useEffect(() => {
     if (!span1Ref.current || !span2Ref2.current || !headRef.current) return;
 
-    const ctxSimple = gsap.context(() => {
-      const tl = gsap.timeline({
+    const ctx = gsap.context(() => {
+
+      gsap.set(span1Ref.current, { x: "-100%", opacity: 0 });
+      gsap.set(span2Ref2.current, { x: "100%", opacity: 0 });
+
+
+      // ---- LEFT span ----
+      gsap.to(span1Ref.current, {
+        x: "-40%",
+        opacity: 1,
+        duration: 0.8,
+        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
         scrollTrigger: {
           trigger: headRef.current,
-          start: "top 85%",
-          once: true,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
         },
       });
 
-      gsap.set(span1Ref.current, { opacity: 0, x: -80 });
-      gsap.set(span2Ref2.current, { opacity: 0, x: 80 });
-
-      tl.to(span1Ref.current, {
-        x: 0,
+      // ---- RIGHT span ----
+      gsap.to(span2Ref2.current, {
+        x: "40%",
         opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-      }).to(
-        span2Ref2.current,
+        duration: 0.8,
+        ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
+        scrollTrigger: {
+          trigger: headRef.current,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+
+      // ---- SVG ----
+      gsap.fromTo(
+        headRef.current.querySelector("svg"),
+        { opacity: 0 },
         {
-          x: 0,
           opacity: 1,
           duration: 1,
-          ease: "power3.out",
-        },
-        "-=0.6"
+          delay: 0.4,
+          scrollTrigger: {
+            trigger: headRef.current,
+          },
+        }
       );
+
     });
 
-    return () => ctxSimple.revert();
+    return () => ctx.revert();
   }, []);
+
 
 
   useEffect(() => {
@@ -1596,7 +1583,7 @@ export default function Home() {
 
 
           {/* TextCust Matrix Scroll */}
-          <div className="textcust-pin-area" style={{ marginTop: '20px', backgroundColor: "#0B1C23" }}>
+          <div className="textcust-pin-area" style={{ marginTop: '20px'}}>
             <TextCust />
           </div>
 
