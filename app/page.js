@@ -76,7 +76,6 @@ export default function Home() {
   const headRef = useRef(null);
   const pRef = useRef(null);
   const span1Ref = useRef(null);
-  const span2Ref1 = useRef(null);
   const span2Ref2 = useRef(null);
   const cardRefs = useRef([]);
   const partnerRef = useRef(null);
@@ -826,7 +825,7 @@ export default function Home() {
 
       // ---- LEFT span ----
       gsap.to(span1Ref.current, {
-        x: "-40%",
+        x: "0%",
         opacity: 1,
         duration: 0.8,
         ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
@@ -839,7 +838,7 @@ export default function Home() {
 
       // ---- RIGHT span ----
       gsap.to(span2Ref2.current, {
-        x: "40%",
+        x: "0%",
         opacity: 1,
         duration: 0.8,
         ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
@@ -1282,10 +1281,9 @@ export default function Home() {
           <div ref={headRef} className={styles.head}>
             <p ref={pRef}>Services</p>
             <h2>
-              <span ref={span1Ref} className={styles.span1}>We make the</span>
-              <span ref={span2Ref1} className={styles.span2}>complex things</span>
-              <span ref={span2Ref2} className={styles.span2} style={{ color: "#2996a7", paddingTop: "1.2rem" }}>
-                <span>simple</span>.
+              <span ref={span1Ref} className={styles.span1}>We make the complex</span>
+              <span ref={span2Ref2} className={styles.span2} style={{paddingTop: "1.2rem"}}>
+                things<span style={{ color: "#2996a7" }}> simple</span>.
               </span>
               {/* <svg className="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100" width="1328" height="166" viewBox="0 0 1328 166" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M715 83H42.5C20.1325 83 2 101.132 2 123.5V123.5C2 145.868 20.1325 164 42.5 164H715" stroke="#2996a7" vectorEffect="non-scaling-stroke"></path>
