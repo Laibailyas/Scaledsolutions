@@ -620,7 +620,7 @@
   filter: blur(80px);
   animation: floaty 10s ease-in-out infinite alternate;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 @keyframes floaty {
@@ -637,7 +637,7 @@
 .floatingAccents {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   overflow: hidden;
   pointer-events: none;
 }
