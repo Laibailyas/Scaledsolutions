@@ -46,8 +46,8 @@ const TextCust = () => {
         scrollTrigger: {
           trigger: parentRef.current,
           start: "top top",
-          end: "+=" + window.innerHeight * total * 4,  // LONGER scroll = smoother
-          scrub: 1.5,  // smoother scrub
+          end: "+=" + window.innerHeight * total * 2.5,  // LONGER scroll = smoother
+          scrub: 0.8,  // smoother scrub
           pin: true,
         }
       });
