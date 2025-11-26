@@ -850,19 +850,19 @@ export default function Home() {
         },
       });
 
-      // ---- SVG ----
-      gsap.fromTo(
-        headRef.current.querySelector("svg"),
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 1,
-          delay: 0.4,
-          scrollTrigger: {
-            trigger: headRef.current,
-          },
-        }
-      );
+      // // ---- SVG ----
+      // gsap.fromTo(
+      //   headRef.current.querySelector("svg"),
+      //   { opacity: 0 },
+      //   {
+      //     opacity: 1,
+      //     duration: 1,
+      //     delay: 0.4,
+      //     scrollTrigger: {
+      //       trigger: headRef.current,
+      //     },
+      //   }
+      // );
 
     });
 
@@ -1287,11 +1287,11 @@ export default function Home() {
               <span ref={span2Ref2} className={styles.span2} style={{ color: "#2996a7", paddingTop: "1.2rem" }}>
                 <span>simple</span>.
               </span>
-              <svg className="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100" width="1328" height="166" viewBox="0 0 1328 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* <svg className="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100" width="1328" height="166" viewBox="0 0 1328 166" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M715 83H42.5C20.1325 83 2 101.132 2 123.5V123.5C2 145.868 20.1325 164 42.5 164H715" stroke="#2996a7" vectorEffect="non-scaling-stroke"></path>
                 <path d="M712.5 83L1285.5 83C1307.87 83 1326 64.8675 1326 42.5V42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00005L712.5 2.00005" stroke="#2996a7" vectorEffect="non-scaling-stroke"></path>
                 <path d="M715 164H42.5C20.1325 164 2 145.868 2 123.5C2 101.132 20.1325 83 42.5 83H1065L1285.5 83C1307.87 83 1326 64.8675 1326 42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00004H712.5" stroke="#2996a7" strokeWidth="1" vectorEffect="non-scaling-stroke"></path>
-              </svg>
+              </svg> */}
             </h2>
           </div>
 
@@ -1684,7 +1684,7 @@ export default function Home() {
             <h3>
               Empowering <span>timely,</span>
               <br />
-              smart business<span>decisions</span>
+              smart business<span> decisions</span>
             </h3>
             <h3>
               To make <span>good</span> business <br />

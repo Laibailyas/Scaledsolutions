@@ -264,7 +264,7 @@
 
 .section_3 .head h2 span {
   /* align-self: stretch; */
-  background-color: #0B1C23;
+  /* background-color: #0B1C23; */
   line-height: min(5.97222vw, 86px);
 }
 
