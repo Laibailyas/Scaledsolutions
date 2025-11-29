@@ -122,7 +122,7 @@ export default function TeamExpansionPage() {
         <div className="image-section">
           <h2 className="image-section-title" id="directdevelopers">Direct Developers</h2>
           <img
-            src="/direct.svg"
+            src="/animations/teamExpansion1.svg"
             alt="Direct Developers"
             className="image-section-img"
           />
@@ -132,7 +132,7 @@ export default function TeamExpansionPage() {
         <div className="image-section" id="softwaredev">
           <h2 className="image-section-title">Software Development Team</h2>
           <img
-            src="/development.svg"
+            src="/animations/teamExpansion2.svg"
             alt="Software Development Team"
             className="image-section-img"
           />
@@ -142,7 +142,7 @@ export default function TeamExpansionPage() {
         <div className="image-section" id="agilesquad">
           <h2 className="image-section-title">Agile Squad</h2>
           <img
-            src="/agile.svg"
+            src="/animations/teamExpansion3.svg"
             alt="Agile Squad"
             className="image-section-img"
           />

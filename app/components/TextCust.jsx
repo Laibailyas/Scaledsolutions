@@ -23,17 +23,17 @@ const TextCust = () => {
 
     <div className="textAnimation" key="direct">
       <h3>Direct Developers</h3>
-      <img src="/direct.svg" alt="direct" />
+      <img src="/animations/teamExpansion1.svg" alt="direct" />
     </div>,
 
     <div className="textAnimation" key="devteam">
       <h3>Software Development Team</h3>
-      <img src="/development.svg" alt="development" />
+      <img src="/animations/teamExpansion2.svg" alt="development" />
     </div>,
 
     <div className="textAnimation" key="agile">
       <h3>Agile Squad</h3>
-      <img src="/agile.svg" alt="agile" />
+      <img src="/animations/teamExpansion3.svg" alt="agile" />
     </div>
   ];
 
