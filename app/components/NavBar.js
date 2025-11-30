@@ -427,13 +427,12 @@ function NavBar({ logoSrc = "/logo.png" }) {
           >
             <div className={styles.top}>
               <div className={styles.left}>
-                <input type="text" name="name" placeholder="Name*" required autoComplete="name" />
+                <input type="text" name="firstname" placeholder="First Name*" required autoComplete="given-name" />
                 <input type="email" name="email" placeholder="E-mail*" required autoComplete="email" />
                 <input type="text" name="company" placeholder="Company" autoComplete="off" />
               </div>
               <div className={styles.right}>
-                <input type="text" name="firstname" placeholder="First name*" required autoComplete="name" />
-                <input type="tel" name="phone" placeholder="Phone" autoComplete="tel" />
+                <input type="text" name="lastname" placeholder="Last name*" required autoComplete="family-name" />
                 <input type="text" name="help" placeholder="I am looking for help for *" required autoComplete="off" />
               </div>
             </div>

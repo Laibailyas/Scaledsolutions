@@ -190,7 +190,7 @@ export default function NewFooter() {
                 /> */}
               </span>
             </span>
-            <span className="footer-email-text">ScaleSol@gmail.com</span>
+            <span className="footer-email-text">contact@scaledsolutions.com.au</span>
           </a>
         </div>
         <div className="footer-top-wrap">
