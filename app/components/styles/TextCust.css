@@ -7,6 +7,7 @@
 
 .textAnimation img{
     width: 50vw;
+    max-width: 1300px;
 }
 
 .offer-checklist {

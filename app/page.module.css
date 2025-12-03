@@ -225,6 +225,7 @@
 .bgSvgElementcloud {
   width: 100%;
   height: 13.3vw;
+  max-height: 300px;
   background-image: url("/animations/cloud_services.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -235,6 +236,7 @@
 .bgSvgElement {
   width: 100%;
   height: 13.3vw;
+  max-height: 300px;
   background-image: url("/animations/aiIcon.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -245,6 +247,7 @@
 .bgSvgElementintegration {
   width: 100%;
   height: 13.3vw;
+  max-height: 300px;
   background-image: url("/animations/integration_services.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -255,6 +258,7 @@
 .bgSvgElementproduct {
   width: 100%;
   height: 13.3vw;
+  max-height: 300px;
   background-image: url("/animations/product_development.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -264,8 +268,12 @@
 
 .section_3 .head h2 span {
   /* align-self: stretch; */
-  /* background-color: #0B1C23; */
+  background-color: #0B1C23;
   line-height: min(5.97222vw, 86px);
+}
+
+.section_3 .head h2 span:nth-child(3) {
+  background-color: transparent;
 }
 
 .section_3 .head h2 .span1,
@@ -466,18 +474,20 @@
   justify-content: center;
   flex-direction: column;
   gap: 60px;
+  /* background-color: #0B1C23; */
 }
 
 .section_4 .BackGround {
   position: absolute;
   content: "";
-  background-color: #214a5c;
+  /* background-color: #214a5c; */
+  background-color: #0B1C23;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 95%;
   height: calc(100% + 200px);
-  z-index: -1;
+  z-index: 0;
   padding: 100px 0;
   border-radius: 20px;
 }
@@ -563,6 +573,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   color: #CBCBCB;
+  position: relative;
+  z-index: 10;
 }
 
 .section_4 .title .links {
@@ -593,7 +605,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  gap: 10rem; 
+  gap: 10rem;
 }
 
 .section_5 .sticky {
@@ -612,7 +624,7 @@
 }
 
 @media (min-width: 1440px) {
-  .section_5 .sticky .cards{
+  .section_5 .sticky .cards {
     margin-left: 0;
   }
 }
@@ -753,7 +765,7 @@
 }
 
 .section_5 .swiper .cardSticky:nth-child(4) a,
-.section_5 .sticky .cards .cardSticky:nth-child(4) a{
+.section_5 .sticky .cards .cardSticky:nth-child(4) a {
   margin-top: auto;
 }
 
@@ -1497,19 +1509,19 @@
   }
 
   .section_5 .swiper .cardSticky:nth-child(4) .btn,
-.section_5 .sticky .cards .cardSticky:nth-child(4) .btn {
-  padding: 16px 24px;
-}
+  .section_5 .sticky .cards .cardSticky:nth-child(4) .btn {
+    padding: 16px 24px;
+  }
 
   .section_5 .swiper .cardSticky:nth-child(3) img,
-.section_5 .sticky .cards .cardSticky:nth-child(3) img {
-  height: 70px;
-}
+  .section_5 .sticky .cards .cardSticky:nth-child(3) img {
+    height: 70px;
+  }
 
-.section_5 .swiper .cardSticky:nth-child(3) .caption,
-.section_5 .sticky .cards .cardSticky:nth-child(3) .caption {
-  margin-top: 20px;
-}
+  .section_5 .swiper .cardSticky:nth-child(3) .caption,
+  .section_5 .sticky .cards .cardSticky:nth-child(3) .caption {
+    margin-top: 20px;
+  }
 
   .section_5 .swiper .cardSticky:nth-child(4) span,
   .section_5 .sticky .cards .cardSticky:nth-child(4) span {
@@ -1972,5 +1984,19 @@
 
   .pretty-video {
     padding: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section>div {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section_5 {
+    max-width: 1400px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }

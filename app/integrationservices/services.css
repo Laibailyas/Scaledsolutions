@@ -494,14 +494,14 @@
   }
 }
 
-@media (max-width: 1500px) {
-  .card-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1400px;
+  margin: auto;
 }
+
 
 @media (max-width: 1000px) {
   .card-wrapper {
@@ -514,11 +514,12 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-    .strategy-section, .services-hero{
+  .strategy-section,
+  .services-hero {
     padding-bottom: 3rem;
   }
 
-  .services-hero{
+  .services-hero {
     padding-top: 3rem;
   }
 }

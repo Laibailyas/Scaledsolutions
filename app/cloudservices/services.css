@@ -469,14 +469,13 @@
   }
 }
 
-@media (max-width: 1500px) {
   .card-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    max-width: 1400px;
+    margin: auto;
   }
-
-}
 
 @media (max-width: 1000px) {
   .card-wrapper {

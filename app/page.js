@@ -825,7 +825,7 @@ export default function Home() {
 
       // ---- LEFT span ----
       gsap.to(span1Ref.current, {
-        x: "0%",
+        x: "-40%",
         opacity: 1,
         duration: 0.8,
         ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
@@ -838,7 +838,7 @@ export default function Home() {
 
       // ---- RIGHT span ----
       gsap.to(span2Ref2.current, {
-        x: "0%",
+        x: "40%",
         opacity: 1,
         duration: 0.8,
         ease: CustomEase.create("custom", "M0,0,C0.215,0.61,0.355,1,1,1"),
@@ -849,19 +849,19 @@ export default function Home() {
         },
       });
 
-      // // ---- SVG ----
-      // gsap.fromTo(
-      //   headRef.current.querySelector("svg"),
-      //   { opacity: 0 },
-      //   {
-      //     opacity: 1,
-      //     duration: 1,
-      //     delay: 0.4,
-      //     scrollTrigger: {
-      //       trigger: headRef.current,
-      //     },
-      //   }
-      // );
+      // ---- SVG ----
+      gsap.fromTo(
+        headRef.current.querySelector("svg"),
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 1,
+          delay: 0.4,
+          scrollTrigger: {
+            trigger: headRef.current,
+          },
+        }
+      );
 
     });
 
@@ -1034,21 +1034,6 @@ export default function Home() {
         { xFrom: "120%", xTo: "-20%", rotateFrom: "-13deg", rotateTo: "-4deg" },
         { xFrom: "180%", xTo: "-35%", rotateFrom: "-7deg", rotateTo: "10deg" },
       ];
-
-      // sCardRefs.current.forEach((card, i) => {
-      //   if (card) {
-      //     gsap.fromTo(card, { x: cardAnimations[i].xFrom, rotate: cardAnimations[i].rotateFrom }, {
-      //       x: cardAnimations[i].xTo,
-      //       rotate: cardAnimations[i].rotateTo,
-      //       scrollTrigger: {
-      //         trigger: stickyRef.current,
-      //         scrub: 1,
-      //         start: "top 80%",
-      //         end: "bottom 80%",
-      //       },
-      //     });
-      //   }
-      // });
 
       if (!stickyRef.current) return;
 
@@ -1271,7 +1256,7 @@ export default function Home() {
           <div className={styles.scaleGif}></div>
         </section>
 
-        <div className="" style={{ marginTop: '20px' }}>
+        <div className="scrollingCardsWrapper" style={{ marginTop: '20px' }}>
           < ScrollingCards />
         </div>
 
@@ -1281,15 +1266,15 @@ export default function Home() {
           <div ref={headRef} className={styles.head}>
             <p ref={pRef}>Services</p>
             <h2>
-              <span ref={span1Ref} className={styles.span1}>We make the complex</span>
-              <span ref={span2Ref2} className={styles.span2} style={{paddingTop: "1.2rem"}}>
-                things<span style={{ color: "#2996a7" }}> simple</span>.
-              </span>
-              {/* <svg className="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100" width="1328" height="166" viewBox="0 0 1328 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <span ref={span1Ref} className={styles.span1}>We make the</span>
+              <span className={styles.span2}>complex things</span>
+              <span ref={span2Ref2} className={styles.span2} style={{ paddingTop: "1.2rem" }}>
+                <span style={{ color: "#2996a7" }}> simple.</span></span>
+              <svg className="d-none d-lg-block position-absolute t-0 l-0 w-100 h-100" width="1328" height="166" viewBox="0 0 1328 166" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M715 83H42.5C20.1325 83 2 101.132 2 123.5V123.5C2 145.868 20.1325 164 42.5 164H715" stroke="#2996a7" vectorEffect="non-scaling-stroke"></path>
                 <path d="M712.5 83L1285.5 83C1307.87 83 1326 64.8675 1326 42.5V42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00005L712.5 2.00005" stroke="#2996a7" vectorEffect="non-scaling-stroke"></path>
                 <path d="M715 164H42.5C20.1325 164 2 145.868 2 123.5C2 101.132 20.1325 83 42.5 83H1065L1285.5 83C1307.87 83 1326 64.8675 1326 42.5C1326 20.1325 1307.87 2.00005 1285.5 2.00004H712.5" stroke="#2996a7" strokeWidth="1" vectorEffect="non-scaling-stroke"></path>
-              </svg> */}
+              </svg>
             </h2>
           </div>
 

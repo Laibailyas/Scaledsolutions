@@ -24,8 +24,8 @@ export default function DeliveryPartnerPage() {
         <svg className="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#198190" stop-opacity="0.4" />
-              <stop offset="100%" stop-color="#00bcd4" stop-opacity="0.1" />
+              <stop offset="0%" stopColor="#198190" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#00bcd4" stopOpacity="0.1" />
             </linearGradient>
           </defs>
           <path fill="url(#blobGradient)">
