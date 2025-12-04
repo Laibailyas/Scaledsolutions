@@ -1568,7 +1568,7 @@ export default function Home() {
           </div>
 
           {/* FAQ Section */}
-          <div className={styles.faq} ref={faqRef}>
+          <div id="faqs" className={styles.faq} ref={faqRef}>
             <div className={styles.left} ref={faqLeftRef}>
               <h2>FAQ</h2>
               <p>Here are some of our most asked questions. If yours is not there, contact us.</p>
@@ -1683,5 +1683,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
