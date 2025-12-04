@@ -236,14 +236,11 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </svg>
             </button>
             <div className={styles.btns}>
-              <button
-                className={`${styles.contactButton} ${menuContactActive ? `${styles.active}` : ""
-                  }`}
-                onClick={() => activateMenu("menuContact")}
-              >
-                <span>Contact</span>
-                <span>Close</span>
-              </button>
+          
+  <Link href="/contact" className={styles.contactButton}>
+    <span>Contact</span>
+  </Link>
+
               {/* <button
               className={`${styles.btnMenuHamburger} ${menuHamburgerActive ? `${styles.active}` : ""
                 }`}
@@ -591,4 +588,5 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
 
