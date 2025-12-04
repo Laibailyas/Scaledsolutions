@@ -51,48 +51,18 @@ export default function ServicesPage() {
             method="POST"
             action="https://formsubmit.co/Admin@scaledsolutions.com.au"
           >
-            <div className="top">
+
+
+  <div className="top">
   <div className="left">
-    {/* First name */}
+    {/* Full name */}
     <input
       type="text"
-      id="first-name"
-      name="firstname"
-      placeholder="First name*"
+      id="full-name"
+      name="fullname"
+      placeholder="Full name*"
       required
-      autoComplete="given-name"
-    />
-
-    {/* Last name */}
-    <input
-      type="text"
-      id="last-name"
-      name="lastname"
-      placeholder="Last name*"
-      required
-      autoComplete="family-name"
-    />
-
-    {/* Email */}
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="E-mail*"
-      required
-      autoComplete="email"
-    />
-  </div>
-
-  <div className="right">
-    {/* What I am looking for */}
-    <input
-      type="text"
-      id="looking-for"
-      name="help"
-      placeholder="I am looking for help for *"
-      required
-      autoComplete="off"
+      autoComplete="name"
     />
 
     {/* Company */}
@@ -104,9 +74,31 @@ export default function ServicesPage() {
       autoComplete="organization"
     />
   </div>
+
+  <div className="right">
+    {/* Email */}
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="E-mail*"
+      required
+      autoComplete="email"
+    />
+
+    {/* What I am looking for */}
+    <input
+      type="text"
+      id="looking-for"
+      name="help"
+      placeholder="I am looking for help for *"
+      required
+      autoComplete="off"
+    />
+  </div>
 </div>
 
-
+              
             <input type="text" id="message" name="message" placeholder="Message*" autoComplete="off" required tabIndex={6}/>
 
             <input type="hidden" name="_next" value="http://scaledsolutions.vercel.app/contact?success=1" />
@@ -123,6 +115,7 @@ export default function ServicesPage() {
     </>
   );
 }
+
 
 
 
