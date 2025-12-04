@@ -52,17 +52,60 @@ export default function ServicesPage() {
             action="https://formsubmit.co/Admin@scaledsolutions.com.au"
           >
             <div className="top">
-              <div className="left">
-                <input type="text" id="first-name" name="firstname" placeholder="First name*" required tabIndex={1} autoComplete="given-name" />
-                <input type="email" id="email" name="email" placeholder="E-mail*" required autoComplete="email" tabIndex={3}/>
-                <input type="text" id="company" name="company" placeholder="Company" autoComplete="organization" tabIndex={5}/>
-              </div>
+  <div className="left">
+    {/* First name */}
+    <input
+      type="text"
+      id="first-name"
+      name="firstname"
+      placeholder="First name*"
+      required
+      autoComplete="given-name"
+    />
 
-              <div className="right">
-                <input type="text" id="last-name" name="lastname" placeholder="Last name*" required tabIndex={2} autoComplete="family-name" />
-                <input type="text" id="looking-for" name="help" placeholder="I am looking for help for *" required tabIndex={4} autoComplete="off" />
-              </div>
-            </div>
+    {/* Last name */}
+    <input
+      type="text"
+      id="last-name"
+      name="lastname"
+      placeholder="Last name*"
+      required
+      autoComplete="family-name"
+    />
+
+    {/* Email */}
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="E-mail*"
+      required
+      autoComplete="email"
+    />
+  </div>
+
+  <div className="right">
+    {/* What I am looking for */}
+    <input
+      type="text"
+      id="looking-for"
+      name="help"
+      placeholder="I am looking for help for *"
+      required
+      autoComplete="off"
+    />
+
+    {/* Company */}
+    <input
+      type="text"
+      id="company"
+      name="company"
+      placeholder="Company"
+      autoComplete="organization"
+    />
+  </div>
+</div>
+
 
             <input type="text" id="message" name="message" placeholder="Message*" autoComplete="off" required tabIndex={6}/>
 
@@ -80,5 +123,6 @@ export default function ServicesPage() {
     </>
   );
 }
+
 
 
