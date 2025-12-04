@@ -560,7 +560,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
                 <Link href="/deliverypartner">Delivery Partner</Link>
               </menu>
             </button>
-            <Link className={styles.btn} href="">
+            <Link className={styles.btn} href="/contact">
               contact
             </Link>
             <div className={styles.contact}>
@@ -589,6 +589,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
 
 
 
