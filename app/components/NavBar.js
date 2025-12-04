@@ -273,7 +273,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
           <div ></div>
           <div style={{ borderRadius: '1px white ' }} className={styles.contact}>
             <h3>Let&apos;s work together</h3>
-            <button>Make an appointment</button>
+            <button href="/contact">Make an appointment</button>
           </div>
         </div>
         <div className={styles.body} style={{ backgroundColor: "#0B1C23" }}>
@@ -588,5 +588,6 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
 
 
