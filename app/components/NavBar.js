@@ -555,6 +555,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </div>
               <menu className={styles.menuVentrilocInMenu}>
                 <Link href="">About</Link>
+                     <Link href="#faqs">FAQs</Link>
                 <Link href="/teamexpansion">Team Expansion</Link>
                 <Link href="/deliverypartner">Delivery Partner</Link>
               </menu>
@@ -588,6 +589,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
 
 
 
