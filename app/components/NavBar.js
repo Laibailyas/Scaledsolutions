@@ -372,6 +372,12 @@ function NavBar({ logoSrc = "/logo.png" }) {
             <Link href="" className={styles.link}>
               <span>About</span>
             </Link>
+
+            <Link href="#faqs" className={styles.link}>
+  <span>Faqs</span>
+</Link>
+
+            
             <Link href="/teamexpansion" className={styles.link}>
               <span>Team Expansion</span>
             </Link>
@@ -585,3 +591,4 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
+
