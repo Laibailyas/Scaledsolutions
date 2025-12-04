@@ -37,9 +37,7 @@ export default function ServicesPage() {
               <Link className="link" href="mailto:contact@scaledsolutions.com.au">
                 contact@scaledsolutions.com.au
               </Link>
-              <Link className="link" href="tel:18193453223">
-                819-345-3223
-              </Link>
+             
             </div>
           </div>
 
@@ -82,3 +80,4 @@ export default function ServicesPage() {
     </>
   );
 }
+
