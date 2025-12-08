@@ -42,71 +42,87 @@ export default function ServicesPage() {
           </div>
 
           {success && (
-            <p className="success">
-              ✅ Thank you! We received your message.
-            </p>
-          )}
+  <p className="success">✅ Thank you! We received your message.</p>
+)}
 
-          <form className="form"
-            method="POST"
-            action="https://formsubmit.co/Admin@scaledsolutions.com.au"
-          >
+<form
+  className="form"
+  method="POST"
+  action="https://api.web3forms.com/submit"
+>
+  {/* Required Web3Forms Key */}
+  <input
+    type="hidden"
+    name="access_key"
+    value="05658f62-c562-41df-9331-1115118f0bc7"
+  />
 
+  {/* Redirect After Success */}
+  <input
+    type="hidden"
+    name="redirect"
+    value="http://scaledsolutions.vercel.app/contact?success=1"
+  />
 
   <div className="top">
-  <div className="left">
-    {/* Full name */}
-    <input
-      type="text"
-      id="full-name"
-      name="fullname"
-      placeholder="Full name*"
-      required
-      autoComplete="name"
-    />
+    <div className="left">
+      {/* Full Name */}
+      <input
+        type="text"
+        id="full-name"
+        name="name" // required field for Web3Forms
+        placeholder="Full name*"
+        required
+        autoComplete="name"
+      />
 
-    {/* Company */}
-    <input
-      type="text"
-      id="company"
-      name="company"
-      placeholder="Company"
-      autoComplete="organization"
-    />
+      {/* Company */}
+      <input
+        type="text"
+        id="company"
+        name="company"
+        placeholder="Company"
+        autoComplete="organization"
+      />
+    </div>
+
+    <div className="right">
+      {/* Email */}
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="E-mail*"
+        required
+        autoComplete="email"
+      />
+
+      {/* Looking For */}
+      <input
+        type="text"
+        id="looking-for"
+        name="help"
+        placeholder="I am looking for help for *"
+        required
+        autoComplete="off"
+      />
+    </div>
   </div>
 
-  <div className="right">
-    {/* Email */}
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="E-mail*"
-      required
-      autoComplete="email"
-    />
+  {/* Message */}
+  <input
+    type="text"
+    id="message"
+    name="message"
+    placeholder="Message*"
+    autoComplete="off"
+    required
+    tabIndex={6}
+  />
 
-    {/* What I am looking for */}
-    <input
-      type="text"
-      id="looking-for"
-      name="help"
-      placeholder="I am looking for help for *"
-      required
-      autoComplete="off"
-    />
-  </div>
-</div>
+  <button className="btn">Send</button>
+</form>
 
-              
-            <input type="text" id="message" name="message" placeholder="Message*" autoComplete="off" required tabIndex={6}/>
-
-            <input type="hidden" name="_next" value="http://scaledsolutions.vercel.app/contact?success=1" />
-
-            <input type="hidden" name="_captcha" value="false" />
-
-            <button className="btn">Send</button>
-          </form>
 
         </div>
       </div>
@@ -115,6 +131,7 @@ export default function ServicesPage() {
     </>
   );
 }
+
 
 
 
