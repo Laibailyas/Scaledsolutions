@@ -88,47 +88,43 @@
 }
 
 .bgSvgElementMobile {
-  width: 150px;
-  height: 150px;
+  width: 60%;
+  height: 60%;
   display: block;
   background-image: url("/animations/aiIcon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin: auto;
 }
 
 .bgSvgElementMobileIntegration {
-  width: 150px;
-  height: 150px;
+  width: 60%;
+  height: 60%;
   display: block;
   background-image: url("/animations/integration_services.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin: auto;
 }
 
 .bgSvgElementMobileproduct {
-  width: 150px;
-  height: 150px;
+  width: 60%;
+  height: 60%;
   display: block;
   background-image: url("/animations/product_development.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin: auto;
 }
 
 .bgSvgElementMobilecloud {
-  width: 150px;
-  height: 150px;
+  width: 60%;
+  height: 60%;
   display: block;
   background-image: url("/animations/cloud_services.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin: auto;
 }
 
 
@@ -187,7 +183,6 @@
     background-position: center;
     background-size: contain;
   }
-
 }
 
 
@@ -434,9 +429,10 @@
   line-height: 32px;
   font-weight: 300;
   font-family: "PolySans";
+  color: rgb(255, 104, 44);
 }
 
-.menuHamburger .option_1 .body .contact a {
+.menuHamburger .option_1 .body .contact button {
   position: relative;
   color: rgb(237, 208, 198);
   outline: none;
@@ -448,7 +444,7 @@
   z-index: 1;
 }
 
-.menuHamburger .option_1 .body .contact a::before {
+.menuHamburger .option_1 .body .contact button::before {
   background-color: #0B1C23;
   border-radius: 10rem;
   position: absolute;
@@ -461,7 +457,7 @@
   transition: scale 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.menuHamburger .option_1 .body .contact a:hover::before {
+.menuHamburger .option_1 .body .contact button:hover::before {
   scale: 1.05;
 }
 
@@ -669,42 +665,42 @@
   overflow: visible;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a {
   transform: translateX(-20px);
   opacity: 0;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a:nth-child(1) {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(1) {
   transition: transform 350ms 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.2s linear;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a:nth-child(2) {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(2) {
   transition: transform 350ms 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.3s linear;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a:nth-child(3) {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(3) {
   transition: transform 350ms 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.4s linear;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a:nth-child(4) {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(4) {
   transition: transform 350ms 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.5s linear;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a:nth-child(5) {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(5) {
   transition: transform 350ms 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     opacity 250ms 0.6s linear;
 }
 
-.menuHamburger .option_1 .body .btn.active .menuScaledSolutionInMenu a {
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a {
   opacity: 1;
   transform: translateX(0);
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -713,7 +709,7 @@
   width: 100%;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a {
   position: relative;
   padding: 12px 20px;
   font-size: 18px;
@@ -722,7 +718,7 @@
   text-align: start;
 }
 
-.menuHamburger .option_1 .body .btn .menuScaledSolutionInMenu a::before {
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -734,27 +730,27 @@
   transform-origin: left;
 }
 
-.menuHamburger .option_1 .body .btn.active .menuScaledSolutionInMenu a::before {
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a::before {
   transform: scale(1);
 }
 
-.menuHamburger .option_1 .body .btn.active .menuScaledSolutionInMenu a:nth-child(1):before {
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(1):before {
   transition: transform 1.05s 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuHamburger .option_1 .body .btn.active .menuScaledSolutionInMenu a:nth-child(2):before {
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(2):before {
   transition: transform 1.05s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuHamburger .option_1 .body .btn.active .menuScaledSolutionInMenu a:nth-child(3):before {
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(3):before {
   transition: transform 1.05s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuHamburger .option_1 .body .btn.active .menuScaledSolutionInMenu a:nth-child(4):before {
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(4):before {
   transition: transform 1.05s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuHamburger .option_1 .body .btn.active .menuScaledSolutionInMenu a:nth-child(5):before {
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(5):before {
   transition: transform 1.05s 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -784,7 +780,6 @@
   height: auto;
   bottom: -17.5vw;
   right: 0;
-  display: none;
 }
 
 .menuHamburger .option_1 .backGround svg path {
@@ -875,7 +870,7 @@
   color: #2996a7;
 }
 
-.menuServices .backSection .contact a {
+.menuServices .backSection .contact button {
   position: relative;
   color: rgb(237, 208, 198);
   outline: none;
@@ -886,7 +881,7 @@
   font-size: 16px;
 }
 
-.menuServices .backSection .contact a::before {
+.menuServices .backSection .contact button::before {
   background-color: #2996a7;
   border-radius: 10rem;
   position: absolute;
@@ -899,7 +894,7 @@
   transition: scale 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.menuServices .backSection .contact a:hover::before {
+.menuServices .backSection .contact button:hover::before {
   scale: 1.05;
 }
 
@@ -1070,8 +1065,8 @@
   height: auto;
 }
 
-/* ------------------- Menu ScaledSolution ------------------- */
-.menuScaledSolution {
+/* ------------------- Menu Ventriloc ------------------- */
+.menuVentriloc {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
   height: 100%;
@@ -1086,7 +1081,7 @@
   /* تحديد مدة الانتقال 0.5 ثانية */
 }
 
-.menuScaledSolution.active {
+.menuVentriloc.active {
   z-index: 52;
   transition: visibility 0.5s linear, opacity 0.5s linear;
   /* تحديد مدة الانتقال 0.5 ثانية */
@@ -1094,7 +1089,7 @@
   visibility: visible;
 }
 
-.menuScaledSolution .body {
+.menuVentriloc .body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1108,12 +1103,12 @@
   box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
 }
 
-.menuScaledSolution.active .body {
+.menuVentriloc.active .body {
   transition: transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateY(0%);
 }
 
-.menuScaledSolution .body::before {
+.menuVentriloc .body::before {
   position: absolute;
   content: "";
   top: 0;
@@ -1123,7 +1118,7 @@
   /* background-color: #863b32; */
 }
 
-.menuScaledSolution .body::after {
+.menuVentriloc .body::after {
   position: absolute;
   content: "";
   top: 0;
@@ -1134,7 +1129,7 @@
   /* background-color: #863b32; */
 }
 
-.menuScaledSolution .body .links {
+.menuVentriloc .body .links {
   padding: 0 40px;
   padding-top: calc(123px + 116px);
   padding-bottom: 40px;
@@ -1147,7 +1142,7 @@
   border-right: 1px solid #2996a7;
 }
 
-.menuScaledSolution .body .links .link {
+.menuVentriloc .body .links .link {
   min-width: 350px;
   font-size: 40px;
   /* line-height: 40px; */
@@ -1159,67 +1154,67 @@
   /* تطبيق التأثير عند hover وعند إلغاء hover */
 }
 
-.menuScaledSolution .body .links .link:hover {
+.menuVentriloc .body .links .link:hover {
   color: #143b4c;
 }
 
-.menuScaledSolution .body .links .link span {
+.menuVentriloc .body .links .link span {
   opacity: 0;
   display: block;
   transform: translateY(-100%);
 }
 
-.menuScaledSolution.active .body .links .link:nth-child(1) span {
+.menuVentriloc.active .body .links .link:nth-child(1) span {
   transition: transform 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution.active .body .links .link:nth-child(2) span {
+.menuVentriloc.active .body .links .link:nth-child(2) span {
   transition: transform 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution.active .body .links .link:nth-child(3) span {
+.menuVentriloc.active .body .links .link:nth-child(3) span {
   transition: transform 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution.active .body .links .link:nth-child(4) span {
+.menuVentriloc.active .body .links .link:nth-child(4) span {
   transition: transform 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution.active .body .links .link:nth-child(5) span {
+.menuVentriloc.active .body .links .link:nth-child(5) span {
   transition: transform 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution.active .body .links .link span {
+.menuVentriloc.active .body .links .link span {
   opacity: 1;
   transform: translateY(0%);
 }
 
-.menuScaledSolution .body .links .link:nth-child(1) span {
+.menuVentriloc .body .links .link:nth-child(1) span {
   transition: transform 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution .body .links .link:nth-child(2) span {
+.menuVentriloc .body .links .link:nth-child(2) span {
   transition: transform 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution .body .links .link:nth-child(3) span {
+.menuVentriloc .body .links .link:nth-child(3) span {
   transition: transform 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution .body .links .link:nth-child(4) span {
+.menuVentriloc .body .links .link:nth-child(4) span {
   transition: transform 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.menuScaledSolution .body .links .link:nth-child(5) span {
+.menuVentriloc .body .links .link:nth-child(5) span {
   transition: transform 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -1477,7 +1472,7 @@
   }
 
   .menuServices,
-  .menuScaledSolution {
+  .menuVentriloc {
     display: none;
   }
 
@@ -1525,14 +1520,6 @@
   .NavBar .logo svg {
     width: 112px !important;
     height: auto;
-  }
-
-  .menuHamburger .option_1 .body .btn .menuServicesInMenu a {
-    height: 100%;
-  }
-
-  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card {
-    height: 100%;
   }
 
   .NavBar .logo svg {
@@ -1756,7 +1743,6 @@
   .menuServices .body .card .headText span {
     font-size: 28px;
   }
-
 
 
 }

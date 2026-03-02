@@ -223,8 +223,7 @@
 .pop-video-modal {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(11, 28, 35, 0.9);
@@ -240,11 +239,6 @@
   border-radius: 15px;
   padding: 10px;
   box-shadow: 0 10px 30px rgba(25, 129, 144, 0.4);
-  width: 90vw;
-}
-
-.pop-video-wrapper iframe{
-  width: 100%;
 }
 
 .pop-close-btn {
@@ -284,7 +278,7 @@
   }
 
   .pop-video-modal iframe {
-    width: 90vw;
+    width: 100%;
   }
 
   .pop-story-flex {
