@@ -18,8 +18,8 @@ function NavBar({ logoSrc = "/logo.png" }) {
   // const t = useTranslations("NavBar");
   // ------------------- State MenuServices ------------------- //
   const [menuServicesActive, setMenuServices] = useState(false);
-  // ------------------- State MenuVentriloc ------------------- //
-  const [menuVentrilocActive, setMenuVentriloc] = useState(false);
+  // ------------------- State MenuScaledSolution ------------------- //
+  const [menuScaledSolutionActive, setMenuScaledSolution] = useState(false);
   // ------------------- State MenuContact ------------------- //
   const [menuContactActive, setMenuContact] = useState(false);
   // ------------------- State MenuHamburger ------------------- //
@@ -27,7 +27,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
   // ------------------- State MenuHamburger ------------------- //
   const [menuServicesInMenuActive, setMenuServicesInMenu] = useState(true);
   // ------------------- State MenuHamburger ------------------- //
-  const [menuVentrilocInMenuActive, setMenuVentrilocInMenu] = useState(true);
+  const [menuScaledSolutionInMenuActive, setMenuScaledSolutionInMenu] = useState(true);
 
   useEffect(() => {
     if (menuHamburgerActive) {
@@ -86,15 +86,15 @@ function NavBar({ logoSrc = "/logo.png" }) {
     }
     // // ------------------- Button 2 ------------------- //
     // const runCodeWhenBTN2Active = () => {
-    //   const menuVentrilocInMenuActive = document.querySelector(
-    //     `.${styles.menuVentrilocInMenu}`
+    //   const menuScaledSolutionInMenuActive = document.querySelector(
+    //     `.${styles.menuScaledSolutionInMenu}`
     //   );
     //   const btn_2 = document.querySelector(
     //     `.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`
     //   );
 
-    //   const heightMenuVentrilocInMenu = menuVentrilocInMenuActive.offsetHeight;
-    //   btn_2.style.height = 27 + heightMenuVentrilocInMenu + "px";
+    //   const heightMenuScaledSolutionInMenu = menuScaledSolutionInMenuActive.offsetHeight;
+    //   btn_2.style.height = 27 + heightMenuScaledSolutionInMenu + "px";
     // };
 
     // const resetHeightBtn_2 = () => {
@@ -104,7 +104,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
     //   btn_2.style.height = "27px";
     // };
 
-    // if (menuVentrilocInMenuActive) {
+    // if (menuScaledSolutionInMenuActive) {
     //   runCodeWhenBTN2Active();
     // } else {
     //   resetHeightBtn_2();
@@ -115,8 +115,8 @@ function NavBar({ logoSrc = "/logo.png" }) {
       if (menuServicesActive) {
         setMenuServices(false); // close dropdown when scrolling
       }
-      if (menuVentrilocActive) {
-        setMenuVentriloc(false); // close dropdown when scrolling
+      if (menuScaledSolutionActive) {
+        setMenuScaledSolution(false); // close dropdown when scrolling
       }
       if (menuContactActive) {
         setMenuContact(false); // close dropdown when scrolling
@@ -131,7 +131,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [menuServicesActive, menuVentrilocActive, menuContactActive]);
+  }, [menuServicesActive, menuScaledSolutionActive, menuContactActive]);
 
   useEffect(() => {
     // Services height
@@ -145,48 +145,48 @@ function NavBar({ logoSrc = "/logo.png" }) {
   }, [menuServicesInMenuActive]);
 
   useEffect(() => {
-    // Ventriloc height
-    const menuVentrilocInMenu = document.querySelector(`.${styles.menuVentrilocInMenu}`);
+    // ScaledSolution height
+    const menuScaledSolutionInMenu = document.querySelector(`.${styles.menuScaledSolutionInMenu}`);
     const btn_2 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`);
-    if (menuVentrilocInMenuActive) {
-      btn_2.style.height = 27 + menuVentrilocInMenu.offsetHeight + "px";
+    if (menuScaledSolutionInMenuActive) {
+      btn_2.style.height = 27 + menuScaledSolutionInMenu.offsetHeight + "px";
     } else {
       btn_2.style.height = "27px";
     }
-  }, [menuVentrilocInMenuActive]);
+  }, [menuScaledSolutionInMenuActive]);
 
 
   // ------------------- Active Menus ------------------- //
   const activateMenu = (menu) => {
     if (menu === "menuServices") {
       setMenuServices(!menuServicesActive); // تغيير حالة القائمة إلى الحالة المعاكسة
-      setMenuVentriloc(false); // إغلاق القوائم الأخرى
+      setMenuScaledSolution(false); // إغلاق القوائم الأخرى
       setMenuContact(false);
       setMenuHamburger(false);
-    } else if (menu === "menuVentriloc") {
-      setMenuVentriloc(!menuVentrilocActive); // تغيير حالة القائمة إلى الحالة المعاكسة
+    } else if (menu === "menuScaledSolution") {
+      setMenuScaledSolution(!menuScaledSolutionActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
       setMenuContact(false);
       setMenuHamburger(false);
     } else if (menu === "menuContact") {
       setMenuContact(!menuContactActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuHamburger(false);
     } else if (menu === "menuHamburger") {
       setMenuHamburger(!menuHamburgerActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuContact(false);
     } else if (menu === "menuServicesInMenu") {
       setMenuServicesInMenu(!menuServicesInMenuActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuContact(false);
-    } else if (menu === "menuVentrilocInMenu") {
-      setMenuVentrilocInMenu(!menuVentrilocInMenuActive); // تغيير حالة القائمة إلى الحالة المعاكسة
+    } else if (menu === "menuScaledSolutionInMenu") {
+      setMenuScaledSolutionInMenu(!menuScaledSolutionInMenuActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuContact(false);
     }
   };
@@ -220,9 +220,9 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </svg>
             </button>
             <button
-              className={`${styles.link} ${menuVentrilocActive ? `${styles.active}` : ""
+              className={`${styles.link} ${menuScaledSolutionActive ? `${styles.active}` : ""
                 }`}
-              onClick={() => activateMenu("menuVentriloc")}
+              onClick={() => activateMenu("menuScaledSolution")}
             >
               Scaled Solutions
               <svg
@@ -236,10 +236,10 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </svg>
             </button>
             <div className={styles.btns}>
-          
-  <Link href="/contact" className={styles.contactButton}>
-    <span>Contact</span>
-  </Link>
+
+              <Link href="/contact" className={styles.contactButton}>
+                <span>Contact</span>
+              </Link>
 
               {/* <button
               className={`${styles.btnMenuHamburger} ${menuHamburgerActive ? `${styles.active}` : ""
@@ -273,7 +273,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
           <div ></div>
           <div style={{ borderRadius: '1px white ' }} className={styles.contact}>
             <h3>Let&apos;s work together</h3>
-            <button href="/contact">Make an appointment</button>
+            <Link href="/contact">Make an appointment</Link>
           </div>
         </div>
         <div className={styles.body} style={{ backgroundColor: "#0B1C23" }}>
@@ -305,7 +305,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
           <Link href="/aidataservices">
             <div className={styles.card} >
               <h3 className={styles.headText}>
-                <span>Ai & Data</span> Services
+                <span>AI & Data</span> Services
               </h3>
 
               <div
@@ -357,24 +357,24 @@ function NavBar({ logoSrc = "/logo.png" }) {
         </div>
       </menu>
       <menu
-        className={`${styles.menuVentriloc} ${menuVentrilocActive ? `${styles.active}` : ""
+        className={`${styles.menuScaledSolution} ${menuScaledSolutionActive ? `${styles.active}` : ""
           }`}
         style={{ border: '0px' }}
 
-      // onMouseLeave={() => setMenuVentriloc(false)}
+      // onMouseLeave={() => setMenuScaledSolution(false)}
       >
         <div className={styles.body} style={{ backgroundColor: "#0B1C23", border: "0px" }}
-          onMouseLeave={() => setMenuVentriloc(false)}>
+          onMouseLeave={() => setMenuScaledSolution(false)}>
           <div className={styles.links}>
-            <Link href="" className={styles.link}>
+            <Link href="/about" className={styles.link}>
               <span>About</span>
             </Link>
 
-            <Link href="#faqs" className={styles.link}>
-  <span>Faqs</span>
-</Link>
+            <Link href="/faq" className={styles.link}>
+              <span>Faqs</span>
+            </Link>
 
-            
+
             <Link href="/teamexpansion" className={styles.link}>
               <span>Team Expansion</span>
             </Link>
@@ -491,7 +491,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
                 <Link href="/aidataservices">
                   <div className={styles.card}>
                     <span>
-                      <em>Ai & Data </em> Services
+                      <em>AI & Data </em> Services
                     </span>
 
                     <div
@@ -537,9 +537,9 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </menu>
             </button>
             <button
-              className={`${styles.btn} ${menuVentrilocInMenuActive ? `${styles.active}` : ""
+              className={`${styles.btn} ${menuScaledSolutionInMenuActive ? `${styles.active}` : ""
                 }`}
-              onClick={() => activateMenu("menuVentrilocInMenu")}
+              onClick={() => activateMenu("menuScaledSolutionInMenu")}
             >
               <div className={styles.head}>
                 <span>Scaled Solutions</span>
@@ -553,9 +553,9 @@ function NavBar({ logoSrc = "/logo.png" }) {
                   <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
                 </svg>
               </div>
-              <menu className={styles.menuVentrilocInMenu}>
-                <Link href="">About</Link>
-                     <Link href="#faqs">FAQs</Link>
+              <menu className={styles.menuScaledSolutionInMenu}>
+                <Link href="/about">About</Link>
+                <Link href="/faq">FAQs</Link>
                 <Link href="/teamexpansion">Team Expansion</Link>
                 <Link href="/deliverypartner">Delivery Partner</Link>
               </menu>
@@ -565,7 +565,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
             </Link>
             <div className={styles.contact}>
               <h3>Let&apos;s work together</h3>
-               <button href="/contact">Make an appointment</button>
+              <Link href="/contact">Make an appointment</Link>
             </div>
           </div>
           <div className={styles.backGround}>

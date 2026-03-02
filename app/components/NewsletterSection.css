@@ -238,3 +238,10 @@ body {
   border: none;
   cursor: pointer;
 }
+
+
+@media (max-width: 1024px) {
+  .testimonial-popup{
+    top: 60px;
+  }
+}

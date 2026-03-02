@@ -707,9 +707,26 @@
   pointer-events: none;
 }
 
+.video-modal{
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 
 /* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .video-wrapper{
+    width: 90vw;
+  }
+
+  .video-wrapper iframe{
+    width: 100%;
+  }
+}
+
+
 @media (max-width: 768px) {
   .core-heading {
     font-size: 2.3rem;
