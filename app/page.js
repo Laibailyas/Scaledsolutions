@@ -1237,7 +1237,10 @@ export default function Home() {
           <div className={`${styles.accent} ${styles.accent2}`}></div>
           <div className={`${styles.accent} ${styles.accent3}`}></div>
         </div>
-        <div className={styles.animatedGrid}></div>
+        // <div className={styles.animatedGrid}></div>
+  <div className={styles.animatedGrid}>
+  <img src="/animations/bgGrid.svg" alt="Animated grid" />
+</div>
         <section className={`${styles.section_1} ${styles.section}`}>
           <div className={styles.head}>
             <h1>
@@ -1683,6 +1686,7 @@ export default function Home() {
     </div>
   );
 }
+
 
 
 
